@@ -8,7 +8,9 @@ DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
 Paginate = 9
 googleAnalytics = ""
+disqusShortname = "denhamparry"
 enableRobotsTXT = true
+
 
 [sitemap]
   changefreq = "monthly"
@@ -16,7 +18,7 @@ enableRobotsTXT = true
   filename = "sitemap.xml"
 
 [params]
-  favicon = ""
+  favicon = "favicon.ico"
   description = "Random posts from Lewis Denham-Parry."
   facebook = "https://facebook.com/denhamparry"
   twitter = "https://twitter.com/denhamparry"
@@ -28,3 +30,4 @@ enableRobotsTXT = true
   background_color_class = "bg-moon-grey"
   featured_image = "images/landing/landing00.png"
   recent_posts_number = 9
+  show_reading_time = true
