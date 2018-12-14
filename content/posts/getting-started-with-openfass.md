@@ -3,7 +3,7 @@ author: Lewis Denham-Parry
 date: 2018-02-02T14:26:15Z
 description: ""
 draft: false
-featured_image: /images/2018/02/magnet-1-1.png
+featured_image: /images/2018/02/magnet-1.png
 slug: getting-started-with-openfass
 title: Getting started with OpenFaaS
 aliases:
