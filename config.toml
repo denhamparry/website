@@ -1,4 +1,5 @@
 title = "Lewis Denham-Parry"
+description= "A few years ago, while visiting or, rather, rummaging about Notre-Dame, the author of this book found, in an obscure nook of one of the towers, the following word, engraved by hand upon the wall: —ANANKE."
 baseURL = "https://denhamparry.netlify.com"
 languageCode = "en-gb"
 theme = "ananke"
@@ -19,6 +20,7 @@ enableRobotsTXT = true
 
 [params]
   favicon = "favicon.ico"
+  title = ""
   description = "Random posts from Lewis Denham-Parry."
   facebook = "https://facebook.com/denhamparry"
   twitter = "https://twitter.com/denhamparry"
