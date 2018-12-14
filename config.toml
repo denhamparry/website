@@ -7,7 +7,7 @@ MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
 Paginate = 9
-googleAnalytics = ""
+googleAnalytics = "UA-33113860-1"
 disqusShortname = "denhamparry"
 enableRobotsTXT = true
 
