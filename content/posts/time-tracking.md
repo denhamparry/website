@@ -7,7 +7,7 @@ categories:
 date: 2017-11-15T09:07:06Z
 description: ""
 draft: false
-image: /images/2017/11/toggl.png
+featured_image: /images/2017/11/toggl.png
 slug: time-tracking
 tags:
 - time tracking

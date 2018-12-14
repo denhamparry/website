@@ -8,7 +8,7 @@ date: 2017-07-25T06:38:47Z
 description: Nuget is a great packaging tool, but we can make it so much better!  We
   look into setting up a .nuspec file for our own classes and how to reference them.
 draft: false
-image: /images/2017/07/nuget.png
+featured_image: /images/2017/07/nuget.png
 slug: setting-up-nuget-for-packaging-and-consuming
 tags:
 - nuget

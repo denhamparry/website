@@ -9,7 +9,7 @@ date: 2017-06-27T17:44:29Z
 description: First time attending the NDC Oslo Workshop (with Troy Hunt) and Conference.  Reasons
   why I flew out and attended as well as how it went and what I took home
 draft: false
-image: /images/2017/06/OsloByNight.jpg
+featured_image: /images/2017/06/OsloByNight.jpg
 slug: ndcoslo2017
 tags:
 - ndc
@@ -45,7 +45,7 @@ I saw adverts for NDC Oslo which I sold myself on as a career intervention.  I b
 
 ## The Workshop
 
-![](/content/images/2017/06/OsloByDay.jpg)
+![](/images/2017/06/OsloByDay.jpg)
 Monday and Tuesday were scheduled for a workshop.  NDC offered a great selection making it difficult to figure out which one to go for.  I decided to attend the *Hack Yourself First* course with **Troy Hunt**.
 
 This is what I noticed over the 2 days:
@@ -64,7 +64,7 @@ When consulting I'm looking to try and distinguish myself from the competition. 
 
 I tweeted a photo to show where I was and who I was listening to (Troy Hunt).  He retweeted it and I got over 10,000 impressions that day, putting this into context my previous tweet has been viewed 50 times.
 
-![](/content/images/2017/06/Workshop.jpg)
+![](/images/2017/06/Workshop.jpg)
 
 ###3) The reason you're there is to learn, so learn
 
@@ -104,7 +104,7 @@ Dylan walked on stage after the song (more about him later) and presented such a
 
 *Brock Allen / Dominick Baier*
 
-![](/content/images/2017/06/IdentityServer.jpg)
+![](/images/2017/06/IdentityServer.jpg)
 
 Interesting talk on Identity Server, I've used their product in past contracts to secure applications so was great to finally see them in person.  The lesson I learned from the talk is that there is a limited amount of information that you can convey within a one hour window, so many notes were taken to review later on.
 
@@ -130,7 +130,7 @@ I was excited for this talk as Azure is constantly evolving with new products co
 
 *Jon Skeet*
 
-![](/content/images/2017/06/JonSkeet0.jpg)
+![](/images/2017/06/JonSkeet0.jpg)
 
 Jon Skeet for me is the rock star of C# development.  I admire his ability to be his own compiler but I'm just happy to try to keep up with him when he's discussing code to such a deep level before losing me.  I don't aspire to be like Jon but I do enjoy his talks that continue to remind me that there is so much going on under the hood.  With his computer like ability to understand code, he's very much human in expressing this making it as easy as possible to understand complex nature to his talks as well as standing up to equality within the industry.
 
@@ -138,7 +138,7 @@ Jon Skeet for me is the rock star of C# development.  I admire his ability to be
 
 *Dylan Beattie*
 
-![](/content/images/2017/06/DylanBeattie.jpg)
+![](/images/2017/06/DylanBeattie.jpg)
 
 After seeing Dylan at the Keynote I felt I had to see what else he had to offer.  Without knowing too much what the talk was about going into the room, it was the most reassuring talk I had.
 
@@ -160,7 +160,7 @@ I've had little experience with monitoring how custom code is managed when devel
 
 *Scott Helme*
 
-![](/content/images/2017/06/ScottHelme.jpg)
+![](/images/2017/06/ScottHelme.jpg)
 
 Scott was a special guest at the workshop earlier on in the week.  He had a really engaging talk which further expressed points he made at the workshop.  His points in regards to the advantages for HTTPS over HTTP will be used in the future to help further understand the full advantage of going HTTPS only.
 
@@ -168,7 +168,7 @@ Scott was a special guest at the workshop earlier on in the week.  He had a real
 
 *Tiffany Rad*
 
-![](/content/images/2017/06/TiffanyRad.jpg)
+![](/images/2017/06/TiffanyRad.jpg)
 
 As a fan of Mr Robot this talk to begin with was more fun than personal development.  Tiffany is the polar opposite of what I'd expect her to be, she was engaging and inspiring in what she has achieved.  It was also great to see someone do something they love.
 
@@ -176,7 +176,7 @@ As a fan of Mr Robot this talk to begin with was more fun than personal developm
 
 *Jon Skeet*
 
-![](/content/images/2017/06/JonSkeet1.jpg)
+![](/images/2017/06/JonSkeet1.jpg)
 
 Day two of Jon Skeet was just as good as day one.  If you get the chance, check out the Mongolian vowel separator.
 
@@ -190,7 +190,7 @@ Kylie taught me what *soft skills* are.  The room was filled yet she made the ta
 
 *Troy Hunt*
 
-![](/content/images/2017/06/TroyHunt.jpg)
+![](/images/2017/06/TroyHunt.jpg)
 
 Troy further demonstrated security vulnerabilities with the help of his 7 year old son to access a site.  He has a great ability to make security interesting and fun whilst delivering important key techniques to protect your applications.
 
@@ -216,7 +216,7 @@ The talked focused on using Azure to provide a serverless service for arranging 
 
 *Denise Jacobs*
 
-![](/content/images/2017/06/DeniseJacobs.jpg)
+![](/images/2017/06/DeniseJacobs.jpg)
 
 The final soft skills talk for the conference for me came from Denise Jacobs.  She was energetic and explained a lot into why we criticise ourselves and how it is damaging us.  I related to the majority of what she was talking about and have ordered her book to further dive into resolving to progress further with self development.
 
@@ -224,7 +224,7 @@ The final soft skills talk for the conference for me came from Denise Jacobs.  S
 
 *Rob Conery*
 
-![](/content/images/2017/06/RobConery.jpg)
+![](/images/2017/06/RobConery.jpg)
 
 The presentation used technologies that I'm not too familiar with but demonstrated setting up a robust solution.  My main points taken away from this is to limit the dependency on third party providers.  Dependency on them can cause issues if costs or dependency change over night, so becoming dynamic to this could potentially save future issues.
 
@@ -232,7 +232,7 @@ The presentation used technologies that I'm not too familiar with but demonstrat
 
 *Lars Klint*
 
-![](/content/images/2017/06/LarsKlint.jpg)
+![](/images/2017/06/LarsKlint.jpg)
 
 Lars to HoloLens for me is Jon Skeet to C#.  I've yet to invest time into looking into developing with the equipment but Lars demonstrated how familiar the code behind the scenes can be and provided an *inception* like demo of augmented reality inside augmented reality utilising a projector.
 
@@ -258,16 +258,16 @@ I was about to make my way out but managed to speak to some of the speakers I ha
 
 ## Family Time
 
-![](/content/images/2017/06/Laurie.jpg)
+![](/images/2017/06/Laurie.jpg)
 
 After getting in at 5am from PubConf I had an 8am start being Dad and Partner again.  The hangover was in full effect but I promised to make the most of the time we had in Oslo together.  Making our way to the Sculpture Park with a bottle of water and regular coffee breaks I realised how lucky I am.
 
-![](/content/images/2017/06/Laurie1.jpg)
+![](/images/2017/06/Laurie1.jpg)
 
 I came out to Oslo to find out what I need to do next to keep me excited, to want to wake up in the mornings and to know that when I grow older I can look back and be proud of what I've achieved on a small rock looping around a giant light.
 
-![](/content/images/2017/06/Family1.jpg)
+![](/images/2017/06/Family1.jpg)
 
 I had all of what I need in front of me, a beautiful girl and the best boy I could have ever asked for.
 
-![](/content/images/2017/06/Family.jpg)
+![](/images/2017/06/Family.jpg)

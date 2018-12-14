@@ -6,7 +6,7 @@ categories:
 date: 2017-11-14T10:21:26Z
 description: ""
 draft: false
-image: /images/2017/11/docker-azure.png
+featured_image: /images/2017/11/docker-azure.png
 slug: console-log-message-colour
 tags:
 - docker

@@ -7,7 +7,7 @@ date: 2017-05-16T16:10:04Z
 description: A guide to setting up Ubnt devices at home with decision process of purchasing
   the equipment to setting up with Sky Fibre and not looking back.
 draft: false
-image: /images/2017/05/unifi.jpg
+featured_image: /images/2017/05/unifi.jpg
 slug: setting-up-a-home-network-with-ubnt
 tags:
 - Ubnt
@@ -36,7 +36,7 @@ Speaking with a few friends who deal with networks on a professional day to day 
 
 ## Investment
 
-![Ubnt Devices](/content/images/2017/05/UniFiDevices.jpg)
+![Ubnt Devices](/images/2017/05/UniFiDevices.jpg)
 
 With help from one of the friends, I purchased the following devices:
 

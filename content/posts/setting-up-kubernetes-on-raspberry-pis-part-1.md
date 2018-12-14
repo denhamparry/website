@@ -7,7 +7,7 @@ date: 2018-02-13T19:00:00Z
 description: Part one of setting up Kubernetes on Raspberry Pi's focusing on preparing
   the Pi's.
 draft: false
-image: /images/2018/02/UNADJUSTEDNONRAW_thumb_3b58-1.jpg
+featured_image: /images/2018/02/UNADJUSTEDNONRAW_thumb_3b58-1.jpg
 slug: setting-up-kubernetes-on-raspberry-pis-part-1
 tags:
 - raspberry pi

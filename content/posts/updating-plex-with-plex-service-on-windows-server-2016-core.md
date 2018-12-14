@@ -6,7 +6,7 @@ categories:
 date: 2017-11-14T10:14:56Z
 description: ""
 draft: false
-image: /images/2017/11/plex-windowsserver2016.png
+featured_image: /images/2017/11/plex-windowsserver2016.png
 slug: updating-plex-with-plex-service-on-windows-server-2016-core
 tags:
 - plex

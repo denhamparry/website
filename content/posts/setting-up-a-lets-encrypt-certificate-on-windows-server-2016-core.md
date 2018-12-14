@@ -10,7 +10,7 @@ categories:
 date: 2017-11-16T17:47:48Z
 description: ""
 draft: false
-image: /images/2017/11/letsencrypt.png
+featured_image: /images/2017/11/letsencrypt.png
 slug: setting-up-a-lets-encrypt-certificate-on-windows-server-2016-core
 tags:
 - lets encrypt

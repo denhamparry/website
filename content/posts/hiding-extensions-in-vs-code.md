@@ -6,7 +6,7 @@ categories:
 date: 2017-11-17T13:38:05Z
 description: ""
 draft: false
-image: /images/2017/11/vscodeextensions.png
+featured_image: /images/2017/11/vscodeextensions.png
 slug: hiding-extensions-in-vs-code
 tags:
 - vscode

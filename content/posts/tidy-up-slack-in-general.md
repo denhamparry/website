@@ -6,7 +6,7 @@ categories:
 date: 2018-06-14T05:51:36Z
 description: ""
 draft: false
-image: /images/2018/06/slack-1.jpg
+featured_image: /images/2018/06/slack-1.jpg
 slug: tidy-up-slack-in-general
 tags:
 - slack
