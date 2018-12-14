@@ -6,7 +6,7 @@ categories:
 date: 2017-05-17T19:12:25Z
 description: ""
 draft: false
-image: /images/2017/05/docker_background.png
+featured_image: /images/2017/05/docker_background.png
 slug: getting-started-with-docker
 tags:
 - docker

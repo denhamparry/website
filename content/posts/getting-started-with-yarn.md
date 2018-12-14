@@ -6,7 +6,7 @@ categories:
 date: 2017-07-05T16:03:04Z
 description: ""
 draft: false
-image: /images/2017/07/feature-reliable.png
+featured_image: /images/2017/07/feature-reliable.png
 slug: getting-started-with-yarn
 tags:
 - yarn
@@ -151,7 +151,7 @@ yarn add denhamparry-yarn-demo
 
 And that's it!  You should see the package within the *node-modules* folder.
 
-![](/content/images/2017/07/denhamparry-yarn-demo.png)
+![](/images/2017/07/denhamparry-yarn-demo.png)
 
 ## References
 

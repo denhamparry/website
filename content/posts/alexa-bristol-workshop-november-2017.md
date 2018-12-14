@@ -8,7 +8,7 @@ categories:
 date: 2017-11-15T09:17:37Z
 description: ""
 draft: false
-image: /images/2017/11/amazonEchoBanner.jpg
+featured_image: /images/2017/11/amazonEchoBanner.jpg
 slug: alexa-bristol-workshop-november-2017
 tags:
 - workshop

@@ -8,7 +8,7 @@ date: 2018-02-13T14:37:00Z
 description: A selection of links that I've used to setup Kubernetes on Raspberry
   Pi.
 draft: false
-image: /images/2018/02/raspberrypik8s.png
+featured_image: /images/2018/02/raspberrypik8s.png
 slug: kubernetes-cluster-with-arm-raspberry-pi
 tags:
 - raspberry pi

@@ -6,7 +6,7 @@ categories:
 date: 2017-12-01T09:10:32Z
 description: ""
 draft: false
-image: /images/2017/12/dotnetstandard.png
+featured_image: /images/2017/12/dotnetstandard.png
 slug: net-standard-101
 tags:
 - dotnet

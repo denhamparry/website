@@ -3,7 +3,7 @@ author: Lewis Denham-Parry
 date: 2017-11-18T10:06:28Z
 description: ""
 draft: false
-image: /images/2018/02/openssh.png
+featured_image: /images/2018/02/openssh.png
 slug: setting-up-openssh-on-windows-server-2016
 title: Setting up OpenSSH on Windows Server 2016
 aliases:

@@ -7,7 +7,7 @@ categories:
 date: 2017-06-30T06:45:38Z
 description: ""
 draft: false
-image: /images/2017/06/firefox-independent-1200.5bd827ccf1ed.jpg
+featured_image: /images/2017/06/firefox-independent-1200.5bd827ccf1ed.jpg
 slug: proxy-certificates-with-firefox
 tags:
 - firefox

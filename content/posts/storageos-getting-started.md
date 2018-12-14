@@ -5,7 +5,7 @@ categories:
 date: 2017-11-16T10:38:38Z
 description: ""
 draft: false
-image: /images/2017/11/StorageOS.svg
+featured_image: /images/2017/11/StorageOS.svg
 slug: storageos-getting-started
 tags:
 - docker

@@ -8,7 +8,7 @@ date: 2018-02-14T18:00:00Z
 description: Setting up kubeadm and kubectl to manage Kubernetes and add Raspberry
   Pi nodes.
 draft: false
-image: /images/2018/02/IMG_1427.jpg
+featured_image: /images/2018/02/IMG_1427.jpg
 slug: setting-up-kubernetes-on-raspberry-pis-part-2
 tags:
 - raspberry pi

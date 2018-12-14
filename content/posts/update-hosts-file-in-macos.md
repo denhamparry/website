@@ -8,7 +8,7 @@ categories:
 date: 2017-11-17T09:34:26Z
 description: ""
 draft: false
-image: /images/2017/11/hosts.jpg
+featured_image: /images/2017/11/hosts.jpg
 slug: update-hosts-file-in-macos
 tags:
 - hosts

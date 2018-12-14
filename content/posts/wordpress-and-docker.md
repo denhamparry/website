@@ -7,7 +7,7 @@ categories:
 date: 2017-11-14T11:31:29Z
 description: ""
 draft: false
-image: /images/2017/11/DockerWordPress.png
+featured_image: /images/2017/11/DockerWordPress.png
 slug: wordpress-and-docker
 tags:
 - docker
