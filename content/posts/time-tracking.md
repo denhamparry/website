@@ -14,6 +14,8 @@ tags:
 - toggl
 - hours
 title: Time Tracking
+aliases:
+    - "/time-tracking/"
 ---
 
 After going to a couple of meetings in a new contract, we realised that there were blockers that could not be controlled within the team.  These could range from not being able to contact someone within working hours to unlock a service to a faulty computer losing hours or development time within a sprint.

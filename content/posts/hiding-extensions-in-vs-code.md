@@ -12,6 +12,10 @@ tags:
 - vscode
 - macOS
 title: Hiding extensions in VS Code
+aliases:
+    - "/hiding-extensions-in-vs-code/"
+aliases:
+    - "/hiding-extensions-in-vs-code/"
 ---
 
 I've enjoyed using spell checkers in IDEs, but feel that there should be some boundaries.  I couldn't find a quick way to hide an extension via the IDE UI, so had to look for more information:

@@ -12,6 +12,8 @@ tags:
 - docker
 - getting started
 title: Getting Started With Docker
+aliases:
+    - "/getting-started-with-docker/"
 ---
 
 Being an IT contractor, I usually find myself setting up a clients environment to get their project to work locally.  As these are setup by individuals, there is a lack of common practice to be able to get setup quickly and end up having to put the hot fixes in place that have been in place for years.

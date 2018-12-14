@@ -16,6 +16,8 @@ tags:
 - amazon
 - aws
 title: Alexa Bristol Workshop November 2017
+aliases:
+    - "/alexa-bristol-workshop-november-2017/"
 ---
 
 Attended an Alexa Workshop on the 3rd November 2017 in Bristol hosted by Amazon, these are my notes.

@@ -13,6 +13,8 @@ tags:
 - Ubnt
 - Networking
 title: Setting Up A Home Network With Unifi
+aliases:
+    - "/setting-up-a-home-network-with-ubnt/"
 ---
 
 For the last 5 years I've been using an Apple TimeCapsule as my router and wifi base.  The decision to use this was for:

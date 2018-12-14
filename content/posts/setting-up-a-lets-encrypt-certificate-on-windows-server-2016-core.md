@@ -20,6 +20,8 @@ tags:
 - powershell
 - iis
 title: Setting up a Lets Encrypt Certificate on Windows Server 2016 Core
+aliases:
+    - "/setting-up-a-lets-encrypt-certificate-on-windows-server-2016-core/"
 ---
 
 I wanted to use Lets Encrypt to create certificates for my home server.  Once created I've exported a .pfx file so that I can reuse the certificate in third party services.

@@ -7,6 +7,8 @@ draft: false
 image: /images/2017/06/browser-logos.png
 slug: my-google-chrome-extensions
 title: My Browser Extensions
+aliases:
+    - "/my-google-chrome-extensions/"
 ---
 
 Here's a generic list of extensions I use on browsers.  This is purely for reference purposes and any recommendations are welcome!

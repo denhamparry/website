@@ -18,6 +18,8 @@ tags:
 - serverless
 - projects
 title: Getting started with OpenFaas on Kubernetes with Raspberry Pis
+aliases:
+    - "/getting-started-with-openfaas/"
 ---
 
 > This is a non-technical review of getting setup on a load of buzz words.  Spoiler alert: Its the most fun I've had with technology in a long time and is a lot easier than you think thanks to a talented and helpful community.

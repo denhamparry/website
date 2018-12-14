@@ -17,6 +17,8 @@ tags:
 - workshop
 - conference
 title: My First Developer Workshop & Conference
+aliases:
+    - "/ndcoslo2017/"
 ---
 
 I've been meaning to go to a developer conference for a few years and finally decided to go to the NDC Conference in Oslo.

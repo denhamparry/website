@@ -13,6 +13,8 @@ tags:
 - raspberry pi
 - setup
 title: Setting Up Kubernetes On Raspberry Pis - Part 1
+aliases:
+    - "/setting-up-kubernetes-on-raspberry-pis-part-1/"
 ---
 
 > This post is focused on preparing the Raspberry Pi's prior to setting up Kubernetes.

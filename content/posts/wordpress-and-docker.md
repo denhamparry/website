@@ -14,6 +14,8 @@ tags:
 - wordpress
 - azure
 title: Wordpress and Docker
+aliases:
+    - "/wordpress-and-docker/"
 ---
 
 ##Local Development
