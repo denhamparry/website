@@ -5,6 +5,8 @@ description: ""
 draft: false
 slug: console-log-message-colour
 title: Console log message colour
+aliases:
+    - "/console-log-message-colour/"
 ---
 
 Function to add colour to console log messages:

@@ -14,6 +14,8 @@ tags:
 - proxy
 - https
 title: Proxy certificates with Firefox
+aliases:
+    - "/proxy-certificates-with-firefox/"
 ---
 
 Within some companies, proxies are rife.  Regardless how you feel about them you have to get past the pain of setting up services that don't work well with the proxy (not usually at fault of the service) by not giving you any indication as to what happened.

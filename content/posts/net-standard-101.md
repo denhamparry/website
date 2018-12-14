@@ -12,6 +12,8 @@ tags:
 - dotnet
 - standard
 title: .Net Standard 101
+aliases:
+    - "/net-standard-101/"
 ---
 
 > .net Standard is a contract that allows an API to be Standard compliant.  Its not a downloadable package.

@@ -6,6 +6,8 @@ draft: false
 image: /images/2018/02/openssh.png
 slug: setting-up-openssh-on-windows-server-2016
 title: Setting up OpenSSH on Windows Server 2016
+aliases:
+    - "/setting-up-openssh-on-windows-server-2016/"
 ---
 
 * Download the latest --zip-- file from [Github](https://github.com/PowerShell/Win32-OpenSSH/releases)

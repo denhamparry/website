@@ -15,6 +15,8 @@ tags:
 - kubernetes
 - setup
 title: Setting Up Kubernetes On Raspberry Pis - Part 2
+aliases:
+    - "/setting-up-kubernetes-on-raspberry-pis-part-2/"
 ---
 
 > Following on from [Part 1](https://denhamparry.co.uk/setting-up-kubernetes-on-raspberry-pis-part-1/), we'll now look to setup kubeadm and kubectl to manage Kubernetes and add nodes.

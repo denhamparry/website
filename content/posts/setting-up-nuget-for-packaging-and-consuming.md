@@ -15,6 +15,8 @@ tags:
 - nuspec
 - config
 title: Setting up Nuget for Packaging and Consuming
+aliases:
+    - "/setting-up-nuget-for-packaging-and-consuming/"
 ---
 
 ## Creating

@@ -7,11 +7,13 @@ date: 2017-11-14T10:21:26Z
 description: ""
 draft: false
 image: /images/2017/11/docker-azure.png
-slug: deploy-custom-docker-image-to-azure-web-app
+slug: console-log-message-colour
 tags:
 - docker
 - azure
 title: Deploy Custom Docker Image to Azure Web App
+aliases:
+    - "/console-log-message-colour/"
 ---
 
 Requires [Azure Cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) to be installed.

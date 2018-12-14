@@ -6,6 +6,8 @@ draft: false
 image: /images/2018/02/magnet-1-1.png
 slug: getting-started-with-openfass
 title: Getting started with OpenFaaS
+aliases:
+    - "/getting-started-with-openfass/"
 ---
 
 > This is a non-technical review of getting setup on a load of buzz words.  Spoiler alert: Its the most fun I've had with technology in a long time and is a lot easier than you think thanks to a talented and helpful community.

@@ -10,6 +10,8 @@ slug: storageos-getting-started
 tags:
 - docker
 title: StorageOS and Docker - Getting Started
+aliases:
+    - "/storageos-getting-started/"
 ---
 
 ## Introduction

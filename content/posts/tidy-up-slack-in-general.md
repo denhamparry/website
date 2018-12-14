@@ -12,6 +12,8 @@ tags:
 - slack
 - node js
 title: Tidy up Slack (in General)
+aliases:
+    - "/tidy-up-slack-in-general/"
 ---
 
 [Salman](https://twitter.com/soulmaniqbal), [Aled](https://twitter.com/Aled_James9) and I have been busy setting up a new technology community, [Cloud Native Wales](https://blog.cloudnativewales.io).  We're looking to go live and invite people to use some of our tools, but realise that we've been using the **#general** a bit too much and want to remove some of the rubbish prior to going live.

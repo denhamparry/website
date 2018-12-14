@@ -16,6 +16,8 @@ tags:
 - nano
 - dns
 title: Update Hosts file in MacOS
+aliases:
+    - "/update-hosts-file-in-macos/"
 ---
 
 * Open the Hosts file with nano:

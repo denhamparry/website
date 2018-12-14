@@ -12,6 +12,8 @@ tags:
 - yarn
 - npm
 title: Getting started with Yarn
+aliases:
+    - "/getting-started-with-yarn/"
 ---
 
 One of my contracts were looking for a way to publish content via packages or content files (html, css, js).  They were looking to go for a Nuget solution but recommended using Bower from previous experiences.  Then came the part of loading the Bower website to see that they're now recommending Yarn, the package management system built on top of Node Package Manager (npm) but with added benefits.

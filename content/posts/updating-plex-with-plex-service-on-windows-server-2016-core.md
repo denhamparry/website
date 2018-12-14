@@ -12,6 +12,8 @@ tags:
 - plex
 - windows server 2016 core
 title: Updating Plex Media Server with Plex Service on Windows Server 2016 Core
+aliases:
+    - "/updating-plex-with-plex-service-on-windows-server-2016-core/"
 ---
 
 * Download the latest [Plex Media Server](http://plex.tv/downloads/) installation file to the Windows Server.

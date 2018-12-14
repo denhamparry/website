@@ -15,6 +15,8 @@ tags:
 - kubernetes
 - openfaas
 title: Setting Up Kubernetes On Raspberry Pis - Part 0
+aliases:
+    - "/kubernetes-cluster-with-arm-raspberry-pi/"
 ---
 
 These are a selection of links that I've used to create the *Setting up Kubernetes On Raspberry Pi series*.
