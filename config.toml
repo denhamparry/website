@@ -6,7 +6,7 @@ theme = "ananke"
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
-Paginate = 3
+Paginate = 9
 googleAnalytics = ""
 enableRobotsTXT = true
 
@@ -27,4 +27,4 @@ enableRobotsTXT = true
   linkedin = "https://www.linkedin.com/in/denhamparry/"
   background_color_class = "bg-moon-grey"
   featured_image = "images/landing/landing00.png"
-  recent_posts_number = 2
+  recent_posts_number = 9
