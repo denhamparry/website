@@ -23,6 +23,30 @@ menu:
 
 -------------------
 
+## Skills
+
+### Current
+
+* Technical
+  * Kubernetes
+  * Docker
+  * DotNet Core
+  * Bash
+  * Git
+* Non-Technical
+  * Public speaking
+  * Workshops
+
+### Past
+
+* Technical
+  * DotNet
+  * MSSQL
+  * Javascript
+  * JQuery
+* Non-Technical
+  * Team Leader
+
 ## Experience
 
 ### Present
