@@ -92,5 +92,6 @@ Software Consultancy.
 
 ## Education
 
-2002-2005
-:   **BSc (Hons) Computer Science**; [UMIST](https://www.linkedin.com/school/university-of-manchester/) (Manchester, United Kingdom).
+**UMIST** _BSc (Hons) Computer Science_ (2002-2005)
+
+* [Website](https://www.linkedin.com/school/university-of-manchester/)
