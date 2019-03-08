@@ -58,7 +58,7 @@ Focused on bringing exciting talks, sharing knowledge, improving skills and crea
 
 * [Website](https://cloudnativewales.io)
 
-* [Meetup Page](http://meetup.com/cloud-Native-Wales/)
+* [Meetup](http://meetup.com/cloud-Native-Wales/)
 
 **LearnK8S** _Instructor_ (2018 - present)
 
@@ -76,13 +76,23 @@ Software Consultancy.
 
 **JLT** _Consultant_ (2017-2018)
 
+* [Website](https://www.jlt.com)
+
 **Tigerbay** _Consultant_ (2017-2018)
+
+* [Website](https://www.tigerbay.co.uk)
 
 **Bupa** _Consultant_ (2016-2017)
 
+* [Website](https://www.bupa.co.uk)
+
 **Citrus Credit** _Consultant_ (2016)
 
+* [Website](https://www.crunchbase.com/organization/citrus-credit)
+
 **Oasis Dental Care** _Consultant_ (2014-2016)
+
+* [Website](https://www.oasisdentalcare.co.uk)
 
 **Lead Perfect** _Consultant_ (2013-2014)
 
