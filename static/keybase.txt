@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/denhamparry
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://denhamparry.co.uk
+  * I am denhamparry (https://keybase.io/denhamparry) on keybase.
+  * I have a public key ASD7MyPDGb8SU-498VRDIccXFBECQbdSU7aJ8CyyJ7eqlwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120fb3323c319bf1253ee3df1544321c71714110241b75253b689f02cb227b7aa970a",
+      "host": "keybase.io",
+      "kid": "0120fb3323c319bf1253ee3df1544321c71714110241b75253b689f02cb227b7aa970a",
+      "uid": "f79c4d3da99c061af5056bdc977ad919",
+      "username": "denhamparry"
+    },
+    "merkle_root": {
+      "ctime": 1552650469,
+      "hash": "bef2d7a894225a3103c2e91531607afe65bb1e76f87530d2701fc85e5f1ced9c565b2c34cdf0bd69d44d6f9c4c4c13b4e99308d655e1ffaebd33f6b455a21818",
+      "hash_meta": "5ffc395b0c72b78bb5f1600210ffef5b56f36cce8054e9c517e8892968cce254",
+      "seqno": 4954975
+    },
+    "service": {
+      "entropy": "OilJQ1Mfyc+49dJucXobp48h",
+      "hostname": "denhamparry.co.uk",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1552650494,
+  "expire_in": 504576000,
+  "prev": "1a8287f1e2ab48736adb0b6541483b1aadb0a8aa69c3921aa7138e8faa0b26ce",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg+zMjwxm/ElPuPfFUQyHHFxQRAkG3UlO2ifAssie3qpcKp3BheWxvYWTESpcCB8QgGoKH8eKrSHNq2wtlQUg7Gq2wqKppw5IapxOOj6oLJs7EIAMs9puT9rCN+rNUBAahdWjm87476AS2qn8UUr5u7oz6AgHCo3NpZ8RA+eGt8QaQgg3R18kktWO7uHye8n7s2k1h30VJlSy/tTSRMiuYWOioePNZOu9x56ZfO4D2kCWRNw8aRcLlpW/3DahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHrJw2pmW98PSJmGUsnNPbrDeoCl52jxwBAIyqfZp3tlo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/denhamparry
+
+==================================================================
