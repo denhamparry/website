@@ -30,4 +30,4 @@ Date: 12th March 2019.
 
 Find out the parallels of mental health to monoliths versus microservices!
 
-Podcast: [Click here](https://player.fm/series/cto-and-co-founder-talk-with-dave-albert/guest-lewis-denham-parry)
+Podcast: [player.fm](https://player.fm/series/cto-and-co-founder-talk-with-dave-albert/guest-lewis-denham-parry)
