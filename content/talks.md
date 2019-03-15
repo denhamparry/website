@@ -24,6 +24,15 @@ In this talk, you’ll learn how to design, package & deploy reliable .NET appli
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_ySc3_TT_tc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### One Monolith / One Macroservice / Many Microservices
+
+Where: [ µCon London 2018 - The Microservices Conference](https://skillsmatter.com/conferences/10336-mucon-london-2018-the-microservices-conference#skillscasts).
+Date:  5th November 2018.
+
+From working with a number of companies, the only constant is seeing that each company has their own way of migrating from a monolith to a microservice architecture, and it never working out as planned. In this talk Lewis will share with you the idea of embracing your monolith and making it a macroservice. He’ll explore the benefits of this approach from both a technical and business perspective, and plan how to convert this macroserivce into microservices.
+
+Video: [SkillsMatter](https://skillsmatter.com/skillscasts/12964-one-monolith-one-macroservice-many-microservices)
+
 ## Podcast
 
 ### CTO and Co-Founder Talk with Dave Albert
