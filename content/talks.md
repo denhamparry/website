@@ -1,7 +1,7 @@
 ---
 author: Lewis Denham-Parry
 title: Talks
-description: Talks that I've given that are available online
+description: Public talks that I've given that are available online
 featured_image: /images/talks/header.png
 type: page
 menu:
@@ -26,12 +26,21 @@ In this talk, you’ll learn how to design, package & deploy reliable .NET appli
 
 ### One Monolith / One Macroservice / Many Microservices
 
-Where: [ µCon London 2018 - The Microservices Conference](https://skillsmatter.com/conferences/10336-mucon-london-2018-the-microservices-conference#skillscasts).
+Where: [µCon London 2018 - The Microservices Conference](https://skillsmatter.com/conferences/10336-mucon-london-2018-the-microservices-conference#skillscasts).
 Date:  5th November 2018.
 
 From working with a number of companies, the only constant is seeing that each company has their own way of migrating from a monolith to a microservice architecture, and it never working out as planned. In this talk Lewis will share with you the idea of embracing your monolith and making it a macroservice. He’ll explore the benefits of this approach from both a technical and business perspective, and plan how to convert this macroserivce into microservices.
 
 Video: [SkillsMatter](https://skillsmatter.com/skillscasts/12964-one-monolith-one-macroservice-many-microservices)
+
+---
+
+### Tutorial: Use Kubernetes to Deploy .NET Applications
+
+Where: [ProgNET London 2018](https://skillsmatter.com/conferences/10107-prognet-london-2018#skillscasts).
+Date:  12th September 2018.
+
+With the explosive momentum of Docker, Kubernetes has become the de-facto standard for orchestrating and managing containerised apps in production.
 
 ---
 
