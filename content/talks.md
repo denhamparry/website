@@ -2,7 +2,7 @@
 author: Lewis Denham-Parry
 title: Talks
 description: Talks that I've given that are available online
-featured_image: /images/talks/header.jpg
+featured_image: /images/talks/header.png
 type: page
 menu:
   main: {}
