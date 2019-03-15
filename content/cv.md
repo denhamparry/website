@@ -2,6 +2,7 @@
 title: CV
 description: If you want to know what I've done
 type: page
+featured_image: 'images/landing/landing00.png'
 menu:
   main: {}
 
