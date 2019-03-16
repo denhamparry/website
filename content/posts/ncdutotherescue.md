@@ -32,10 +32,33 @@ Since then, I've found a love for bash and using terminal.
 
 __NCurses Disk Usage__ (Ncdu) is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a remote server where you don't have an entire graphical setup available, but it is a useful tool even on regular desktop systems. Ncdu aims to be fast, simple and easy to use, and should be able to run in any minimal POSIX-like environment with ncurses installed.
 
-*  [More information](https://dev.yorhel.nl/ncdu)
+* [More information](https://dev.yorhel.nl/ncdu)
 
 ## Setup
 
 Lets get it installed:
 
-Requirements
+### 1) Install Homebrew
+
+[Homebrew](https://brew.sh) is the missing package manager for macOS (or Linux)
+
+To install, run this command within the terminal prompt:
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Follow the command prompts and you're done!
+
+### 2) Install ncdu
+
+We can use Homebrew to install ncdu using:
+
+```bash
+brew install ncdu
+```
+
+### 3) Use ncdu
+
+Within your terminal type ncdu within the directory you're trying to :
+
