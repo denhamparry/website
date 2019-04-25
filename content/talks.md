@@ -11,6 +11,17 @@ menu:
 
 ## Video
 
+### Shaun of the Dev
+
+Where: [PubConf](https://pubconf.io)
+Date: 1st February 2019
+
+Rapid-fire funny talks, musical acts, and comedy stunts from amazing developers.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9NEGZQ3rRQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
 ### Scaling microservices with Message queues, .NET and Kubernetes
 
 Where: [NDC London](https://ndc-london.com).
@@ -20,7 +31,7 @@ When you design and build applications at scale, you deal with two significant c
 
 In this talk, you’ll learn how to design, package & deploy reliable .NET applications to Kubernetes & decouple several components using a message broker. You will also learn how to set autoscaling rules to cope with an increasing influx of messages in the queue.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_ySc3_TT_tc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/si44LvcgXwU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
