@@ -11,6 +11,19 @@ menu:
 
 ## Video
 
+### What vulnerabilities? Live hacking of Containers and Orchestrators
+
+Where: [NDC Oslo](https://ndcoslo.com/)
+Date: 20th June 2019
+
+We often see alerts about vulnerabilities being found in frameworks that we use today, but should we really care about them? What's the worst that can happen? Can someone own a container? Could they run a bitcoin miner on my servers? Are they able to own the cluster?
+
+In this talk, we look at one of the worst-case scenarios from a real-world perspective. We have a red team member attempting to hack a cluster we own with a live hack on stage whilst the blue team member tries to stop it from happening.
+
+We'll discuss developing best practices, implement security policies and how best to monitor your services to put preventative measures in place.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JaMJJTb_bEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Shaun of the Dev
 
 Where: [PubConf](https://pubconf.io)
