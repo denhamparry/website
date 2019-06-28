@@ -30,6 +30,6 @@ enableRobotsTXT = true
   # gitlab = "https://gitlab.com/denhamparry"
   linkedin = "https://www.linkedin.com/in/denhamparry/"
   background_color_class = "bg-moon-grey"
-  featured_image = "images/landing/landing00.png"
+  featured_image = "images/landing/landing00.jpg"
   recent_posts_number = 9
   show_reading_time = true
