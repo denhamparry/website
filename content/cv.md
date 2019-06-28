@@ -31,7 +31,6 @@ menu:
 * Technical
   * Kubernetes
   * Docker
-  * DotNet Core
   * Bash
   * Git
 * Non-Technical
@@ -42,10 +41,12 @@ menu:
 
 * Technical
   * DotNet
+  * DotNet Core
   * MSSQL
   * Javascript
   * JQuery
 * Non-Technical
+  * CTO
   * Team Leader
 
 ## Experience
