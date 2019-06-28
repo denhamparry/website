@@ -52,6 +52,12 @@ menu:
 
 ### Present
 
+**Jetstack** _Solutions Engineer_ (2019 - present)
+
+Running public and private Kubernetes workshops and building a better tomorrow.
+
+* [Website](https://jetstack.io)
+
 **Cloud Native Wales** _Co-Founder_ (2018 - present)
 
 Meetup on Cloud Native technologies based in Cardiff.
@@ -61,7 +67,7 @@ Focused on bringing exciting talks, sharing knowledge, improving skills and crea
 
 * [Meetup](http://meetup.com/cloud-Native-Wales/)
 
-**LearnK8S** _Instructor_ (2018 - present)
+**LearnK8S** _Instructor_ (2018 - 2019)
 
 Providing public and private workshops for Kubernetes training.
 
