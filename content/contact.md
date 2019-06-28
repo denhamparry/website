@@ -8,4 +8,8 @@ menu:
 
 ---
 
-{{< form-contact action="http://formspree.io/lewis@denhamparry.co.uk" >}}
+# Contact
+
+## Twitter
+
+[@denhamparry](https://twitter.com/denhamparry)
