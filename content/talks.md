@@ -24,6 +24,27 @@ We'll discuss developing best practices, implement security policies and how bes
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JaMJJTb_bEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+---
+
+### How we contributed to the community with no code
+
+Where: [KubeCon CloudNative Europe / Barcelona](https://events.linuxfoundation.org/events/kubecon-cloudnativecon-europe-2019)
+Date: 10th May 2019
+
+This time last year, two people from Wales, United Kingdom decried to bring the CNCF to their doorstep.
+
+Previously, they were attending international conferences and national meetups to meet and be a part of the community.
+
+Knowing that they were in a privileged position, they wanted to share it with others that, for whatever reason, were unable to make these events.
+
+Cloud Native Wales will be soon celebrating a year of meetups, and best of all, we get to share this with the 100's of people within our meetup community.
+
+This talk will inspire you to take the chance to branch the CNCF and build a community closer to home, help others learn, share and contribute to the world wide community.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4jEASYCaVDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
 ### Shaun of the Dev
 
 Where: [PubConf](https://pubconf.io)
