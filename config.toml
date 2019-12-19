@@ -1,7 +1,7 @@
 title = "Lewis Denham Parry"
 description= "A website about Lewis Denham-Parry, if that's of interest to you"
 languageCode = "en-gb"
-theme = "hyde-hyde"
+theme = "hyde"
 
 [params.social]
 	twitter = "denhamparry"
