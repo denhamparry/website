@@ -1,20 +1,14 @@
-title = "Lewis Denham-Parry"
+title = "Lewis Denham Parry"
 description= "A website about Lewis Denham-Parry, if that's of interest to you"
-baseURL = "https://denhamparry.co.uk"
 languageCode = "en-gb"
-theme = "hyde"
+theme = "hyde-hyde"
 
-MetaDataFormat = "yaml"
-DefaultContentLanguage = "en"
-SectionPagesMenu = "main"
-Paginate = 9
-googleAnalytics = "UA-33113860-1"
-disqusShortname = "denhamparry"
-[Menus]
-  main = [
-    { Name = "Github", URL = "https://github.com/denhamparry/"},
-    { Name = "LinkedIn", URL = "https://www.linkedin.com/in/denhamparry/"}
-  ]
+[params.social]
+	twitter = "denhamparry"
+	keybase = "denhamparry"
+	github = "denhamparry"
+	linkedin = "denhamparry"
+  gravatar = "lewis@denhamparry.co.uk"
 [params]
   description = "A website about Lewis Denham-Parry, if that's of interest to you"
 [sitemap]
