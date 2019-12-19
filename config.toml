@@ -2,7 +2,7 @@ title = "Lewis Denham-Parry"
 description= "A website about Lewis Denham-Parry, if that's of interest to you"
 baseURL = "https://denhamparry.co.uk"
 languageCode = "en-gb"
-theme = "hugo-paper"
+theme = "hyde"
 
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
@@ -10,9 +10,13 @@ SectionPagesMenu = "main"
 Paginate = 9
 googleAnalytics = "UA-33113860-1"
 disqusShortname = "denhamparry"
-enableRobotsTXT = true
-
-
+[Menus]
+  main = [
+    { Name = "Github", URL = "https://github.com/denhamparry/"},
+    { Name = "LinkedIn", URL = "https://www.linkedin.com/in/denhamparry/"}
+  ]
+[params]
+  description = "A website about Lewis Denham-Parry, if that's of interest to you"
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
