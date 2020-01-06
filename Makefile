@@ -27,4 +27,4 @@ hugo_serve: stop_container hugo_build_image git_submodules  ## Serve slides on h
 hugo_create: stop_container hugo_build_image git_submodules  ## Serve slides on http://localhost:1313
 	docker run --rm -p 1313:1313 \
 	-v $(CURDIR):/hugo-project --name ${CONTAINER_NAME} \
-	$(REGISTRY)/$(IMAGE_NAME) hugo
+	$(REGISTRY)/$(IMAGE_NAME) hugo ${POST}
