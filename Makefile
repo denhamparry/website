@@ -16,7 +16,7 @@ git_submodules: ## Update submodules for Hugo
 	git submodule update --init --recursive
 
 .PHONY: build
-hugo_build_image: ## Build Hugo image
+hugo_build_image: git_submodules ## Build Hugo image
 	docker build -t $(REGISTRY)/$(IMAGE_NAME) .
 
 .PHONY: serve
