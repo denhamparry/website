@@ -1,5 +1,6 @@
 public/
 _old/
 resources/
+node_modules/
 # Local Netlify folder
 .netlify

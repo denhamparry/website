@@ -4,21 +4,22 @@ REGISTRY := denhamparry
 CONTAINER_NAME := hugo-denhamparry
 IMAGE_NAME := hugo
 
-##@ Help
-.PHONY: help
-help: ## Show this screen (default behaviour of `make`)
-	@echo "Website for denhamparry.co.uk"
-	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
+.PHONY: all
+all: help
 
-stop_container:
+.PHONY: stop
+stop_container: ## Stop any running containers
 	docker rm -f ${CONTAINER_NAME} || true
 
-git_submodules:
-	git submodule update --init --recursive
+.PHONY: submodule
+git_submodules: ## Update submodules for Hugo
+	git submodule update --remote --rebase
 
-hugo_build_image:
+.PHONY: build
+hugo_build_image: git_submodules ## Build Hugo image
 	docker build -t $(REGISTRY)/$(IMAGE_NAME) .
 
+.PHONY: serve
 hugo_serve: stop_container hugo_build_image git_submodules  ## Serve slides on http://localhost:1313
 	docker run --rm -p 1313:1313 \
 	-v $(CURDIR):/hugo-project --name ${CONTAINER_NAME} \
@@ -28,3 +29,10 @@ hugo_create: stop_container hugo_build_image git_submodules  ## Serve slides on 
 	docker run --rm -p 1313:1313 \
 	-v $(CURDIR):/hugo-project --name ${CONTAINER_NAME} \
 	$(REGISTRY)/$(IMAGE_NAME) hugo ${POST}
+
+.PHONY: help
+help: ## parse jobs and descriptions from this Makefile
+	@grep -E '^[ a-zA-Z0-9_-]+:([^=]|$$)' $(MAKEFILE_LIST) \
+		| grep -Ev '^(help\b[[:space:]]*:|all: help$$)' \
+		| sort \
+		| awk 'BEGIN {FS = ":.*?##"}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'

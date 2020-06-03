@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ARG HUGO_VERSION=0.52
+ARG HUGO_VERSION=0.72
 ENV DOCUMENT_DIR=/hugo-project
 
 RUN apt-get update && apt-get upgrade -y \
