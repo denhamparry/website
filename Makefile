@@ -13,7 +13,7 @@ stop_container: ## Stop any running containers
 
 .PHONY: submodule
 git_submodules: ## Update submodules for Hugo
-	git submodule update --init --recursive
+	git submodule update --remote --rebase
 
 .PHONY: build
 hugo_build_image: git_submodules ## Build Hugo image
