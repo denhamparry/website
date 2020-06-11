@@ -8,6 +8,12 @@ Hugo website for DenhamParry
 
 TL;DR
 
-```
+```sh
 $ make hugo_serve
+```
+
+## Posts
+
+```sh
+$ hugo new posts/my-first-post.md
 ```
