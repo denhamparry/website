@@ -5,7 +5,7 @@ categories:
 - node js
 date: 2018-06-14T05:51:36Z
 description: ""
-draft: false
+draft: true
 featured_image: /images/2018/06/slack-1.jpg
 slug: tidy-up-slack-in-general
 tags:
