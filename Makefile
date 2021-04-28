@@ -7,24 +7,25 @@ IMAGE_NAME := hugo
 .PHONY: all
 all: help
 
-.PHONY: stop
+.PHONY: stop_container
 stop_container: ## Stop any running containers
 	docker rm -f ${CONTAINER_NAME} || true
 
-.PHONY: submodule
+.PHONY: git_submodules
 git_submodules: ## Update submodules for Hugo
 	git submodule update --remote --rebase
 
-.PHONY: build
+.PHONY: hugo_build_image
 hugo_build_image: git_submodules ## Build Hugo image
 	docker build -t $(REGISTRY)/$(IMAGE_NAME) .
 
-.PHONY: serve
+.PHONY: hugo_serve
 hugo_serve: stop_container hugo_build_image git_submodules  ## Serve slides on http://localhost:1313
 	docker run --rm -p 1313:1313 \
 	-v $(CURDIR):/hugo-project --name ${CONTAINER_NAME} \
 	$(REGISTRY)/$(IMAGE_NAME)
 
+.PHONY: hugo_create
 hugo_create: stop_container hugo_build_image git_submodules  ## Serve slides on http://localhost:1313
 	docker run --rm -p 1313:1313 \
 	-v $(CURDIR):/hugo-project --name ${CONTAINER_NAME} \
