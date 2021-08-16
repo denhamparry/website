@@ -15,13 +15,7 @@ googleAnalytics= "UA-33113860-1"
     minifyOutput= true
 
 [params]
-    [homeInfoParams]
-        Title= "Hi there wave"
-        Content= "Can be Info, links, about..."
-    [socialIcons]
-        [name. "Twitter"]
-        url = "https://twitter.com/denhamparry"
-    # env= "production"
+    env= "production"
     title= "Lewis Denham-Parry"
     description= "Personal website for Lewis Denham-Parry"
     keywords= ["Blog", "DenhamParry"]
@@ -33,7 +27,7 @@ googleAnalytics= "UA-33113860-1"
 
     ShowReadingTime= false
     ShowShareButtons= false
-    ShowPostNavLinks= true
+    ShowPostNavLinks= false
     ShowBreadCrumbs= true
     ShowCodeCopyButtons= true
     disableSpecial1stPost= true
@@ -43,3 +37,12 @@ googleAnalytics= "UA-33113860-1"
     hideSummary= false
     showtoc= false
     tocopen= false
+
+[privacy]
+    [twitter]
+        disabled= false
+        enableDNT= true
+        simple= true
+    [youtube]
+        disabled= false
+        privacyEnhanced= true
