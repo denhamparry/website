@@ -6,7 +6,6 @@ Hugo website for DenhamParry
 
 ## Development
 
-TL;DR
 
 ```sh
 $ make hugo_serve
@@ -17,3 +16,10 @@ $ make hugo_serve
 ```sh
 $ hugo new posts/my-first-post.md
 ```
+
+## References
+
+### Theme
+
+- [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod)
+
