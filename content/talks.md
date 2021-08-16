@@ -1,8 +1,23 @@
 ---
-author: Lewis Denham-Parry
 title: Talks
+date: 2021:08:16T18:00:00+00:00
+tags: ["talk"]
+author: Lewis Denham-Parry
+showToc: true
+TocOpen: false
+draft: false
+hidemeta: false
+comments: false
 description: Public talks that I've given that are available online
-featured_image: /images/talks/header.png
+disableShare: false
+dissbleHLJS: true
+hideSummary: false
+searchHidden: true
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+cover:
+  image: /images/talks/header.png
 type: page
 menu:
   main: {}
