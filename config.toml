@@ -1,27 +1,45 @@
-baseURL = "https://denhamparry.co.uk"
-languageCode = "en-gb"
-defaultContentLanguage = "en"
-title = "Lewis Denham-Parry"
-theme = "PaperMod"
+baseURL= "https=//denhamparry.co.uk"
+title= "DenhamParry"
+paginate= 5
+theme= "PaperMod"
 
-rssLimit = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
-enableEmoji = true  
-googleAnalytics = "UA-33113860-1"
+enableRobotsTXT= true
+buildDrafts= false
+buildFuture= false
+buildExpired= false
 
-[author]
-  name = "Lewis Denham-Parry"
+googleAnalytics= "UA-33113860-1"
+
+[minify]
+    disableXML= true
+    minifyOutput= true
 
 [params]
-  dateform        = "2 Jan 2006"
-  dateformShort   = "2 Jan"
-  dateformNum     = "01-02-2006"
-  dateformNumTime = "2006-01-02 15:04 -0700"
+    [homeInfoParams]
+        Title= "Hi there wave"
+        Content= "Can be Info, links, about..."
+    [socialIcons]
+        [name. "Twitter"]
+        url = "https://twitter.com/denhamparry"
+    # env= "production"
+    title= "Lewis Denham-Parry"
+    description= "Personal website for Lewis Denham-Parry"
+    keywords= ["Blog", "DenhamParry"]
+    author= "Lewis Denham-Parry"
+    # images= ["<link or path of image for opengraph, twitter-cards>"]
+    DateFormat= "January 2, 2006"
+    defaultTheme= "auto"
+    disableThemeToggle= false
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    title = "Posts"
-    url = "/posts/"
-    weight = 0
+    ShowReadingTime= false
+    ShowShareButtons= false
+    ShowPostNavLinks= true
+    ShowBreadCrumbs= true
+    ShowCodeCopyButtons= true
+    disableSpecial1stPost= true
+    disableScrollToTop= false
+    comments= false
+    hidemeta= false
+    hideSummary= false
+    showtoc= false
+    tocopen= false
