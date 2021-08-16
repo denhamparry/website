@@ -13,36 +13,3 @@ googleAnalytics= "UA-33113860-1"
 [minify]
     disableXML= true
     minifyOutput= true
-
-[params]
-    env= "production"
-    title= "Lewis Denham-Parry"
-    description= "Personal website for Lewis Denham-Parry"
-    keywords= ["Blog", "DenhamParry"]
-    author= "Lewis Denham-Parry"
-    # images= ["<link or path of image for opengraph, twitter-cards>"]
-    DateFormat= "January 2, 2006"
-    defaultTheme= "auto"
-    disableThemeToggle= false
-
-    ShowReadingTime= false
-    ShowShareButtons= false
-    ShowPostNavLinks= false
-    ShowBreadCrumbs= true
-    ShowCodeCopyButtons= true
-    disableSpecial1stPost= true
-    disableScrollToTop= false
-    comments= false
-    hidemeta= false
-    hideSummary= false
-    showtoc= false
-    tocopen= false
-
-[privacy]
-    [twitter]
-        disabled= false
-        enableDNT= true
-        simple= true
-    [youtube]
-        disabled= false
-        privacyEnhanced= true
