@@ -26,6 +26,21 @@ menu:
 
 ## Video
 
+### Capture The Flag NA 2021
+
+Where: [Cloud Native Security Conference NA 2021](https://events.linuxfoundation.org/cloud-native-security-conference-north-america/)
+
+Review of the Capture the Flag event hosted at Cloud Native Security Conference
+NA that was part of KubeCon NA 2021.
+
+#### Introduction NA 2021
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bn_0NjvoDoo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### Walkthrough NA 2021
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/phKBYX6Pd_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### What vulnerabilities? Live hacking of Containers and Orchestrators
 
 - Where: [NDC Oslo](https://ndcoslo.com/)
