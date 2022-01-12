@@ -32,11 +32,18 @@ menu:
 - Date: 20th June 2019
 - Online: [YouTube](https://www.youtube.com/watch?v=JaMJJTb_bEE)
 
-We often see alerts about vulnerabilities being found in frameworks that we use today, but should we really care about them? What's the worst that can happen? Can someone own a container? Could they run a bitcoin miner on my servers? Are they able to own the cluster?
+We often see alerts about vulnerabilities being found in frameworks that we use
+today, but should we really care about them? What's the worst that can happen?
+Can someone own a container? Could they run a bitcoin miner on my servers? Are
+they able to own the cluster?
 
-In this talk, we look at one of the worst-case scenarios from a real-world perspective. We have a red team member attempting to hack a cluster we own with a live hack on stage whilst the blue team member tries to stop it from happening.
+In this talk, we look at one of the worst-case scenarios from a real-world
+perspective. We have a red team member attempting to hack a cluster we own with
+a live hack on stage whilst the blue team member tries to stop it from
+happening.
 
-We'll discuss developing best practices, implement security policies and how best to monitor your services to put preventative measures in place.
+We'll discuss developing best practices, implement security policies and how
+best to monitor your services to put preventative measures in place.
 
 ---
 
@@ -46,15 +53,21 @@ We'll discuss developing best practices, implement security policies and how bes
 - Date: 10th May 2019
 - Online: [YouTube](https://www.youtube.com/watch?v=4jEASYCaVDo)
 
-This time last year, two people from Wales, United Kingdom decried to bring the CNCF to their doorstep.
+This time last year, two people from Wales, United Kingdom decried to bring the
+CNCF to their doorstep.
 
-Previously, they were attending international conferences and national meetups to meet and be a part of the community.
+Previously, they were attending international conferences and national meetups
+to meet and be a part of the community.
 
-Knowing that they were in a privileged position, they wanted to share it with others that, for whatever reason, were unable to make these events.
+Knowing that they were in a privileged position, they wanted to share it with
+others that, for whatever reason, were unable to make these events.
 
-Cloud Native Wales will be soon celebrating a year of meetups, and best of all, we get to share this with the 100's of people within our meetup community.
+Cloud Native Wales will be soon celebrating a year of meetups, and best of all,
+we get to share this with the 100's of people within our meetup community.
 
-This talk will inspire you to take the chance to branch the CNCF and build a community closer to home, help others learn, share and contribute to the world wide community.
+This talk will inspire you to take the chance to branch the CNCF and build a
+community closer to home, help others learn, share and contribute to the world
+wide community.
 
 ---
 
@@ -74,9 +87,18 @@ Rapid-fire funny talks, musical acts, and comedy stunts from amazing developers.
 - Date:  30th January 2019
 - Online: [YouTube](https://www.youtube.com/watch?v=si44LvcgXwU)
 
-When you design and build applications at scale, you deal with two significant challenges: scalability & robustness. You should design your service so that even if it is subject to intermittent heavy loads, it continues to operate reliably. But how do you build such applications? And how do you deploy an application that scales dynamically? Kubernetes has a feature called autoscaler where instances of your applications are increased or decreased automatically based on metrics that you define.
+When you design and build applications at scale, you deal with two significant
+challenges: scalability & robustness. You should design your service so that
+even if it is subject to intermittent heavy loads, it continues to operate
+reliably. But how do you build such applications? And how do you deploy an
+application that scales dynamically? Kubernetes has a feature called autoscaler
+where instances of your applications are increased or decreased automatically
+based on metrics that you define.
 
-In this talk, you’ll learn how to design, package & deploy reliable .NET applications to Kubernetes & decouple several components using a message broker. You will also learn how to set autoscaling rules to cope with an increasing influx of messages in the queue.
+In this talk, you’ll learn how to design, package & deploy reliable .NET
+applications to Kubernetes & decouple several components using a message broker.
+You will also learn how to set autoscaling rules to cope with an increasing
+influx of messages in the queue.
 
 ---
 
@@ -86,7 +108,12 @@ In this talk, you’ll learn how to design, package & deploy reliable .NET appli
 - Date:  5th November 2018
 - Online: [SkillsMatter](https://skillsmatter.com/skillscasts/12964-one-monolith-one-macroservice-many-microservices)
 
-From working with a number of companies, the only constant is seeing that each company has their own way of migrating from a monolith to a microservice architecture, and it never working out as planned. In this talk Lewis will share with you the idea of embracing your monolith and making it a macroservice. He’ll explore the benefits of this approach from both a technical and business perspective, and plan how to convert this macroserivce into microservices.
+From working with a number of companies, the only constant is seeing that each
+company has their own way of migrating from a monolith to a microservice
+architecture, and it never working out as planned. In this talk Lewis will
+share with you the idea of embracing your monolith and making it a macroservice.
+He’ll explore the benefits of this approach from both a technical and business
+perspective, and plan how to convert this macroserivce into microservices.
 
 ---
 
@@ -95,11 +122,28 @@ From working with a number of companies, the only constant is seeing that each c
 - Where: [ProgNET London 2018](https://skillsmatter.com/conferences/10107-prognet-london-2018#skillscasts).
 - Date:  12th September 2018.
 
-With the explosive momentum of Docker, Kubernetes has become the de-facto standard for orchestrating and managing containerised apps in production.
+With the explosive momentum of Docker, Kubernetes has become the de-facto
+standard for orchestrating and managing containerised apps in production.
 
 ---
 
 ## Podcast
+
+### The KubeCon CTF
+
+Date: 10 January 2022.
+
+In this episode Steve speaks with the Control Plane Kubernetes security training
+gurus, Lewis Denham-Parry and Andy Martin about their brain-child, the KubeCon
+Capture the Flag!
+
+We get into how it began, the community the enables it and the inspiration for
+some of the concepts within its structure and scenes.
+
+Recorded back in June 2021 and long overdue thanks to some editing nightmares,
+this is one to listen to before we  meet up for KubeCon 2022 #optimistic  
+
+Podcast: [cosecast.com](https://cosecast.com/episode-8-kubecon-ctf)
 
 ### CTO and Co-Founder Talk with Dave Albert
 
