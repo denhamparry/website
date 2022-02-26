@@ -28,33 +28,23 @@ menu:
 
 ### Capture The Flag NA 2021
 
-Where: [Cloud Native Security Conference NA 2021](https://events.linuxfoundation.org/cloud-native-security-conference-north-america/)
+- Where: [Cloud Native Security Conference NA 2021](https://events.linuxfoundation.org/cloud-native-security-conference-north-america/)
+- Date: 12th October 2021
+- Online: [YouTube - Introduction NA 2021](https://youtu.be/Bn_0NjvoDoo)
+- Online: [YouTube - Walkthrough NA 2021](https://youtu.be/phKBYX6Pd_A)
 
 Review of the Capture the Flag event hosted at Cloud Native Security Conference
 NA that was part of KubeCon NA 2021.
 
-#### Introduction NA 2021
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Bn_0NjvoDoo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-#### Walkthrough NA 2021
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/phKBYX6Pd_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ### Capture The Flag EU 2021
 
-Where: [Cloud Native Security Day EU 2021]()
+- Where: [Cloud Native Security Day EU 2021](https://events.linuxfoundation.org/cloud-native-security-day-europe/)
+- Date: 4th May 2021
+- Online: [YouTube - Capture the Flag overview](https://youtu.be/Bn_0NjvoDoo)
+- Online: [YouTube - Capture The Flag Summary + Wrap UpVirtual](https://youtu.be/phKBYX6Pd_A)
 
 Review of the Capture the Flag event hosted at Cloud Native Security Day EU
 that was part of KubeCon EU 2021.
-
-#### Capture the Flag overview
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Bn_0NjvoDoo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-#### Capture The Flag Summary + Wrap UpVirtual
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/phKBYX6Pd_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### What vulnerabilities? Live hacking of Containers and Orchestrators
 
