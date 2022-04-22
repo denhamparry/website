@@ -73,7 +73,7 @@ Once we have your attention from seeing how this could be someone’s worst day,
 
 From attending this session, you’ll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
 
-### KernelCon - Kubernetes Secuirty: Learn By Hacking
+### KernelCon - Kubernetes Security: Learn By Hacking
 
 - Where: [KernelCon 2022](https://kernelcon.org/training#k8sec)
 - Date: 30th - 31st March 2022
