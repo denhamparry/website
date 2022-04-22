@@ -1,6 +1,6 @@
 ---
 title: Talks
-date: 2021:08:16T18:00:00+00:00
+date: 2022:04:22T21:00:00+00:00
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -8,7 +8,7 @@ TocOpen: false
 draft: false
 hidemeta: false
 comments: false
-description: Public talks that I've given that are available online
+description: Public talks that I've given
 disableShare: false
 dissbleHLJS: true
 hideSummary: false
@@ -24,7 +24,70 @@ menu:
 
 ---
 
-## Video
+## Coming Up
+
+### NDC London 2022 - An Introduction to Kubernetes
+
+- Link: [NDC London 2022](https://ndclondon.com/agenda/an-introduction-to-kubernetes-part-i-02zg/0vh9oah807o)
+- Where: Queen Elizabeth II Centre, London
+- Date: 09th May 2022
+
+In this workshop, we're going to introduce you to the orchestrator formally known as Kubernetes. This isn't about why or if you should be using it, more of I need to work with a Kubernetes cluster and how do I connect to it and get it to work for me.
+
+In this workshop, you will: 
+
+- have your very own cluster already setup and show you how to connect to it from your own machine 
+- understand how we run our workloads and how to update them 
+- how do we load balancer our workloads and make them available to others on the internet 
+- some common mistakes that you can avoid
+
+By the end of the workshop, you will be able to hold your head high and say that you can work with a Kubernetes cluster and be ready for your next Cloud Native adventure!
+
+### KubeCon EU 2022 - Threat Modelling Kubernetes: A Lightspeed Introduction
+
+- Link: [KubeCon EU 2022](https://sched.co/ytqj)
+- Where: Feria Valencia, Valencia, Spain
+- Date: 19th May 2022
+
+Cloud native container and Kubernetes systems bring new threats and risks to our precious workloads. As cloud technologies undergo rapid innovation and new tools and techniques emerge, security can get left behind. The answer to this conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on threat modelling cloud native systems, understanding adversarial techniques and preventative measures, and helping security and engineering teams increase the security and velocity of system delivery.
+
+## Done!
+
+### KernelCon - The Hand That Feeds: How to Misuse Kubernetes
+
+- Where: [KernelCon 2022](https://kernelcon.org/)
+- Date: 02nd April 2022
+
+We usually trust the hand that feeds, but what happens when we can't? How do we run applications when there is little to no trust? In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack to give us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements. Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll see how Kubernetes can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute. From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
+
+### .NET Beyond - The Hand That Feeds: How to Misuse Kubernetes
+
+- Where: [.NET Beyond 2022](https://tanzu.vmware.com/developer/tv/dotnet-beyond/0012/)
+- Date: 31st March 2022
+
+We usually trust the hand that feeds, but what happens when we can’t trust the hand that feeds us? How do we run applications when there is little to no trust?
+
+In this session, we’re going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We’ll take advantage of an OWASP vulnerability within a supply chain attack giving us an entry point. From there, together we’ll explore how an attacker can take further control of the cluster via lateral and vertical movements.
+
+Once we have your attention from seeing how this could be someone’s worst day, we’ll look at how we can patch this up as a Blue Team. We’ll see what we have available from Kubernetes that can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.
+
+From attending this session, you’ll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
+
+### KernelCon - Kubernetes Secuirty: Learn By Hacking
+
+- Where: [KernelCon 2022](https://kernelcon.org/training#k8sec)
+- Date: 30th - 31st March 2022
+
+Understand why many cloud native services have evolved quickly, and often miss vital security considerations, with Hacking Kubernetes, GKE CIS Benchmark, and SANS authors:
+
+- Secure containerized applications and defend orchestration workloads.
+- Use real-world exploits to target key application deployment components.
+- Understand the risks involved in running cloud native infrastructure.
+- Explore vulnerabilities to cloud native deployments through authentication, pipeline, and supply chain exploits.
+- Exploit and then secure application deployments via Docker and Kubernetes.
+- Determine how vulnerabilities are exploited and how defences are designed.
+
+## 2021
 
 ### Capture The Flag NA 2021
 
