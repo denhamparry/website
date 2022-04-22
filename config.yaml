@@ -29,8 +29,8 @@ params:
           url: "https://github.com/denhamparry"
         - name: twitter
           url: "https://twitter.com/denhamparry"
-        - name: RsS
-          url: "index.xml"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/denhamparry/"
 
 privacy:
     twitter:
