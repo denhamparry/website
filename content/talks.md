@@ -10,7 +10,7 @@ hidemeta: false
 comments: false
 description: Public talks that I've given
 disableShare: false
-dissbleHLJS: true
+disableHLJS: true
 hideSummary: false
 searchHidden: true
 ShowReadingTime: true
@@ -28,41 +28,84 @@ menu:
 
 ### NDC London 2022 - An Introduction to Kubernetes
 
-- Link: [NDC London 2022](https://ndclondon.com/agenda/an-introduction-to-kubernetes-part-i-02zg/0vh9oah807o)
+- Type: Workshop
+- Link: [London, UK](https://ndclondon.com/agenda/an-introduction-to-kubernetes-part-i-02zg/0vh9oah807o)
 - Where: Queen Elizabeth II Centre, London
 - Date: 09th May 2022
 
 In this workshop, we're going to introduce you to the orchestrator formally known as Kubernetes. This isn't about why or if you should be using it, more of I need to work with a Kubernetes cluster and how do I connect to it and get it to work for me.
 
-In this workshop, you will: 
+In this workshop, you will:
 
-- have your very own cluster already setup and show you how to connect to it from your own machine 
-- understand how we run our workloads and how to update them 
-- how do we load balancer our workloads and make them available to others on the internet 
+- have your very own cluster already setup and show you how to connect to it from your own machine
+- understand how we run our workloads and how to update them
+- how do we load balancer our workloads and make them available to others on the internet
 - some common mistakes that you can avoid
 
 By the end of the workshop, you will be able to hold your head high and say that you can work with a Kubernetes cluster and be ready for your next Cloud Native adventure!
 
+### PubConf London 2022 - TBC
+
+- Type: Talk
+- Where: [London, UK](https://pubconf.io/events/2022/london/)
+- Date: 13th May 2022
+
+### CNW / AI Wales - ML: From Model to Microservice
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/AI-Wales/events/285372201/)
+- Date: 12th May 2022
+
 ### KubeCon EU 2022 - Threat Modelling Kubernetes: A Lightspeed Introduction
 
-- Link: [KubeCon EU 2022](https://sched.co/ytqj)
+- Type: Talk
+- Link: [Valencia, Spain](https://sched.co/ytqj)
 - Where: Feria Valencia, Valencia, Spain
 - Date: 19th May 2022
 
 Cloud native container and Kubernetes systems bring new threats and risks to our precious workloads. As cloud technologies undergo rapid innovation and new tools and techniques emerge, security can get left behind. The answer to this conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on threat modelling cloud native systems, understanding adversarial techniques and preventative measures, and helping security and engineering teams increase the security and velocity of system delivery.
 
-## Done!
+### OWASP AppSec EU  -The Hand That Feeds - How to Misuse Kubernetes
+
+- Type: Talk
+- Link: [Online](https://whova.com/web/sT1P4N7cLm%2FUyeUd0yq6HLfmBOP%2FXqL042hVxqUa0ZA%3D/Speakers?utm_source=owasp-web&utm_medium=event-page&utm_campaign=none)
+- Where: Online
+- Date: 09th June 2022
+
+We usually trust the hand that feeds, but what happens when we can't? How do we run applications when there is little to no trust?
+
+In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack to give us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.
+
+Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll see how Kubernetes can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.
+
+From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
+
+## 2022
+
+### DevSecCon Wales - HackTheBox-athon Workshop 2022
+
+- Type: Workshop
+- Where: [Cardiff, UK](https://www.meetup.com/devseccon-wales/events/285077006/)
+- Date: 13th April 2022
+
+### CNW / AI Wales - The One When We Went To Newport
+
+- Type: Meetup
+- Where: [Newport, UK](https://www.meetup.com/AI-Wales/events/284776918/)
+- Date: 07th Apr 2022
 
 ### KernelCon - The Hand That Feeds: How to Misuse Kubernetes
 
-- Where: [KernelCon 2022](https://kernelcon.org/)
+- Type: Talk
+- Where: [Omaha, USA](https://kernelcon.org/)
 - Date: 02nd April 2022
 
 We usually trust the hand that feeds, but what happens when we can't? How do we run applications when there is little to no trust? In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack to give us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements. Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll see how Kubernetes can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute. From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
 
 ### .NET Beyond - The Hand That Feeds: How to Misuse Kubernetes
 
-- Where: [.NET Beyond 2022](https://tanzu.vmware.com/developer/tv/dotnet-beyond/0012/)
+- Type: Talk
+- Where: [Online](https://tanzu.vmware.com/developer/tv/dotnet-beyond/0012/)
 - Date: 31st March 2022
 
 We usually trust the hand that feeds, but what happens when we can’t trust the hand that feeds us? How do we run applications when there is little to no trust?
@@ -75,7 +118,8 @@ From attending this session, you’ll leave with a Purple Team understanding of 
 
 ### KernelCon - Kubernetes Security: Learn By Hacking
 
-- Where: [KernelCon 2022](https://kernelcon.org/training#k8sec)
+- Type: Workshop
+- Where: [Omaha, USA](https://kernelcon.org/training#k8sec)
 - Date: 30th - 31st March 2022
 
 Understand why many cloud native services have evolved quickly, and often miss vital security considerations, with Hacking Kubernetes, GKE CIS Benchmark, and SANS authors:
@@ -87,31 +131,298 @@ Understand why many cloud native services have evolved quickly, and often miss v
 - Exploit and then secure application deployments via Docker and Kubernetes.
 - Determine how vulnerabilities are exploited and how defences are designed.
 
+### CNW / AI Wales - Spring Awakening
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/AI-Wales/events/283883339/)
+- Date: 03th Mar 2022
+
+### Private Kubernetes Training February 2/2
+
+- Type: Training
+- Where: Online
+- Date: 08th - 09th February 2022
+
+### Private Kubernetes Training February 1/2
+
+- Type: Training
+- Where: Online
+- Date: 02nd - 03rd February 2022
+
+### Private Kubernetes Training January 2022 2/2
+
+- Type: Training
+- Where: Online
+- Date: 26th - 27th January 2022
+
+### Private Kubernetes Training January 2022 1/2
+
+- Type: Training
+- Where: Online
+- Date: 20th - 21st January 2022
+
+### Tanzu Tuesdays - Kubernetes Capture the Flag - Again
+
+- Type: Talk
+- Where: [Online](https://tanzu.vmware.com/developer/tv/tanzu-tuesdays/0080/)
+- Date: 11th January 2022
+
+### Podcast - The KubeCon CTF
+
+- Type: Podcast
+- Where: [cosecast.com](https://cosecast.com/episode-8-kubecon-ctf)
+- Date: 10 January 2022.
+
+In this episode Steve speaks with the Control Plane Kubernetes security training
+gurus, Lewis Denham-Parry and Andy Martin about their brain-child, the KubeCon
+Capture the Flag!
+
+We get into how it began, the community the enables it and the inspiration for
+some of the concepts within its structure and scenes.
+
+Recorded back in June 2021 and long overdue thanks to some editing nightmares,
+this is one to listen to before we meet up for KubeCon 2022.
+
 ## 2021
 
-### Capture The Flag NA 2021
+### Private Kubernetes Training December 2021 2/2
 
-- Where: [Cloud Native Security Conference NA 2021](https://events.linuxfoundation.org/cloud-native-security-conference-north-america/)
+- Type: Training
+- Where: Online
+- Date: 08th - 09th December 2021
+
+### Private Kubernetes Training December 2021 1/2
+
+- Type: Training
+- Where: Online
+- Date: 01st - 02nd December 2021
+
+### Tanzu Tuesdays November 2021 - Kubernetes CTF
+
+- Type: Talk
+- Where: [Online](https://tanzu.vmware.com/developer/tv/tanzu-tuesdays/0075/)
+- Date: 30th November 2021
+
+### BSides London November 2021 - Kubernetes CTF
+
+- Type: CTF
+- Where: [London, UK](https://emamo.com/event/bsideslondon2021/r/speaker/lewis-denham-parry)
+- Date: 12th November 2021
+
+Delve deeper into the dark and mysterious world of Kubernetes security! Exploit a supply chain attack and start your journey deep inside the target infrastructure, exploit your position to hunt and collect the flags, and hopefully learn something new and wryly amusing along the way!
+
+Attendees can play six increasingly beguiling and demanding scenarios to bushwhack their way through the dense jungle of Kubernetes security. Everybody is welcome, from beginner to hardened veteran, as we venture amongst the low-hanging fruits of insecure configuration and scale the lofty peaks of cluster compromise!
+
+### KubeCon Cloud Native Security Conference Day - Capture The Flag NA 2021
+
+- Type: CTF
+- Where: [LA, USA / Online](https://events.linuxfoundation.org/cloud-native-security-conference-north-america/)
 - Date: 12th October 2021
-- Online: [YouTube - Introduction NA 2021](https://youtu.be/Bn_0NjvoDoo)
-- Online: [YouTube - Walkthrough NA 2021](https://youtu.be/phKBYX6Pd_A)
+- Video: [YouTube - Introduction NA 2021](https://youtu.be/Bn_0NjvoDoo)
+- Video: [YouTube - Walkthrough NA 2021](https://youtu.be/phKBYX6Pd_A)
 
 Review of the Capture the Flag event hosted at Cloud Native Security Conference
 NA that was part of KubeCon NA 2021.
 
-### Capture The Flag EU 2021
+### Private Kubernetes Security Training October 2021
 
-- Where: [Cloud Native Security Day EU 2021](https://events.linuxfoundation.org/cloud-native-security-day-europe/)
+- Type: Training
+- Where: Online
+- Date: 04th - 06th October 2021
+
+### Private Kubernetes Training September 2021 2/2
+
+- Type: Training
+- Where: Online
+- Date: 22nd - 23rd September 2021
+
+### Klustered
+
+- Type: Debugging
+- Where: [Online](https://www.youtube.com/watch?v=FClIbQ8hdxY)
+- Date: 16th September 2021
+
+### KCD UK
+
+- Type: Conference
+- Where: [Online](https://community.cncf.io/events/details/cncf-kcd-uk-presents-kubernetes-community-days-uk-2021/)
+- Date: 16th September 2021
+
+### Private Kubernetes Training September 2021 1/2
+
+- Type: Training
+- Where: Online
+- Date: 15th - 16th September 2021
+
+### KCD UK - Kubernetes Threat Modelling Workshop
+
+- Type: Workshop
+- Where: [Online](https://www.eventbrite.co.uk/x/kubernetes-threat-modelling-tickets-169847718097)
+- Date: 13th September 2021
+
+### Private Kubernetes Security Training August 2021
+
+- Type: Training
+- Where: Online
+- Date: 23rd - 25th August 2021
+
+### Cloud Natives UK - with special guest Liz Rice and Andrew Martin
+
+- Type: Meetup
+- Where: [Online](https://www.youtube.com/watch?v=QkoD_GqmC_E)
+- Date: 12th August 2021
+
+### O'Reilly - Kubernetes Threat Modelling August 2021
+
+- Type: Workshop
+- Where: [Online](https://www.oreilly.com/live-events/kubernetes-threat-modeling/0636920055610/0636920055609/)
+- Date: 10th August 2021
+
+### Private Kubernetes Talk August 2021
+
+- Type: Talk
+- Where: Online
+- Date: 03rd August 2021
+
+### Private Kubernetes Training July 2021
+
+- Type: Training
+- Where: Online
+- Date: 21st - 22nd July 2021
+
+### Private Kubernetes Security Training July 2021
+
+- Type: Training
+- Where: Online
+- Date: 12th - 14th July 2021
+
+### Private Kubernetes Talk June 2021
+
+- Type: Talk
+- Where: Online
+- Date: 29th June 2021
+
+### Private Kubernetes Training June 2021 2/2
+
+- Type: Training
+- Where: Online
+- Date: 16th - 17th June 2021
+
+### Private Kubernetes Training June 2021 1/2
+
+- Type: Training
+- Where: Online
+- Date: 09th - 10th June 2021
+
+### Private Kubernetes Training May 2021
+
+- Type: Training
+- Where: Online
+- Date: 10th - 11th May 2021
+
+### Cloud Natives UK - with special guest Justin Garrison
+
+- Type: Training
+- Where: [Online](https://www.youtube.com/watch?v=JqOVC1ZKeBg)
+- Date: 06th May 2021
+
+### KubeCon Cloud Native Security Day - Capture The Flag EU 2021
+
+- Type: CTF
+- Where: [Online](https://events.linuxfoundation.org/cloud-native-security-day-europe/)
 - Date: 4th May 2021
-- Online: [YouTube - Capture the Flag overview](https://youtu.be/Bn_0NjvoDoo)
-- Online: [YouTube - Capture The Flag Summary + Wrap UpVirtual](https://youtu.be/phKBYX6Pd_A)
+- Video: [YouTube - Capture the Flag overview](https://youtu.be/Bn_0NjvoDoo)
+- Video: [YouTube - Capture The Flag Summary + Wrap UpVirtual](https://youtu.be/phKBYX6Pd_A)
 
 Review of the Capture the Flag event hosted at Cloud Native Security Day EU
 that was part of KubeCon EU 2021.
 
-### What vulnerabilities? Live hacking of Containers and Orchestrators
+### Cloud Natives UK - with special guest Dan "Pop" Papandrea
 
-- Where: [NDC Oslo](https://ndcoslo.com/)
+- Type: Training
+- Where: [Online](https://www.youtube.com/watch?v=EVPjtUuMeMQ)
+- Date: 25th March 2021
+
+## 2020
+
+### Cloud Native Wales Meetup v2.0.2
+
+- Type: Meetup
+- Where: [Online](https://www.meetup.com/cloudnativewales/events/274550490/)
+- Date: 16 Nov 2020
+
+### Cloud Native Wales Meetup v2.0.1
+
+- Type: Meetup
+- Where: [Online](https://www.meetup.com/cloudnativewales/events/273116205/)
+- Date: 29th Sept 2020
+
+### Cloud Native Wales Meetup v2.0.0-alpha
+
+- Type: Meetup
+- Where: [Online](https://www.meetup.com/cloudnativewales/events/269794188/)
+- Date: 09th Apr 2020
+
+### Cloud Native Wales Meetup v1.8.0
+
+- Type: Meetup
+- Where: [Online](https://www.meetup.com/cloudnativewales/events/269166136/)
+- Date: 12th Mar 2020
+
+### Cloud Native Wales Meetup v1.7.0
+
+- Type: Meetup
+- Where: [Online](https://www.meetup.com/cloudnativewales/events/268445986/)
+- Date: 13th Feb 2020
+
+### PubConf London 2020 - You've Just Lost The Game
+
+- Type: Talk
+- Where: [London, UK](https://pubconf.io/events/2020/london/)
+- Date: 31st January 2020
+
+## 2019
+
+### CNW / AI Wales: Christmas Social
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/AI-Wales/events/266825245/)
+- Date: 18th Dec 2019
+
+### Cloud Native Wales Meetup v1.6.0
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/266266702/)
+- Date: 14th Nov 2019
+
+### Cloud Native Wales Meetup v1.5.0
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/266266702/)
+- Date: 10th Oct 2019
+
+### Cloud Native Wales Meetup v1.4.0
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/266266702/)
+- Date: 12th Sept 2019
+
+### KCDC - What vulnerabilities? Live hacking of Containers and Orchestrators
+
+- Type: Talk
+- Where: [Kansas City, USA](https://kcdc2019.myconf.app/session/ses-134099)
+- Date: 19th July 2019
+
+### Cloud Native Wales Meetup v1.2.0
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/csxbwqyzkbpb/)
+- Date: 04th Jul 2019
+
+### NDC Oslo - What vulnerabilities? Live hacking of Containers and Orchestrators
+
+- Type: Talk
+- Where: [Oslo, Norway](https://ndcoslo.com/)
 - Date: 20th June 2019
 - Online: [YouTube](https://www.youtube.com/watch?v=JaMJJTb_bEE)
 
@@ -128,13 +439,35 @@ happening.
 We'll discuss developing best practices, implement security policies and how
 best to monitor your services to put preventative measures in place.
 
----
+### Cloud Native Wales Meetup v1.1.0
 
-### How we contributed to the community with no code
+- Type: Meetup
+- Where: [Meetup](https://www.meetup.com/cloudnativewales/events/csxbwqyzjbrb/)
+- Date: 13th Jun 2019
 
+### BlueConf - Contributing With No Code
+
+- Type: Lightning Talks
+- Where: [BlueConf](https://blueconf.co.uk/)
+- Date 08th Jun 2019
+
+### BlueConf - WTF is Cloud Native
+
+- Type: Talk
+- Where: [Cardiff, UK](https://blueconf.co.uk/)
+- Date 08th Jun 2019
+
+### µCon London 2019 - How do we become Cloud Native?
+
+- Type: Talk
+- Where: [London, UK](https://skillsmatter.com/conferences/11982-con-london-2019-the-conference-on-microservices-ddd-and-software-architecture#program)
+
+### KubeCon EU - How we contributed to the community with no code
+
+- Type: Lightning Talk
 - Where: [KubeCon CloudNative Europe / Barcelona](https://events.linuxfoundation.org/events/kubecon-cloudnativecon-europe-2019)
-- Date: 10th May 2019
-- Online: [YouTube](https://www.youtube.com/watch?v=4jEASYCaVDo)
+- Date: 19th May 2019
+- Online: [Barcelona, Spain](https://www.youtube.com/watch?v=4jEASYCaVDo)
 
 This time last year, two people from Wales, United Kingdom decried to bring the
 CNCF to their doorstep.
@@ -152,21 +485,69 @@ This talk will inspire you to take the chance to branch the CNCF and build a
 community closer to home, help others learn, share and contribute to the world
 wide community.
 
----
+### Cloud Native Wales Meetup v1.0.0
 
-### Shaun of the Dev
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/csxbwqyzhbmb/)
+- Date: 09th May 2019
 
-- Where: [PubConf](https://pubconf.io)
+### PubConf Minnesota 2019 - Captain Planet: Not the Hero We Want or Need
+
+- Type: Talk
+- Where: [Minnesota, USA](https://pubconf.io/events/2019/minnesota/)
+- Date: 08th May 2019
+
+### NDC Minnesota 2019 - Scaling Microservices with Message Queues, DotNet Core and Kubernetes
+
+- Type: Talk
+- Where: [Minnesota, USA](https://ndcminnesota.com/)
+- Date: 07th May 2019
+
+### Cloud Native Wales Meetup v0.12.0
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/csxbwqyzgbpb/)
+- Date: 11th Apr 2019
+
+### Docker London: State of the Union Address
+
+- Type: Meetup
+- Where: [London, UK](https://www.meetup.com/Docker-London/events/257931060/)
+- Date: 27th Mar 2019
+
+### Cloud Native Wales Meetup v0.11.0
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyzfbsb/)
+- Date: 14th Mar 2019
+
+### Podcast - CTO and Co-Founder Talk with Dave Albert
+
+- Type: Podcast
+- Where: [player.fm](https://player.fm/series/cto-and-co-founder-talk-with-dave-albert/guest-lewis-denham-parry)
+- Date: 12th March 2019.
+
+Find out the parallels of mental health to monoliths versus microservices!
+
+### Cloud Native Wales Meetup v0.10.0
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyzdbsb/)
+- Date: 07th Feb 2019
+
+### PubConf London 2019 - Shaun of the Dev
+
+- Type: Talk
+- Where: [London, UK](https://pubconf.io)
 - Date: 1st February 2019
 - Online [YouTube](https://www.youtube.com/watch?v=9NEGZQ3rRQ4)
 
 Rapid-fire funny talks, musical acts, and comedy stunts from amazing developers.
 
----
+### NDC London 2019 - Scaling Microservices with Message queues, .NET and Kubernetes
 
-### Scaling microservices with Message queues, .NET and Kubernetes
-
-- Where: [NDC London](https://ndc-london.com)
+- Type: Talk
+- Where: [London, UK](https://ndc-london.com)
 - Date:  30th January 2019
 - Online: [YouTube](https://www.youtube.com/watch?v=si44LvcgXwU)
 
@@ -183,13 +564,31 @@ applications to Kubernetes & decouple several components using a message broker.
 You will also learn how to set autoscaling rules to cope with an increasing
 influx of messages in the queue.
 
----
+### Cloud Native Wales Meetup v0.9.0
 
-### One Monolith / One Macroservice / Many Microservices
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyzdbsb/)
+- Date: 10th Jan 2019
 
-- Where: [µCon London 2018 - The Microservices Conference](https://skillsmatter.com/conferences/10336-mucon-london-2018-the-microservices-conference#skillscasts)
-- Date:  5th November 2018
-- Online: [SkillsMatter](https://skillsmatter.com/skillscasts/12964-one-monolith-one-macroservice-many-microservices)
+## 2018
+
+### Cloud Native Wales Meetup v0.8.0
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxqbrb/)
+- Date: 12th Dec 2018
+
+### Cloud Native Wales Meetup v0.7.0
+
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxpblb/)
+- Date: 08th Nov 2018
+
+### µCon London 2018 - One Monolith / One Macroservice / Many Microservices
+
+- Type: Talk
+- Where: [London, UK](https://skillsmatter.com/conferences/10336-mucon-london-2018-the-microservices-conference#skillscasts)
+- Date: 05th November 2018
 
 From working with a number of companies, the only constant is seeing that each
 company has their own way of migrating from a monolith to a microservice
@@ -198,42 +597,47 @@ share with you the idea of embracing your monolith and making it a macroservice.
 He’ll explore the benefits of this approach from both a technical and business
 perspective, and plan how to convert this macroserivce into microservices.
 
----
+### Cloud Native Wales Meetup v0.6.0
 
-### Tutorial: Use Kubernetes to Deploy .NET Applications
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxnbpb/)
+- Date: 11th Oct 2018
 
-- Where: [ProgNET London 2018](https://skillsmatter.com/conferences/10107-prognet-london-2018#skillscasts).
+### Cloud Native Wales Meetup v0.5.0
+
+- Type: Meetup
+- Where: [Meetup](https://www.meetup.com/cloudnativewales/events/lxwbppyxmbrb/)
+- Date: 13th Sept 2018
+
+### ProgNet London 2018 - Use Kubernetes to Deploy .NET Applications
+
+- Type: Workshop
+- Where: [London, UK](https://skillsmatter.com/conferences/10107-prognet-london-2018#skillscasts).
 - Date:  12th September 2018.
 
 With the explosive momentum of Docker, Kubernetes has become the de-facto
 standard for orchestrating and managing containerised apps in production.
 
----
+### Cloud Native Wales Meetup v0.4.0
 
-## Podcast
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxlbmb/)
+- Date: 09th Aug 2018
 
-### The KubeCon CTF
+### Cloud Native Wales Meetup v0.3.0
 
-Date: 10 January 2022.
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxkbqb/)
+- Date: 05th Jul 2018
 
-In this episode Steve speaks with the Control Plane Kubernetes security training
-gurus, Lewis Denham-Parry and Andy Martin about their brain-child, the KubeCon
-Capture the Flag!
+### Cloud Native Wales Meetup v0.2.0
 
-We get into how it began, the community the enables it and the inspiration for
-some of the concepts within its structure and scenes.
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxjbsb/)
+- Date: 20th Jun 2018
 
-Recorded back in June 2021 and long overdue thanks to some editing nightmares,
-this is one to listen to before we  meet up for KubeCon 2022 #optimistic  
+### Cloud Native Wales Meetup v0.1.0
 
-Podcast: [cosecast.com](https://cosecast.com/episode-8-kubecon-ctf)
-
-### CTO and Co-Founder Talk with Dave Albert
-
-- Date: 12th March 2019.
-
-Find out the parallels of mental health to monoliths versus microservices!
-
-Podcast: [player.fm](https://player.fm/series/cto-and-co-founder-talk-with-dave-albert/guest-lewis-denham-parry)
-
----
+- Type: Meetup
+- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxhbnb/)
+- Date: 10th May 2018
