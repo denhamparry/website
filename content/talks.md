@@ -44,12 +44,6 @@ In this workshop, you will:
 
 By the end of the workshop, you will be able to hold your head high and say that you can work with a Kubernetes cluster and be ready for your next Cloud Native adventure!
 
-### PubConf London 2022 - TBC
-
-- Type: Talk
-- Where: [London, UK](https://pubconf.io/events/2022/london/)
-- Date: 13th May 2022
-
 ### CNW / AI Wales - ML: From Model to Microservice
 
 - Type: Meetup
@@ -65,7 +59,7 @@ By the end of the workshop, you will be able to hold your head high and say that
 
 Cloud native container and Kubernetes systems bring new threats and risks to our precious workloads. As cloud technologies undergo rapid innovation and new tools and techniques emerge, security can get left behind. The answer to this conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on threat modelling cloud native systems, understanding adversarial techniques and preventative measures, and helping security and engineering teams increase the security and velocity of system delivery.
 
-### OWASP AppSec EU  -The Hand That Feeds - How to Misuse Kubernetes
+### OWASP AppSec EU - The Hand That Feeds - How to Misuse Kubernetes
 
 - Type: Talk
 - Link: [Online](https://whova.com/web/sT1P4N7cLm%2FUyeUd0yq6HLfmBOP%2FXqL042hVxqUa0ZA%3D/Speakers?utm_source=owasp-web&utm_medium=event-page&utm_campaign=none)
@@ -79,6 +73,38 @@ In this session, we're going to start by taking a look at attack paths in and ar
 Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll see how Kubernetes can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.
 
 From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
+
+### KCDC 2022 - The Hand That Feeds - How to Misuse Kubernetes
+
+- Type: Talk
+- Where: [Kansas City, USA](https://www.kcdc.info/sessions)
+- Date: 08-10th August 2022
+
+We usually trust the hand that feeds, but what happens when we can't trust the hand that feeds us? How do we run applications when there is little to no trust?
+
+In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack giving us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.
+
+Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this up as a Blue Team. What do we have available from Kubernetes that can mitigate some of this disaster, and what practices should we put in place to further strengthen and defend our compute.
+
+From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
+
+### KCDC 2022 - The Lost Art Of Keeping A Secret
+
+- Type: Talk
+- Where: [Kansas City, USA](https://www.kcdc.info/sessions)
+- Date: 08-10th August 2022
+
+One thing that L**** has noticed recently is that with all the advances that we have in technology, we still appear to have problems in keeping secrets to ourselves.
+
+In this talk, *E*** will introduce the core concepts of secrets. We look at an overview as to how best we can manage secrets, from creating them to using them in our applications.
+
+**W** will then look at the actors involved, the role of a developer consuming a secret, an engineer providing and defending them to an attacker on the lookout for some more data.
+
+***I* will then look at ways that we can manage secrets over many environments, from development to production. Finally, we check what to do when our secrets aren't so secret anymore.
+
+Finally, ****S will finish with case studies of where security first has won and the instances where the secrets have been given away.
+
+This talk will focus on the implementation of secrets based on cloud technologies, but the core concepts can be used within any system and the best practices that should be followed to give you a fighting chance to keep it to yourself.
 
 ## 2022
 
