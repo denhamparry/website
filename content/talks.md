@@ -26,6 +26,43 @@ menu:
 
 ## Coming Up
 
+### OWASP AppSec EU  -The Hand That Feeds - How to Misuse Kubernetes
+
+- Type: Talk
+- Link: [Online](https://whova.com/web/sT1P4N7cLm%2FUyeUd0yq6HLfmBOP%2FXqL042hVxqUa0ZA%3D/Speakers?utm_source=owasp-web&utm_medium=event-page&utm_campaign=none)
+- Where: Online
+- Date: 09th June 2022
+
+We usually trust the hand that feeds, but what happens when we can't? How do we run applications when there is little to no trust?
+
+In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack to give us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.
+
+Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll see how Kubernetes can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.
+
+From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
+
+## 2022
+
+### KubeCon EU 2022 - Threat Modelling Kubernetes: A Lightspeed Introduction
+
+- Type: Talk
+- Link: [Valencia, Spain](https://sched.co/ytqj)
+- Where: Feria Valencia, Valencia, Spain
+- Date: 19th May 2022
+
+Cloud native container and Kubernetes systems bring new threats and risks to our precious workloads. As cloud technologies undergo rapid innovation and new tools and techniques emerge, security can get left behind. The answer to this conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on threat modelling cloud native systems, understanding adversarial techniques and preventative measures, and helping security and engineering teams increase the security and velocity of system delivery.
+
+### CloudNative SecurityCon Europe 2022 - CTF Overview and Experience
+
+- Type: Talk
+- Video: [https://youtu.be/YVlQS90SdaA]
+- Where: Feria Valencia, Valencia, Spain
+- Date: 16th May 2022
+
+Prepare yourself for tomorrow's CTF event with a warm-up session based on introductory SecurityCon CTF events. All experience levels are welcome!
+
+Learn how to engage with confounding container breakouts, confusing Kubernetes misconfigurations, and the art of engaging with CTF events to prepare yourself for the high-flying no-holds-barred super-inverted gravity-defying capture the flag event at SecurityCon tomorrow!
+
 ### NDC London 2022 - An Introduction to Kubernetes
 
 - Type: Workshop
@@ -43,44 +80,6 @@ In this workshop, you will:
 - some common mistakes that you can avoid
 
 By the end of the workshop, you will be able to hold your head high and say that you can work with a Kubernetes cluster and be ready for your next Cloud Native adventure!
-
-### PubConf London 2022 - TBC
-
-- Type: Talk
-- Where: [London, UK](https://pubconf.io/events/2022/london/)
-- Date: 13th May 2022
-
-### CNW / AI Wales - ML: From Model to Microservice
-
-- Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/AI-Wales/events/285372201/)
-- Date: 12th May 2022
-
-### KubeCon EU 2022 - Threat Modelling Kubernetes: A Lightspeed Introduction
-
-- Type: Talk
-- Link: [Valencia, Spain](https://sched.co/ytqj)
-- Where: Feria Valencia, Valencia, Spain
-- Date: 19th May 2022
-
-Cloud native container and Kubernetes systems bring new threats and risks to our precious workloads. As cloud technologies undergo rapid innovation and new tools and techniques emerge, security can get left behind. The answer to this conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on threat modelling cloud native systems, understanding adversarial techniques and preventative measures, and helping security and engineering teams increase the security and velocity of system delivery.
-
-### OWASP AppSec EU  -The Hand That Feeds - How to Misuse Kubernetes
-
-- Type: Talk
-- Link: [Online](https://whova.com/web/sT1P4N7cLm%2FUyeUd0yq6HLfmBOP%2FXqL042hVxqUa0ZA%3D/Speakers?utm_source=owasp-web&utm_medium=event-page&utm_campaign=none)
-- Where: Online
-- Date: 09th June 2022
-
-We usually trust the hand that feeds, but what happens when we can't? How do we run applications when there is little to no trust?
-
-In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack to give us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.
-
-Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll see how Kubernetes can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.
-
-From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
-
-## 2022
 
 ### DevSecCon Wales - HackTheBox-athon Workshop 2022
 
