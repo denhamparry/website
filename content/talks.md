@@ -26,12 +26,6 @@ menu:
 
 ## Coming Up
 
-### CNW / AI Wales - ML: From Model to Microservice
-
-- Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/AI-Wales/events/285372201/)
-- Date: 12th May 2022
-
 ### KubeCon EU 2022 - Threat Modelling Kubernetes: A Lightspeed Introduction
 
 - Type: Talk
