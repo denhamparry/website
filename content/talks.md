@@ -26,15 +26,6 @@ menu:
 
 ## Coming Up
 
-### KubeCon EU 2022 - Threat Modelling Kubernetes: A Lightspeed Introduction
-
-- Type: Talk
-- Link: [Valencia, Spain](https://sched.co/ytqj)
-- Where: Feria Valencia, Valencia, Spain
-- Date: 19th May 2022
-
-Cloud native container and Kubernetes systems bring new threats and risks to our precious workloads. As cloud technologies undergo rapid innovation and new tools and techniques emerge, security can get left behind. The answer to this conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on threat modelling cloud native systems, understanding adversarial techniques and preventative measures, and helping security and engineering teams increase the security and velocity of system delivery.
-
 ### OWASP AppSec EU - The Hand That Feeds - How to Misuse Kubernetes
 
 - Type: Talk
@@ -83,6 +74,15 @@ Finally, `****S` will finish with case studies of where security first has won a
 This talk will focus on the implementation of secrets based on cloud technologies, but the core concepts can be used within any system and the best practices that should be followed to give you a fighting chance to keep it to yourself.
 
 ## 2022
+
+### KubeCon EU 2022 - Threat Modelling Kubernetes: A Lightspeed Introduction
+
+- Type: Talk
+- Video: [KubeCon Platform (registration required)](https://kubecon-cloudnativecon-europe.com/) (YouTube available from 06th June 2022)
+- Where: Feria Valencia, Valencia, Spain
+- Date: 19th May 2022
+
+Cloud native container and Kubernetes systems bring new threats and risks to our precious workloads. As cloud technologies undergo rapid innovation and new tools and techniques emerge, security can get left behind. The answer to this conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on threat modelling cloud native systems, understanding adversarial techniques and preventative measures, and helping security and engineering teams increase the security and velocity of system delivery.
 
 ### Cloud Native Security Days EU 2022 - CTF Overview and Experience
 
