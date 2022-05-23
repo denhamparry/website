@@ -26,24 +26,6 @@ menu:
 
 ## Coming Up
 
-### NDC London 2022 - An Introduction to Kubernetes
-
-- Type: Workshop
-- Link: [London, UK](https://ndclondon.com/agenda/an-introduction-to-kubernetes-part-i-02zg/0vh9oah807o)
-- Where: Queen Elizabeth II Centre, London
-- Date: 09th May 2022
-
-In this workshop, we're going to introduce you to the orchestrator formally known as Kubernetes. This isn't about why or if you should be using it, more of I need to work with a Kubernetes cluster and how do I connect to it and get it to work for me.
-
-In this workshop, you will:
-
-- have your very own cluster already setup and show you how to connect to it from your own machine
-- understand how we run our workloads and how to update them
-- how do we load balancer our workloads and make them available to others on the internet
-- some common mistakes that you can avoid
-
-By the end of the workshop, you will be able to hold your head high and say that you can work with a Kubernetes cluster and be ready for your next Cloud Native adventure!
-
 ### CNW / AI Wales - ML: From Model to Microservice
 
 - Type: Meetup
@@ -94,19 +76,37 @@ From attending this session, you'll leave with a Purple Team understanding of co
 - Where: [Kansas City, USA](https://www.kcdc.info/sessions)
 - Date: 08-10th August 2022
 
-One thing that L**** has noticed recently is that with all the advances that we have in technology, we still appear to have problems in keeping secrets to ourselves.
+One thing that `L****` has noticed recently is that with all the advances that we have in technology, we still appear to have problems in keeping secrets to ourselves.
 
-In this talk, *E*** will introduce the core concepts of secrets. We look at an overview as to how best we can manage secrets, from creating them to using them in our applications.
+In this talk, `*E***` will introduce the core concepts of secrets. We look at an overview as to how best we can manage secrets, from creating them to using them in our applications.
 
-**W** will then look at the actors involved, the role of a developer consuming a secret, an engineer providing and defending them to an attacker on the lookout for some more data.
+`**W**` will then look at the actors involved, the role of a developer consuming a secret, an engineer providing and defending them to an attacker on the lookout for some more data.
 
-***I* will then look at ways that we can manage secrets over many environments, from development to production. Finally, we check what to do when our secrets aren't so secret anymore.
+`***I*` will then look at ways that we can manage secrets over many environments, from development to production. Finally, we check what to do when our secrets aren't so secret anymore.
 
-Finally, ****S will finish with case studies of where security first has won and the instances where the secrets have been given away.
+Finally, `****S` will finish with case studies of where security first has won and the instances where the secrets have been given away.
 
 This talk will focus on the implementation of secrets based on cloud technologies, but the core concepts can be used within any system and the best practices that should be followed to give you a fighting chance to keep it to yourself.
 
 ## 2022
+
+### NDC London 2022 - An Introduction to Kubernetes
+
+- Type: Workshop
+- Link: [London, UK](https://ndclondon.com/agenda/an-introduction-to-kubernetes-part-i-02zg/0vh9oah807o)
+- Where: Queen Elizabeth II Centre, London
+- Date: 09th May 2022
+
+In this workshop, we're going to introduce you to the orchestrator formally known as Kubernetes. This isn't about why or if you should be using it, more of I need to work with a Kubernetes cluster and how do I connect to it and get it to work for me.
+
+In this workshop, you will:
+
+- have your very own cluster already setup and show you how to connect to it from your own machine
+- understand how we run our workloads and how to update them
+- how do we load balancer our workloads and make them available to others on the internet
+- some common mistakes that you can avoid
+
+By the end of the workshop, you will be able to hold your head high and say that you can work with a Kubernetes cluster and be ready for your next Cloud Native adventure!
 
 ### DevSecCon Wales - HackTheBox-athon Workshop 2022
 
