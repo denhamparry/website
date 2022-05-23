@@ -84,6 +84,18 @@ This talk will focus on the implementation of secrets based on cloud technologie
 
 ## 2022
 
+### Cloud Native Security Days EU 2022 - CTF Overview and Experience
+
+- Type: Talk / CTF
+- Video: [YouTube](https://youtu.be/YVlQS90SdaA)
+- Video: [YouTube: Closing Notes](https://youtu.be/93FdQUjzqow?t=490)
+- Where: Feria Valencia, Valencia, Spain
+- Date: 16th May 2022
+
+Prepare yourself for tomorrow's CTF event with a warm-up session based on introductory SecurityCon CTF events. All experience levels are welcome!
+
+Learn how to engage with confounding container breakouts, confusing Kubernetes misconfigurations, and the art of engaging with CTF events to prepare yourself for the high-flying no-holds-barred super-inverted gravity-defying capture the flag event at SecurityCon tomorrow!
+
 ### NDC London 2022 - An Introduction to Kubernetes
 
 - Type: Workshop
