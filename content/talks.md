@@ -86,7 +86,7 @@ This talk will focus on the implementation of secrets based on cloud technologie
 ### KubeCon EU 2022 - Threat Modelling Kubernetes: A Lightspeed Introduction
 
 - Type: Talk
-- Video: [KubeCon Platform (registration required)](https://kubecon-cloudnativecon-europe.com/) (YouTube available from 06th June 2022)
+- Video: [YouTube](https://youtu.be/gkXoYFKqQkE)
 - Where: Feria Valencia, Valencia, Spain
 - Date: 19th May 2022
 
