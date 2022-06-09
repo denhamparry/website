@@ -26,21 +26,6 @@ menu:
 
 ## Coming Up
 
-### OWASP AppSec EU - The Hand That Feeds - How to Misuse Kubernetes
-
-- Type: Talk
-- Link: [Online](https://whova.com/web/sT1P4N7cLm%2FUyeUd0yq6HLfmBOP%2FXqL042hVxqUa0ZA%3D/Speakers?utm_source=owasp-web&utm_medium=event-page&utm_campaign=none)
-- Where: Online
-- Date: 09th June 2022
-
-We usually trust the hand that feeds, but what happens when we can't? How do we run applications when there is little to no trust?
-
-In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack to give us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.
-
-Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll see how Kubernetes can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.
-
-From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
-
 ### DevSecCon24 - Threat Modelling Kubernetes: A Lightspeed Introduction
 
 - Type: Talk
@@ -96,6 +81,21 @@ Once we have your attention from seeing how this could be someone's worst day, w
 From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
 
 ## 2022
+
+### OWASP AppSec EU - The Hand That Feeds - How to Misuse Kubernetes
+
+- Type: Talk
+- Link: [Online](https://whova.com/web/sT1P4N7cLm%2FUyeUd0yq6HLfmBOP%2FXqL042hVxqUa0ZA%3D/Speakers?utm_source=owasp-web&utm_medium=event-page&utm_campaign=none)
+- Where: Online
+- Date: 09th June 2022
+
+We usually trust the hand that feeds, but what happens when we can't? How do we run applications when there is little to no trust?
+
+In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack to give us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.
+
+Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll see how Kubernetes can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.
+
+From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
 
 ### KubeCon EU 2022 - Threat Modelling Kubernetes: A Lightspeed Introduction
 
