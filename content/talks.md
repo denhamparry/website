@@ -26,14 +26,6 @@ menu:
 
 ## Coming Up
 
-### DevSecCon24 - Threat Modelling Kubernetes: A Lightspeed Introduction
-
-- Type: Talk
-- Where: [Online](https://www.meetup.com/devseccon-wales/events/286041178/)
-- Date: 14th June 2022
-
-Cloud native container and Kubernetes systems bring new threats and risks to our precious workloads. As cloud technologies undergo rapid innovation and new tools and techniques emerge, security can get left behind. The answer to this conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on threat modelling cloud native systems, understanding adversarial techniques and preventative measures, and helping security and engineering teams increase the security and velocity of system delivery.
-
 ### KCDC 2022 - The Hand That Feeds - How to Misuse Kubernetes
 
 - Type: Talk
@@ -81,6 +73,14 @@ Once we have your attention from seeing how this could be someone's worst day, w
 From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
 
 ## 2022
+
+### DevSecCon24 - Threat Modelling Kubernetes: A Lightspeed Introduction
+
+- Type: Talk
+- Where: [Online](https://www.meetup.com/devseccon-wales/events/286041178/)
+- Date: 14th June 2022
+
+Cloud native container and Kubernetes systems bring new threats and risks to our precious workloads. As cloud technologies undergo rapid innovation and new tools and techniques emerge, security can get left behind. The answer to this conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on threat modelling cloud native systems, understanding adversarial techniques and preventative measures, and helping security and engineering teams increase the security and velocity of system delivery.
 
 ### OWASP AppSec EU - The Hand That Feeds - How to Misuse Kubernetes
 
