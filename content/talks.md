@@ -26,9 +26,25 @@ menu:
 
 ## Coming Up
 
-### KubeCon NA 2022
+### KubeCon NA 2022 - 
 
-- To follow
+- Type: Talk
+- Where: [Detroit, USA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/)
+- Date: 26-28th October 2022
+
+Threat actors have always been looking to attack clusters. Do you have the right security in place to detect and defeat if they are targeting yours? Or they are already in?
+
+Kubernetes has become the de facto cloud operating system and production environments have increased in maturity. So have the threats.
+
+Security Teams don’t necessarily have the expertise to detect state-of-art attack scenarios specific to cloud-native environments, like Kubernetes.
+
+So, where do they get started? Capture-The-Flag (CTF) events are a great way to learn about the techniques of both attack (Red Team) and defence (Blue Team).
+
+This talk will give you a framework for your own internal CTF events, with Red and Blue Team assessments, as a best practice for improving security in your organisation.
+
+We'll give a hands-on, live walkthrough of the top 3 state-of-art attack scenarios as CTF exercises using common open source projects like Simulator and Tetragon.
+
+Remember, the best way to learn how to detect is to first know how to attack!
 
 ## 2022
 
