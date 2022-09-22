@@ -3,6 +3,6 @@ spec:
     - keyless:
         identities:
           - issuer: https://accounts.google.com
-          - subjectRegExp: .*@chainguard.dev$
+          - subjectRegExp: .*@dnehamparry.co.uk$
     - key:
         kms: https://github.com/web-flow.gpg

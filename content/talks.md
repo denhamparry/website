@@ -26,6 +26,28 @@ menu:
 
 ## Coming Up
 
+### KubeCon NA 2022 - 
+
+- Type: Talk
+- Where: [Detroit, USA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/)
+- Date: 26-28th October 2022
+
+Threat actors have always been looking to attack clusters. Do you have the right security in place to detect and defeat if they are targeting yours? Or they are already in?
+
+Kubernetes has become the de facto cloud operating system and production environments have increased in maturity. So have the threats.
+
+Security Teams don’t necessarily have the expertise to detect state-of-art attack scenarios specific to cloud-native environments, like Kubernetes.
+
+So, where do they get started? Capture-The-Flag (CTF) events are a great way to learn about the techniques of both attack (Red Team) and defence (Blue Team).
+
+This talk will give you a framework for your own internal CTF events, with Red and Blue Team assessments, as a best practice for improving security in your organisation.
+
+We'll give a hands-on, live walkthrough of the top 3 state-of-art attack scenarios as CTF exercises using common open source projects like Simulator and Tetragon.
+
+Remember, the best way to learn how to detect is to first know how to attack!
+
+## 2022
+
 ### KCDC 2022 - The Hand That Feeds - How to Misuse Kubernetes
 
 - Type: Talk
@@ -57,22 +79,6 @@ In this talk, `*E***` will introduce the core concepts of secrets. We look at an
 Finally, `****S` will finish with case studies of where security first has won and the instances where the secrets have been given away.
 
 This talk will focus on the implementation of secrets based on cloud technologies, but the core concepts can be used within any system and the best practices that should be followed to give you a fighting chance to keep it to yourself.
-
-### NDC Oslo - The Hand That Feeds - How to Misuse Kubernetes
-
-- Type: Talk
-- Where: [Oslo, Norway](https://ndcoslo.com/agenda/the-hand-that-feeds-how-to-misuse-kubernetes-0ugs/0iiv5pa9n3t)
-- Date: 28-30th September 2022
-
-We usually trust the hand that feeds, but what happens when we can't trust the hand that feeds us? How do we run applications when there is little to no trust?
-
-In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack giving us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.
-
-Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this up as a Blue Team. What do we have available from Kubernetes that can mitigate some of this disaster, and what practices should we put in place to further strengthen and defend our compute.
-
-From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
-
-## 2022
 
 ### DevSecCon24 - Threat Modelling Kubernetes: A Lightspeed Introduction
 
