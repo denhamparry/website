@@ -1,12 +1,8 @@
 spec:
   authorities:
     - keyless:
-        url: https://fulcio.sigstore.dev
         identities:
-          - subjectRegExp: .*+@denhamparry.co.uk$
-            issuer: https://accounts.google.com
-      ctlog:
-        url: https://rekor.sigstore.dev
+          - issuer: https://accounts.google.com
+          - subjectRegExp: .*@dnehamparry.co.uk$
     - key:
-        # Allow commits signed by GitHub.
         kms: https://github.com/web-flow.gpg
