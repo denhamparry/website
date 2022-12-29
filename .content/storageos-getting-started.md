@@ -66,8 +66,8 @@ $ export STORAGEOS_USERNAME=storageos STORAGEOS_PASSWORD=storageos STORAGEOS_HOS
 ```
 ### Setup the Cluster
 >StorageOS nodes need to know the exact cluster size and peers to connect to during start up. This enables nodes to contact each other over the network.
- 
-* Specify the expected size of the cluster (3 ,5 or 7) using the StorageOS CLI: 
+
+* Specify the expected size of the cluster (3 ,5 or 7) using the StorageOS CLI:
 ```bash
 CLUSTER_ID=$(storageos cluster create --size 3)
 ```
@@ -165,7 +165,7 @@ $ docker run -it --volume-driver storageos --volume myvol:/data busybox sh
 ```bash
 $ ls /data
 ```
-* you should see lost+found, because StorageOS volumes are automatically formatted with a filesystem on creation. 
+* you should see lost+found, because StorageOS volumes are automatically formatted with a filesystem on creation.
 * Write data into a file:
 ```bash
 $ echo "I'm writing some data to a StorageOS volume" > /data/myfile
@@ -191,7 +191,7 @@ $ storageos volume unmount default/myvol
 ```bash
 $ docker run -it --volume-driver storageos --volume myvol:/data busybox sh
 ```
-* Check the container can see myfile: 
+* Check the container can see myfile:
 ```bash
 $ cat /data/myfile
 ```

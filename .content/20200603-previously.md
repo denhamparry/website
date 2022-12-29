@@ -37,7 +37,7 @@ Looking back, these are the challenges that I had and looked to resolve.  I'll l
 
 - From attending training sessions to supporting them and eventually leading them
 - Tips and tricks for attending workshops to get the most out of them
-- Tips and tricks to presenting a workshops, whether its at work during lunch, meetup, conference, or paid for private workshop 
+- Tips and tricks to presenting a workshops, whether its at work during lunch, meetup, conference, or paid for private workshop
 - Best ways to learn
 
 ### Cloud Native Wales

@@ -23,7 +23,7 @@ Within some companies, proxies are rife.  Regardless how you feel about them you
 This happened with me and Firefox.  Setting up a new machine at a new contract, all the other browsers work fine except for Firefox.  After recently listening to a talk about invalid certificates I realised that this was the issue when trying to load any secure website.
 
 To resolve, you need to add the certificate to within the Certificate Authorities within Firefox. **Be aware, bad things could possibly happen if you register a bad certificate.  Only do this if you personally trust the certificate source**  These are the steps I took to resolve the issue:
- 
+
 * Go to *Settings > Options > Advanced  > Certificates > View Certificates*
 * Click *Servers > Add Exception*
 * Go to a HTTPS url (e.g. [https://addons.cdn.mozilla.net](https://addons.cdn.mozilla.net))

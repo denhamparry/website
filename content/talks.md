@@ -26,7 +26,7 @@ menu:
 
 ## Coming Up
 
-### KubeCon NA 2022 - 
+### KubeCon NA 2022 -
 
 - Type: Talk
 - Where: [Detroit, USA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/)

@@ -48,7 +48,7 @@ $ sudo raspi-config
 ```
 
 * Open the **Raspberry Pi Configuration Tool**.
-* Select **Network Options** > **Hostname**. 
+* Select **Network Options** > **Hostname**.
 * Change the hostname (e.g. k8s-master-1)
 
 ### Enable SSH
@@ -179,6 +179,6 @@ $ sudo apt-get dist-upgrade
 
 > Continue to [Part 2](https://denhamparry.co.uk/setting-up-kubernetes-on-raspberry-pis-part-2/)
 
-## References 
+## References
 
 * [Updating Raspberry Pi](https://www.raspberrypi.org/documentation/raspbian/updating.md)

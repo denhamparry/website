@@ -22,4 +22,3 @@ $ hugo new posts/my-first-post.md
 ### Theme
 
 - [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod)
-

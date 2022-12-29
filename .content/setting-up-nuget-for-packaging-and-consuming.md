@@ -169,7 +169,7 @@ A copy of the *nuspc.xsd* file can be found [here](https://github.com/NuGet/NuGe
 
 ### Version Definitions
 
-The convention for version definitions is as follows: 
+The convention for version definitions is as follows:
 
 **Major.Minor.Patch.**
 
@@ -286,20 +286,20 @@ Dependencies are installed whenever the dependent package is installed, reinstal
 ```json
 <!-- Accepts any version 6.1 and above -->
 <dependency id="ExamplePackage" version="6.1" />
- 
+
 <!-- Accepts any version above, but not include 4.1.3. This might be
       used to guarantee a dependency with a specific bug fix. -->
 <dependency id="ExamplePackage" version="(4.1.3,)" />
- 
+
 <!-- Accepts any version up below 5.x, which might be used to prevent
       pulling in a later version of a dependency that changed its interface.
       However, this form is not recommended because it can be difficult to
       determine the lowest version.  -->
 <dependency id="ExamplePackage" version="(,5.0)" />
- 
+
 <!-- Accepts any 1.x or 2.x version, but no 0.x or 3.x and higher versions -->
 <dependency id="ExamplePackage" version="[1,3)" />
- 
+
 <!-- Accepts 1.3.2 up to 1.4.x, but not 1.5 and higher. -->
 <dependency id="ExamplePackage" version="[1.3.2,1.5)" />
 ```
@@ -533,7 +533,7 @@ Both methods have their advantages and disadvantages.
   </files>
 </package>
 ```
-
+
 ### Packaging
 When using an assembly or the convention-based working directory, create a package by running NuGet pack with your .nuspecfule:
 
@@ -589,7 +589,7 @@ The *.nupkg* file is essentially a .zip file, so if you require to browse the co
 
 ## Publishing
 
-The local publish directory is found at the root of the branch folder.  The folder is named Nuget and contains nuget.exe file as well as any other local published packages.
+The local publish directory is found at the root of the branch folder.  The folder is named Nuget and contains nuget.exe file as well as any other local published packages.
 
 ### Consuming
 
@@ -723,8 +723,8 @@ You can use a symbol server to allow Visual Studio to automatically download the
 
 * For VS 2015, go to Tools menu and click Options.
 * Within the Options dialog box, open the Debugging node and then click Symbols.
-* Click the New Folder icon and add the location for the symbols server. 
-
+* Click the New Folder icon and add the location for the symbols server.
+
 ## References
 * [NuGet documentation](https://docs.microsoft.com/en-us/nuget/)
 * [.nuspec reference](https://docs.microsoft.com/en-us/nuget/schema/nuspec)

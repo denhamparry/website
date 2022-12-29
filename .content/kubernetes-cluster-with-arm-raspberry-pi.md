@@ -29,7 +29,7 @@ These are a selection of links that I've used to create the *Setting up Kubernet
 ## Raspberry Pi
 
 * [Raspberry PI Downloads](https://www.raspberrypi.org/downloads/raspbian/)
-* [Raspbian Lite](https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-07-05/) 
+* [Raspbian Lite](https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-07-05/)
 * [Etcher](https://etcher.io/)
 
 ## Prometheus

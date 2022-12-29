@@ -12,12 +12,12 @@ aliases:
 
 * Download the latest --zip-- file from [Github](https://github.com/PowerShell/Win32-OpenSSH/releases)
   * Run script on server to download the file:
-  
+
 ```powershell
 PS C:\> Invoke-WebRequest https://githu
 b.com/PowerShell/Win32-OpenSSH/releases/download/v0.0.22.0/OpenSSH-Win64.zip -OutFile openssh.zip
 ```
-  
+
 * Extract the files from the zip file:
 
 ```powershell
