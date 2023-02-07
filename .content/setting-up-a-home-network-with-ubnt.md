@@ -28,7 +28,7 @@ During this time, I upgraded the device (with the replaced devices being handed 
 
 With the rise of internet connected devices within my house, serving everything from media, home security and someone to talk to whilst cooking (Alexa) I wanted to find a stable solution that was more modular.  I liked the idea of being able to have devices with specific uses that could be managed and upgraded independently over time.
 
-## Solution - Ubnt / Unifi / 
+## Solution - Ubnt / Unifi /
 
 After looking at a couple off the shelve solutions, and Apple no longer producing what I was used to, I found Ubnt thanks to numerous tech bloggers talking about it.
 

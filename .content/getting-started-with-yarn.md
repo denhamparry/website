@@ -155,12 +155,10 @@ And that's it!  You should see the package within the *node-modules* folder.
 
 ## References
 
-[GitHub: yarn-demo](https://github.com/denhamparry/yarn-demo) 
+[GitHub: yarn-demo](https://github.com/denhamparry/yarn-demo)
 
 [GitHub: yarn-demo-site](https://github.com/denhamparry/yarn-demo-site)
 
 [NPM Repository: denhamparry-yarn-demo](https://www.npmjs.com/package/denhamparry-yarn-demo)
 
 [Yarn Documentation](https://yarnpkg.com/en/docs/package-json)
-
-

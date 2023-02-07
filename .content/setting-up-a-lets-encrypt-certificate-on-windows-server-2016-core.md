@@ -30,7 +30,7 @@ I wanted to use Lets Encrypt to create certificates for my home server.  Once cr
 
 ```powershell
 PS C:\> Install-WindowsFeature -Name Web-Server
-PS C:\> Install-WindowsFeature -Name Web-App-Dev -IncludeAllSubFeature 
+PS C:\> Install-WindowsFeature -Name Web-App-Dev -IncludeAllSubFeature
 ```
 
 ### Add Domain Binding to Default Web Site

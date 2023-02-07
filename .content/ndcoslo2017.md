@@ -146,7 +146,7 @@ A lot of points he raised I do on a day to day basis, thus making me realise I t
 
 He mentioned about inheriting an extended process of notes to setup a machine to work at a new company.  At a recent contract I experienced the same issue so went about writing my own *readme.md* file for the next person to use when setting up.  Points taken were to make friendly code, to help other developers understand how to integrate or handle errors from our own code base by giving detailed, concise feedback from the code itself.
 
-At the end of the talk I wanted to thank him for helping me realise this, but then thought it would be best to send him an email later on.  Luckily I was able to meet him at a bar later on in the week but more about that later. 
+At the end of the talk I wanted to thank him for helping me realise this, but then thought it would be best to send him an email later on.  Luckily I was able to meet him at a bar later on in the week but more about that later.
 
 ## The Conference Day 2
 
