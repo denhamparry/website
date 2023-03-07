@@ -26,9 +26,45 @@ menu:
 
 ## Coming Up
 
-### KubeCon NA 2022 -
+### Public Cloud Kubernetes London - _Some like it hot_ (SLSA)
 
 - Type: Talk
+- Where: [London, UK](https://www.meetup.com/public-cloud-kubernetes-london/events/291161443/)
+- Date: 09th March 2023
+
+### Cloud Native Manchester - _Some like it hot_ (SLSA)
+
+- Type: Talk
+- Where: [Manchester, UK](https://www.meetup.com/cloud-native-kubernetes-manchester/events/291823775/)
+- Date: 21st March 2023
+
+## 2023
+
+### What Does Rugby Have To Do With Sigstore? - Fosdem
+
+- Type: Talk
+- Video: [Website](https://fosdem.org/2023/schedule/event/security_rugby_sigstore/)
+- Where: [Brussels, Belgium](https://fosdem.org/2023/schedule/event/security_rugby_sigstore/)
+- Date: 04-05th February 2023
+
+Cosign, fulcio, rekor are all components in keyless signing with Sigstore.
+
+Each piece has its responsibility to provide a smooth developer experience for container signing.
+
+How does it all work together to complete that complicated dance to tie identity to cryptographic signatures?
+
+And what's more cryptic than rugby?
+
+In this talk, James and Lewis will educate attendees about sigstore and container signing using examples from the best sport in the world, rugby.
+
+If you're interested in learning more about sigstore and what a hooker does, this talk is for you.
+
+## 2022
+
+### KubeCon NA 2022 - Hack Back; Let’s Learn Security With CTFs!
+
+- Type: Talk
+- Video: [YouTube](https://www.youtube.com/watch?v=IZXVWyKGHi4)
 - Where: [Detroit, USA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/)
 - Date: 26-28th October 2022
 
@@ -45,8 +81,6 @@ This talk will give you a framework for your own internal CTF events, with Red a
 We'll give a hands-on, live walkthrough of the top 3 state-of-art attack scenarios as CTF exercises using common open source projects like Simulator and Tetragon.
 
 Remember, the best way to learn how to detect is to first know how to attack!
-
-## 2022
 
 ### KCDC 2022 - The Hand That Feeds - How to Misuse Kubernetes
 
