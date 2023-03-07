@@ -26,6 +26,12 @@ menu:
 
 ## Coming Up
 
+### Public Cloud Kubernetes London - _Some like it hot_ (SLSA)
+
+- Type: Talk
+- Where: [London, UK](https://www.meetup.com/public-cloud-kubernetes-london/events/291161443/)
+- Date: 09th March 2023
+
 ## 2023
 
 ### What Does Rugby Have To Do With Sigstore? - Fosdem
