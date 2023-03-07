@@ -32,6 +32,12 @@ menu:
 - Where: [London, UK](https://www.meetup.com/public-cloud-kubernetes-london/events/291161443/)
 - Date: 09th March 2023
 
+### Cloud Native Manchester - _Some like it hot_ (SLSA)
+
+- Type: Talk
+- Where: [Manchester, UK](https://www.meetup.com/cloud-native-kubernetes-manchester/events/291823775/)
+- Date: 21st March 2023
+
 ## 2023
 
 ### What Does Rugby Have To Do With Sigstore? - Fosdem
