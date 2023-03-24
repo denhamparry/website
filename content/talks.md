@@ -26,11 +26,29 @@ menu:
 
 ## Coming Up
 
-### Public Cloud Kubernetes London - _Some like it hot_ (SLSA)
+### KCDC 2023 - Signed, Sealed, Delivered I'm yours!
 
 - Type: Talk
-- Where: [London, UK](https://www.meetup.com/public-cloud-kubernetes-london/events/291161443/)
-- Date: 09th March 2023
+- Where: [Kansas City, USA](https://www.kcdc.info/sessions)
+- Date: 22-23rd June 2023
+
+The internet is built on trust, for example you trust that what you're reading right now is from me, Lewis Denham-Parry, on his laptop somewhere in the world sometime in the past. But how can you trust that? How do you know that this hasn't been tampered with? How can you trust the authenticity of Lewis, and have there been any updates since this was written due to changes in context?
+
+These problems are similar to what we have in software today, from source code, to build, to release and ultimately running in production. What dependencies do we have in our software? What happens when we find a CVE? How do we trust that the build hasn't been tampered with? Or as we like to call it, Supply Chain Security.
+
+This talk will bring you up to speed with recommended best practices to build trust today that others can use to build on in the future. We'll look at technologies around Sigstore to help build trust, the SLSA framework to articulate best practices, and case studies to see where this could have helped others in the past and who are currently using it today.
+
+This talk is aimed at people who have trusted others and want to make it easier for others to trust them.
+
+## 2023
+
+### ⚡️ Enlightning - Signed, Sealed, Delivered, I’m Yours! An Introduction to Sigstore
+
+- Type: Discussion
+- Where: [YouTube](https://www.youtube.com/watch?v=8GKFzJaEHac)
+- Date: 23rd March 2023
+
+How do you know that the software you're running on your laptop or in production is actually the software you think you're running? Attackers may try to modify source code or compiled binaries/containers as they move about the internet and your network. We can check the authenticity of software and other digital artefacts with digital signatures. But, in practice, almost nobody does! Today, we'll see why not, and what the Sigstore project is doing to fix that. We'll explore digital signatures, losing your Yubikey on the street, why the price of security for OSS projects should be zero, how you achieve more security by promising less, and why software signatures need "sunshine laws," all in the context of the Sigstore project and its constituent components Fulcio, Rekor, and Cosign. You'll learn how the OSS ecosystem is getting more secure every day and how you can apply the same tools and principles.
 
 ### Cloud Native Manchester - _Some like it hot_ (SLSA)
 
@@ -38,9 +56,13 @@ menu:
 - Where: [Manchester, UK](https://www.meetup.com/cloud-native-kubernetes-manchester/events/291823775/)
 - Date: 21st March 2023
 
-## 2023
+### Public Cloud Kubernetes London - _Some like it hot_ (SLSA)
 
-### What Does Rugby Have To Do With Sigstore? - Fosdem
+- Type: Talk
+- Where: [London, UK](https://www.meetup.com/public-cloud-kubernetes-london/events/291161443/)
+- Date: 09th March 2023
+
+### Fosdem - What Does Rugby Have To Do With Sigstore?
 
 - Type: Talk
 - Video: [Website](https://fosdem.org/2023/schedule/event/security_rugby_sigstore/)
