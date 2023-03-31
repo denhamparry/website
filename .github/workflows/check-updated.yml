@@ -1,0 +1,27 @@
+name: Check if Hugo page has been updated
+on:
+  push:
+    branches:
+      - '*'
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  check-updated:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Find outdated pages
+        run: |
+          hugo list pages | while read -r page; do
+            modified=$(git log -1 --format=%ct -- $page)
+            now=$(date +%s)
+            days_since_modified=$(( (now - modified) / 86400 ))
+            if [ $days_since_modified -gt 30 ]; then
+              echo "Page $page hasn't been updated for $days_since_modified days"
+              issue_title="Page $page hasn't been updated for $days_since_modified days"
+              issue_body="The following page hasn't been updated for $days_since_modified days: $page"
+              curl -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -d '{"title":"'$issue_title'", "body":"'$issue_body'"}' "https://api.github.com/repos/$GITHUB_REPOSITORY/issues"
+            fi
+          done
