@@ -5,3 +5,4 @@ node_modules/
 # Local Netlify folder
 .netlify
 .vscode/
+.hugo_build.lock

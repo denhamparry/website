@@ -1,8 +1,11 @@
 name: Check if Hugo page has been updated
 on:
+  schedule:
+    - cron: '0 0 * * *'
   push:
     branches:
-      - '*'
+      - main
+
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -14,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Find outdated pages
         run: |
-          hugo list pages | while read -r page; do
+          hugo list all | tail -n +2 | awk -F , '{print $1}' | while read -r page; do
             modified=$(git log -1 --format=%ct -- $page)
             now=$(date +%s)
             days_since_modified=$(( (now - modified) / 86400 ))
@@ -23,5 +26,5 @@ jobs:
               issue_title="Page $page hasn't been updated for $days_since_modified days"
               issue_body="The following page hasn't been updated for $days_since_modified days: $page"
               curl -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -d '{"title":"'$issue_title'", "body":"'$issue_body'"}' "https://api.github.com/repos/$GITHUB_REPOSITORY/issues"
-            fi
+          fi
           done
