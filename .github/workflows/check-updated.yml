@@ -7,6 +7,7 @@ on:
       - main
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  MODIFIED_DAYS: 9
 
 jobs:
   check-updated:
@@ -20,19 +21,18 @@ jobs:
             modified=$(git log -1 --format=%ct -- $page)
             now=$(date +%s)
             days_since_modified=$(( (now - modified) / 86400 ))
-
-            # Extract the date from the Markdown front matter
-            date_field=$(grep -i '^date:' $page | head -n 1 | sed 's/date:\s*//i')
-            if [ -n "$date_field" ]; then
-              date=$(date -d "$date_field" +%s)
-              days_since_update=$(( (now - date) / 86400 ))
-              if [ $days_since_update -gt 30 ]; then
-                echo "Page $page hasn't been updated for $days_since_update days"
-                issue_title="Page $page hasn't been updated for $days_since_update days"
-                issue_body="The following page hasn't been updated for $days_since_update days: $page"
-                curl -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -d '{"title":"'$issue_title'", "body":"'$issue_body'"}' "https://api.github.com/repos/$GITHUB_REPOSITORY/issues"
+            if [ $days_since_modified -gt "$MODIFIED_DAYS" ]; then
+              echo "Page $page hasn't been updated for more than $MODIFIED_DAYS"
+              issue_title="Page $page hasn't been updated for $days_since_modified days"
+              issue_body="The following page hasn't been updated for $days_since_modified days: $page"
+              existing_issue=$(curl -s -X GET -H "Authorization: Bearer $GITHUB_TOKEN" "https://api.github.com/repos/$GITHUB_REPOSITORY/issues?state=open&labels=content-outdated&per_page=100" | jq '.[] | select(.title == "'"$issue_title"'")')
+              if [ -n "$existing_issue" ]; then
+                echo "Issue already exists: $existing_issue"
+              else
+                echo "Creating issue for page: $page"
+                curl -s -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -d '{"title":"'$issue_title'", "body":"'$issue_body'", "labels":["content-outdated"]}' "https://api.github.com/repos/$GITHUB_REPOSITORY/issues"
               fi
             else
-              echo "No date field found in $page"
+              echo "Page $page is up to date, it was modified $days_since_modified days ago"
             fi
           done
