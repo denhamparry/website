@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
       - name: Find outdated pages
         run: |
           find content -type f -name "*.md" | while read -r page; do
