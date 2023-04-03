@@ -27,13 +27,8 @@ jobs:
               echo "Page $page hasn't been updated for more than $MODIFIED_DAYS"
               issue_title="Page $page hasn't been updated for $days_since_modified days"
               issue_body="The following page hasn't been updated for $days_since_modified days: $page"
-              existing_issue=$(curl -s -X GET -H "Authorization: Bearer $GITHUB_TOKEN" "https://api.github.com/repos/$GITHUB_REPOSITORY/issues?state=open&labels=content-outdated&per_page=100" | jq '.[] | select(.title == "'"$issue_title"'")')
-              if [ -n "$existing_issue" ]; then
-                echo "Issue already exists: $existing_issue"
-              else
-                echo "Creating issue for page: $page"
-                curl -s -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -d '{"title":"'$issue_title'", "body":"'$issue_body'", "labels":["content-outdated"]}' "https://api.github.com/repos/$GITHUB_REPOSITORY/issues"
-              fi
+              echo "Creating issue for page: $page"
+              curl -s -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -d '{"title":"'$issue_title'", "body":"'$issue_body'", "labels":["content-outdated"]}' "https://api.github.com/repos/$GITHUB_REPOSITORY/issues"
             else
               echo "Page $page is up to date, it was modified $days_since_modified days ago"
             fi
