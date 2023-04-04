@@ -22,7 +22,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          fetch-depth: '0'
+          fetch-depth: '1'
       - name: Find outdated pages
         id: outdated-pages
         run: |
@@ -42,6 +42,7 @@ jobs:
           done
       - uses: JasonEtco/create-an-issue@v2
         id: create-issue
+        if: (steps.outdated-pages.outputs.PAGE)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PAGE: ${{ steps.outdated-pages.outputs.PAGE }}
@@ -51,5 +52,9 @@ jobs:
           filename: .github/BLOG_UPDATE.md
           update_existing: true
           search_existing: all
-      - run: 'echo Created issue number ${{ steps.create-issue.outputs.number }}'
-      - run: 'echo Created ${{ steps.create-issue.outputs.url }}'
+      - name: Created Issue Number
+        if: (steps.create-issue.outputs.number)
+        run: 'echo Created issue number ${{ steps.create-issue.outputs.number }}'
+      - name: Created Issue
+        if: (steps.create-issue.outputs.url)
+        run: 'echo Created ${{ steps.create-issue.outputs.url }}'
