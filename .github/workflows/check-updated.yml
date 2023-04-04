@@ -27,8 +27,9 @@ jobs:
               echo "Page $page hasn't been updated for more than $MODIFIED_DAYS"
               issue_title="Page $page hasn't been updated for $days_since_modified days"
               issue_body="The following page hasn't been updated for $days_since_modified days: $page"
-              echo "Creating issue for page: $page"
-              curl -s -X POST -H "Authorization: Bearer $GITHUB_TOKEN" -d '{"title":"'$issue_title'", "body":"'$issue_body'", "labels":["content-outdated"]}' "https://api.github.com/repos/$GITHUB_REPOSITORY/issues"
+              echo "Create issue for page: $page"
+              echo $issue_title
+              echo $issue_body
             else
               echo "Page $page is up to date, it was modified $days_since_modified days ago"
             fi
