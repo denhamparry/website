@@ -1,4 +1,7 @@
 name: Check if Hugo page has been updated
+permissions:
+  contents: read
+  issues: write
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -8,6 +11,9 @@ on:
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   MODIFIED_DAYS: 9
+  PAGE: ""
+  PAGE_TITLE: ""
+  PAGE_BODY: ""
 
 jobs:
   check-updated:
@@ -18,19 +24,32 @@ jobs:
         with:
           fetch-depth: '0'
       - name: Find outdated pages
+        id: outdated-pages
         run: |
           find content -type f -name "*.md" | while read -r page; do
             modified=$(git log -1 --format=%ct -- $page)
             now=$(date +%s)
             days_since_modified=$(( (now - modified) / 86400 ))
             if [ $days_since_modified -gt "$MODIFIED_DAYS" ]; then
-              echo "Page $page hasn't been updated for more than $MODIFIED_DAYS"
-              issue_title="Page $page hasn't been updated for $days_since_modified days"
-              issue_body="The following page hasn't been updated for $days_since_modified days: $page"
+              echo "Page $page hasn't been updated for more than $MODIFIED_DAYS days"
+              echo "PAGE=$page" >> $GITHUB_OUTPUT
+              echo "PAGE_TITLE='Page $page hasn't been updated for $days_since_modified days'" >> $GITHUB_OUTPUT
+              echo "PAGE_BODY='The following page hasn't been updated for $days_since_modified days: $page'" >> $GITHUB_OUTPUT
               echo "Create issue for page: $page"
-              echo $issue_title
-              echo $issue_body
             else
               echo "Page $page is up to date, it was modified $days_since_modified days ago"
             fi
           done
+      - uses: JasonEtco/create-an-issue@v2
+        id: create-issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAGE: ${{ steps.outdated-pages.outputs.PAGE }}
+          PAGE_TITLE: ${{ steps.outdated-pages.outputs.PAGE_TITLE }}
+          PAGE_BODY: ${{ steps.outdated-pages.outputs.PAGE_BODY }}
+        with:
+          filename: .github/BLOG_UPDATE.md
+          update_existing: true
+          search_existing: all
+      - run: 'echo Created issue number ${{ steps.create-issue.outputs.number }}'
+      - run: 'echo Created ${{ steps.create-issue.outputs.url }}'
