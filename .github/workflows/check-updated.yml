@@ -26,6 +26,7 @@ jobs:
       - name: Find outdated pages
         id: outdated-pages
         run: |
+          export PAGE="";
           find content -type f -name "*.md" | while read -r page; do
             FILE_PATH="$page"
             LAST_COMMIT_DATE=$(git log -1 --format="%cd" --date=iso-strict "$FILE_PATH")
@@ -38,46 +39,43 @@ jobs:
 
             echo "Days since last commit: $DATE_DIFF_DAYS"
 
-            # Check if the difference is more than 9 days
+            # Check if the difference is more than MODIFIED_DAYS
             if [ $DATE_DIFF_DAYS -gt "$MODIFIED_DAYS" ]; then
-              echo "Page $FILE_PATH hasn't been updated for more than $MODIFIED_DAYS days"
-              echo "PAGE=$FILE_PATH" >> $GITHUB_OUTPUT
-              echo "PAGE_TITLE='Page $FILE_PATH hasn't been updated for $DATE_DIFF_DAYS days'" >> $GITHUB_OUTPUT
-              echo "PAGE_BODY='The following page hasn't been updated for $DATE_DIFF_DAYS days: $FILE_PATH'" >> $GITHUB_OUTPUT
               echo "Create issue for page: $FILE_PATH"
+              export PAGE="$FILE_PATH"
             else
               echo "Page $page is up to date, it was modified $DATE_DIFF_DAYS days ago"
             fi
+          echo "PAGE=$PAGE" >> $GITHUB_OUTPUT
           done
-      - name: Check and create GitHub issue if not exists
-        uses: actions/github-script@v5
+      - name: Check and create GitHub issue if page does not exist
+        uses: actions/github-script@v6
         if: (steps.outdated-pages.outputs.PAGE)
+        env:
+          PAGE: "${{ steps.outdated-pages.outputs.PAGE }}"
         with:
           script: |
-            const title = 'Page out of date ${{ steps.outdated-pages.outputs.PAGE_TITLE }}';
-            const body = ${{ steps.outdated-pages.outputs.PAGE_BODY }};
-            const labels = ['documentation', 'help wanted'];
-            // Fetch existing issues
+            const { PAGE } = process.env
+            const TITLE = `Page requires review: ${PAGE}`
+            const BODY = 'This page requires review'
+            const LABELS = ['documentation', 'help wanted'];
+
             const issues = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',
             });
 
-            // Check if an issue with the same title exists
-            const existingIssue = issues.data.find(issue => issue.title === title);
-
+            const existingIssue = issues.data.find(issue => issue.title === TITLE);
             if (existingIssue) {
               console.log('Issue already exists with number:', existingIssue.number);
             } else {
               const issue = await github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                title: title,
-                body: body,
-                labels: labels
+                title: TITLE,
+                body: BODY,
+                labels: LABELS
               });
-
               console.log('Issue created with number:', issue.data.number);
             }
-          github-token: ${{ secrets.GITHUB_TOKEN }}
