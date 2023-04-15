@@ -20,9 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          fetch-depth: '1'
+          fetch-depth: '0'
       - name: Find outdated pages
         id: outdated-pages
         run: |
@@ -40,13 +40,13 @@ jobs:
 
             # Check if the difference is more than 9 days
             if [ $DATE_DIFF_DAYS -gt "$MODIFIED_DAYS" ]; then
-              echo "Page $page hasn't been updated for more than $MODIFIED_DAYS days"
-              echo "PAGE=$page" >> $GITHUB_OUTPUT
-              echo "PAGE_TITLE='Page $page hasn't been updated for $days_since_modified days'" >> $GITHUB_OUTPUT
-              echo "PAGE_BODY='The following page hasn't been updated for $days_since_modified days: $page'" >> $GITHUB_OUTPUT
-              echo "Create issue for page: $page"
+              echo "Page $FILE_PATH hasn't been updated for more than $MODIFIED_DAYS days"
+              echo "PAGE=$FILE_PATH" >> $GITHUB_OUTPUT
+              echo "PAGE_TITLE='Page $FILE_PATH hasn't been updated for $DATE_DIFF_DAYS days'" >> $GITHUB_OUTPUT
+              echo "PAGE_BODY='The following page hasn't been updated for $DATE_DIFF_DAYS days: $FILE_PATH'" >> $GITHUB_OUTPUT
+              echo "Create issue for page: $FILE_PATH"
             else
-              echo "Page $page is up to date, it was modified $days_since_modified days ago"
+              echo "Page $page is up to date, it was modified $DATE_DIFF_DAYS days ago"
             fi
           done
       - name: Check and create GitHub issue if not exists
