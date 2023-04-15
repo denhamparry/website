@@ -40,21 +40,35 @@ jobs:
               echo "Page $page is up to date, it was modified $days_since_modified days ago"
             fi
           done
-      - uses: JasonEtco/create-an-issue@v2
-        id: create-issue
+      - name: Check and create GitHub issue if not exists
+        uses: actions/github-script@v5
         if: (steps.outdated-pages.outputs.PAGE)
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PAGE: ${{ steps.outdated-pages.outputs.PAGE }}
-          PAGE_TITLE: ${{ steps.outdated-pages.outputs.PAGE_TITLE }}
-          PAGE_BODY: ${{ steps.outdated-pages.outputs.PAGE_BODY }}
         with:
-          filename: .github/BLOG_UPDATE.md
-          update_existing: true
-          search_existing: all
-      - name: Created Issue Number
-        if: (steps.create-issue.outputs.number)
-        run: 'echo Created issue number ${{ steps.create-issue.outputs.number }}'
-      - name: Created Issue
-        if: (steps.create-issue.outputs.url)
-        run: 'echo Created ${{ steps.create-issue.outputs.url }}'
+          script: |
+            const title = 'Page out of date ${{ steps.outdated-pages.outputs.PAGE_TITLE }}';
+            const body = ${{ steps.outdated-pages.outputs.PAGE_BODY }};
+            const labels = ['documentation', 'help wanted'];
+            // Fetch existing issues
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+            });
+
+            // Check if an issue with the same title exists
+            const existingIssue = issues.data.find(issue => issue.title === title);
+
+            if (existingIssue) {
+              console.log('Issue already exists with number:', existingIssue.number);
+            } else {
+              const issue = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: labels
+              });
+
+              console.log('Issue created with number:', issue.data.number);
+            }
+          github-token: ${{ secrets.GITHUB_TOKEN }}
