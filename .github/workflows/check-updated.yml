@@ -27,10 +27,19 @@ jobs:
         id: outdated-pages
         run: |
           find content -type f -name "*.md" | while read -r page; do
-            modified=$(git log -1 --format=%ct -- $page)
-            now=$(date +%s)
-            days_since_modified=$(( (now - modified) / 86400 ))
-            if [ $days_since_modified -gt "$MODIFIED_DAYS" ]; then
+            FILE_PATH="$page"
+            LAST_COMMIT_DATE=$(git log -1 --format="%cd" --date=iso-strict "$FILE_PATH")
+            echo "Last commit date on $FILE_PATH: $LAST_COMMIT_DATE"
+
+            # Calculate the difference between the current date and the last commit date in days
+            CURRENT_DATE=$(date -u +"%Y-%m-%dT%H:%M:%S%z")
+            DATE_DIFF=$(($(date -u -d "$CURRENT_DATE" +%s) - $(date -u -d "$LAST_COMMIT_DATE" +%s)))
+            DATE_DIFF_DAYS=$((DATE_DIFF / (60*60*24)))
+
+            echo "Days since last commit: $DATE_DIFF_DAYS"
+
+            # Check if the difference is more than 9 days
+            if [ $DATE_DIFF_DAYS -gt "$MODIFIED_DAYS" ]; then
               echo "Page $page hasn't been updated for more than $MODIFIED_DAYS days"
               echo "PAGE=$page" >> $GITHUB_OUTPUT
               echo "PAGE_TITLE='Page $page hasn't been updated for $days_since_modified days'" >> $GITHUB_OUTPUT
