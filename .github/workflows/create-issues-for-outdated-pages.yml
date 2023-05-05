@@ -1,0 +1,90 @@
+name: Create issues for outdated pages
+permissions:
+  contents: read
+  issues: write
+on:
+  schedule:
+    - cron: '30 5 * * *'
+  push:
+    branches:
+      - main
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  MODIFIED_DAYS: 9
+
+jobs:
+  create-issues-for-outdated-pages:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+
+      - name: Find outdated pages
+        id: find-outdated-pages
+        run: |
+          export PAGES=""
+          find content -type f -name "*.md" | while read -r page; do
+            LAST_COMMIT_DATE=$(git log -1 --format="%cd" --date=iso-strict "$page")
+            echo "Last commit date on $page: $LAST_COMMIT_DATE"
+
+            # Calculate the difference between the current date and the last commit date in days
+            CURRENT_DATE=$(date -u +"%Y-%m-%dT%H:%M:%S%z")
+            DATE_DIFF=$(($(date -u -d "$CURRENT_DATE" +%s) - $(date -u -d "$LAST_COMMIT_DATE" +%s)))
+            DATE_DIFF_DAYS=$((DATE_DIFF / (60*60*24)))
+
+            echo "Days since last commit: $DATE_DIFF_DAYS"
+
+            # Check if the difference is more than MODIFIED_DAYS
+            if [ $DATE_DIFF_DAYS -gt "$MODIFIED_DAYS" ]; then
+              if [ -z "$PAGES" ]; then
+                export PAGES="$page"
+              else
+                export PAGES="$page,$PAGES"
+              fi
+              echo "PAGES=$PAGES" >> $GITHUB_OUTPUT
+              echo "Create issue for page: $page"
+            else
+              echo "Page $page is up to date, it was modified $DATE_DIFF_DAYS days ago"
+            fi
+          done
+
+      - name: Check and create GitHub issue if an issue for a page does not exist
+        uses: actions/github-script@v6
+        if: (steps. find-outdated-pages.outputs.PAGES)
+        env:
+          PAGES: "${{ steps. find-outdated-pages.outputs.PAGES }}"
+        with:
+          script: |
+            const { PAGES } = process.env
+            const pagesString = `${PAGES}`
+            const pagesArr =  pagesString.split(',');
+
+            for (let i = 0; i < pagesArr.length; i++) {
+              var TITLE = `Page requires review: ${pagesArr[i]}`
+              var BODY = 'This page requires review'
+              var LABELS = ['documentation', 'help wanted'];
+              console.log(TITLE, BODY, LABELS);
+
+              const issues = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+              });
+
+              const existingIssue = issues.data.find(issue => issue.title === TITLE);
+              if (existingIssue) {
+                console.log('Issue already exists with number:', existingIssue.number);
+              } else {
+                const issue = await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: TITLE,
+                  body: BODY,
+                  labels: LABELS
+                });
+                console.log('Issue created with number:', issue.data.number);
+              }
+            }
