@@ -8,74 +8,87 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  MODIFIED_DAYS: 9
-  PAGE: ""
-  PAGE_TITLE: ""
-  PAGE_BODY: ""
+  MODIFIED_DAYS: -1
 
 jobs:
   check-updated:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: '0'
-      - name: Find outdated pages
-        id: outdated-pages
-        run: |
-          export PAGE="";
-          find content -type f -name "*.md" | while read -r page; do
-            FILE_PATH="$page"
-            LAST_COMMIT_DATE=$(git log -1 --format="%cd" --date=iso-strict "$FILE_PATH")
-            echo "Last commit date on $FILE_PATH: $LAST_COMMIT_DATE"
 
-            # Calculate the difference between the current date and the last commit date in days
-            CURRENT_DATE=$(date -u +"%Y-%m-%dT%H:%M:%S%z")
-            DATE_DIFF=$(($(date -u -d "$CURRENT_DATE" +%s) - $(date -u -d "$LAST_COMMIT_DATE" +%s)))
-            DATE_DIFF_DAYS=$((DATE_DIFF / (60*60*24)))
-
-            echo "Days since last commit: $DATE_DIFF_DAYS"
-
-            # Check if the difference is more than MODIFIED_DAYS
-            if [ $DATE_DIFF_DAYS -gt "$MODIFIED_DAYS" ]; then
-              echo "Create issue for page: $FILE_PATH"
-              export PAGE="$FILE_PATH"
-            else
-              echo "Page $page is up to date, it was modified $DATE_DIFF_DAYS days ago"
-            fi
-          echo "PAGE=$PAGE" >> $GITHUB_OUTPUT
-          done
       - name: Check and create GitHub issue if page does not exist
         uses: actions/github-script@v6
-        if: (steps.outdated-pages.outputs.PAGE)
         env:
-          PAGE: "${{ steps.outdated-pages.outputs.PAGE }}"
+          PAGES: "${{ steps.outdated-pages.outputs.PAGES }}"
+          FILENAMES: "${{ steps.outdated-pages.outputs.FILENAMES }}"
+          MY_ARRAY: "${{ steps.outdated-pages.outputs.MY_ARRAY }}"
         with:
           script: |
-            const { PAGE } = process.env
-            const TITLE = `Page requires review: ${PAGE}`
-            const BODY = 'This page requires review'
-            const LABELS = ['documentation', 'help wanted'];
+            const fs = require('fs');
+            const path = require('path');
+            const util = require('util');
+            const simpleGit = require('simple-git');
 
-            const issues = await github.rest.issues.listForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: 'open',
-            });
+            const readdir = util.promisify(fs.readdir);
+            const stat = util.promisify(fs.stat);
 
-            const existingIssue = issues.data.find(issue => issue.title === TITLE);
-            if (existingIssue) {
-              console.log('Issue already exists with number:', existingIssue.number);
-            } else {
-              const issue = await github.rest.issues.create({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                title: TITLE,
-                body: BODY,
-                labels: LABELS
-              });
-              console.log('Issue created with number:', issue.data.number);
+            const MODIFIED_DAYS = 30; // Set this to the number of days you want to check
+
+            async function findMarkdownFiles(dir) {
+              const files = await readdir(dir);
+              return await Promise.all(
+                files.map(async (file) => {
+                  const filePath = path.join(dir, file);
+                  const stats = await stat(filePath);
+
+                  if (stats.isDirectory()) {
+                    return findMarkdownFiles(filePath);
+                  } else if (path.extname(file) === '.md') {
+                    return filePath;
+                  }
+                })
+              ).then((results) => results.flat());
             }
+
+            async function main() {
+              const directory = './content'; // Set this to the path to the content directory
+              const markdownFiles = await findMarkdownFiles(directory);
+
+              const git = simpleGit();
+
+              for (const filePath of markdownFiles) {
+                const lastCommit = await git.log({ file: filePath, n: 1 });
+                const lastCommitDate = new Date(lastCommit.latest.date);
+
+                console.log(`Last commit date on ${filePath}: ${lastCommitDate.toISOString()}`);
+
+                const currentDate = new Date();
+                const dateDiffMs = currentDate - lastCommitDate;
+                const dateDiffDays = Math.floor(dateDiffMs / (1000 * 60 * 60 * 24));
+
+                console.log(`Days since last commit: ${dateDiffDays}`);
+
+                if (dateDiffDays > MODIFIED_DAYS) {
+                  console.log(`Create issue for page: ${filePath}`);
+
+                  // const TITLE = `Page requires review: ${filePath}`;
+                  // const BODY = 'This page requires review';
+                  // const LABELS = ['documentation', 'help wanted'];
+
+                  // Add your logic to check for existing issues and create a new issue if necessary
+                } else {
+                  console.log(`Page ${filePath} is up to date, it was modified ${dateDiffDays} days ago`);
+                }
+              }
+            }
+
+            main().catch((err) => console.error(err));

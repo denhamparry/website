@@ -1,0 +1,71 @@
+name: Check if Hugo page has been updated
+permissions:
+  contents: read
+  issues: write
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  MODIFIED_DAYS: -1
+
+jobs:
+  check-updated:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+
+      - name: Check and create GitHub issue if page does not exist
+        uses: actions/github-script@v6
+        env:
+          PAGES: "${{ steps.outdated-pages.outputs.PAGES }}"
+          FILENAMES: "${{ steps.outdated-pages.outputs.FILENAMES }}"
+          MY_ARRAY: "${{ steps.outdated-pages.outputs.MY_ARRAY }}"
+        with:
+          script: |
+            export PAGES="";
+            find content -type f -name "*.md" | while read -r page; do
+              FILE_PATH="$page"
+              LAST_COMMIT_DATE=$(git log -1 --format="%cd" --date=iso-strict "$FILE_PATH")
+              echo "Last commit date on $FILE_PATH: $LAST_COMMIT_DATE"
+
+              # Calculate the difference between the current date and the last commit date in days
+              CURRENT_DATE=$(date -u +"%Y-%m-%dT%H:%M:%S%z")
+              DATE_DIFF=$(($(date -u -d "$CURRENT_DATE" +%s) - $(date -u -d "$LAST_COMMIT_DATE" +%s)))
+              DATE_DIFF_DAYS=$((DATE_DIFF / (60*60*24)))
+
+              echo "Days since last commit: $DATE_DIFF_DAYS"
+
+              # Check if the difference is more than MODIFIED_DAYS
+              if ($DATE_DIFF_DAYS -gt "$MODIFIED_DAYS") {}
+                echo "Create issue for page: $FILE_PATH"
+                const TITLE = `Page requires review: $FILE`
+                const BODY = 'This page requires review'
+                const LABELS = ['documentation', 'help wanted'];
+
+                const issues = await github.rest.issues.listForRepo({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  state: 'open',
+                });
+
+                const existingIssue = issues.data.find(issue => issue.title === TITLE);
+                if (existingIssue) {
+                  console.log('Issue already exists with number:', existingIssue.number);
+                } else {
+                  console.log('Issue would have been created: ', TITLE);
+                }
+              } else {
+                console.log("Page $page is up to date, it was modified $DATE_DIFF_DAYS days ago");
+              }
+            done
