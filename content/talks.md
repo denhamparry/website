@@ -31,7 +31,7 @@ menu:
 
 - Type: Talk
 - Where: [Kansas City, USA](https://www.kcdc.info/sessions)
-- Date: 22-23rd June 2023
+- Date: 22nd June 2023 1:15 pm - 2:15 pm - Room 2201
 
 The internet is built on trust, for example you trust that what you're reading right now is from me, Lewis Denham-Parry, on his laptop somewhere in the world sometime in the past. But how can you trust that? How do you know that this hasn't been tampered with? How can you trust the authenticity of Lewis, and have there been any updates since this was written due to changes in context?
 
