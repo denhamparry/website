@@ -14,7 +14,7 @@ $ make hugo_serve
 ## Posts
 
 ```sh
-$ hugo new posts/my-first-post.md
+hugo new posts/my-first-post.md
 ```
 
 ## References
