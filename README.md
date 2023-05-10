@@ -6,15 +6,14 @@ Hugo website for DenhamParry
 
 ## Development
 
-
 ```sh
-$ make hugo_serve
+make hugo_serve
 ```
 
 ## Posts
 
 ```sh
-$ hugo new posts/my-first-post.md
+hugo new posts/my-first-post.md
 ```
 
 ## References
