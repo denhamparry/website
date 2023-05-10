@@ -1,26 +1,18 @@
-name: Markdown Lint
+name: Markdown Lint with Reviewdog
 
 on:
   pull_request:
-    paths:
-      - '**/*.md'
+    branches:
+      - main
 
 jobs:
-  markdown-lint:
+  markdownlint:
+    name: runner / markdownlint
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - name: markdownlint
+        uses: reviewdog/action-markdownlint@v0
         with:
-          node-version: 14
-
-      - name: Install markdownlint-cli2
-        run: npm install -g markdownlint-cli2
-
-      - name: Lint Markdown files
-        uses: DavidAnson/markdownlint-cli2-action@v4
-        with:
-          input-directory: ./
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
