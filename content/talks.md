@@ -22,24 +22,11 @@ cover:
 type: page
 menu:
   main: {}
-
 ---
 
 ## Coming Up
 
-### KCDC 2023 - Signed, Sealed, Delivered I'm yours!
-
-- Type: Talk
-- Where: [Kansas City, USA](https://www.kcdc.info/sessions)
-- Date: 22nd June 2023 1:15 pm - 2:15 pm - Room 2201
-
-The internet is built on trust, for example you trust that what you're reading right now is from me, Lewis Denham-Parry, on his laptop somewhere in the world sometime in the past. But how can you trust that? How do you know that this hasn't been tampered with? How can you trust the authenticity of Lewis, and have there been any updates since this was written due to changes in context?
-
-These problems are similar to what we have in software today, from source code, to build, to release and ultimately running in production. What dependencies do we have in our software? What happens when we find a CVE? How do we trust that the build hasn't been tampered with? Or as we like to call it, Supply Chain Security.
-
-This talk will bring you up to speed with recommended best practices to build trust today that others can use to build on in the future. We'll look at technologies around Sigstore to help build trust, the SLSA framework to articulate best practices, and case studies to see where this could have helped others in the past and who are currently using it today.
-
-This talk is aimed at people who have trusted others and want to make it easier for others to trust them.
+Something soon...
 
 ## 2023
 
@@ -49,7 +36,19 @@ This talk is aimed at people who have trusted others and want to make it easier 
 - Where: [YouTube](https://www.youtube.com/watch?v=8GKFzJaEHac)
 - Date: 23rd March 2023
 
-How do you know that the software you're running on your laptop or in production is actually the software you think you're running? Attackers may try to modify source code or compiled binaries/containers as they move about the internet and your network. We can check the authenticity of software and other digital artefacts with digital signatures. But, in practice, almost nobody does! Today, we'll see why not, and what the Sigstore project is doing to fix that. We'll explore digital signatures, losing your Yubikey on the street, why the price of security for OSS projects should be zero, how you achieve more security by promising less, and why software signatures need "sunshine laws," all in the context of the Sigstore project and its constituent components Fulcio, Rekor, and Cosign. You'll learn how the OSS ecosystem is getting more secure every day and how you can apply the same tools and principles.
+How do you know that the software you're running on your laptop or in
+production is actually the software you think you're running? Attackers may
+try to modify source code or compiled binaries/containers as they move about
+the internet and your network. We can check the authenticity of software and
+other digital artefacts with digital signatures. But, in practice, almost
+nobody does! Today, we'll see why not, and what the Sigstore project is doing
+to fix that. We'll explore digital signatures, losing your Yubikey on the
+street, why the price of security for OSS projects should be zero, how you
+achieve more security by promising less, and why software signatures need
+"sunshine laws," all in the context of the Sigstore project and its constituent
+components Fulcio, Rekor, and Cosign. You'll learn how the OSS ecosystem is
+getting more secure every day and how you can apply the same tools and
+principles.
 
 ### Cloud Native Manchester - _Some like it hot_ (SLSA)
 
@@ -72,36 +71,50 @@ How do you know that the software you're running on your laptop or in production
 
 Cosign, fulcio, rekor are all components in keyless signing with Sigstore.
 
-Each piece has its responsibility to provide a smooth developer experience for container signing.
+Each piece has its responsibility to provide a smooth developer experience for
+container signing.
 
-How does it all work together to complete that complicated dance to tie identity to cryptographic signatures?
+How does it all work together to complete that complicated dance to tie
+identity to cryptographic signatures?
 
 And what's more cryptic than rugby?
 
-In this talk, James and Lewis will educate attendees about sigstore and container signing using examples from the best sport in the world, rugby.
+In this talk, James and Lewis will educate attendees about sigstore and
+container signing using examples from the best sport in the world, rugby.
 
-If you're interested in learning more about sigstore and what a hooker does, this talk is for you.
+If you're interested in learning more about sigstore and what a hooker does,
+this talk is for you.
 
 ## 2022
 
-### KubeCon NA 2022 - Hack Back; Let’s Learn Security With CTFs!
+### KubeCon NA 2022 - Hack Back; Let’s Learn Security With CTFs
 
 - Type: Talk
 - Video: [YouTube](https://www.youtube.com/watch?v=IZXVWyKGHi4)
 - Where: [Detroit, USA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/)
 - Date: 26-28th October 2022
 
-Threat actors have always been looking to attack clusters. Do you have the right security in place to detect and defeat if they are targeting yours? Or they are already in?
+Threat actors have always been looking to attack clusters. Do you have the
+right security in place to detect and defeat if they are targeting yours? Or
+they are already in?
 
-Kubernetes has become the de facto cloud operating system and production environments have increased in maturity. So have the threats.
+Kubernetes has become the de facto cloud operating system and production
+environments have increased in maturity. So have the threats.
 
-Security Teams don’t necessarily have the expertise to detect state-of-art attack scenarios specific to cloud-native environments, like Kubernetes.
+Security Teams don’t necessarily have the expertise to detect state-of-art
+attack scenarios specific to cloud-native environments, like Kubernetes.
 
-So, where do they get started? Capture-The-Flag (CTF) events are a great way to learn about the techniques of both attack (Red Team) and defence (Blue Team).
+So, where do they get started? Capture-The-Flag (CTF) events are a great way
+to learn about the techniques of both attack (Red Team) and defence (Blue
+Team).
 
-This talk will give you a framework for your own internal CTF events, with Red and Blue Team assessments, as a best practice for improving security in your organisation.
+This talk will give you a framework for your own internal CTF events, with Red
+and Blue Team assessments, as a best practice for improving security in your
+organisation.
 
-We'll give a hands-on, live walkthrough of the top 3 state-of-art attack scenarios as CTF exercises using common open source projects like Simulator and Tetragon.
+We'll give a hands-on, live walkthrough of the top 3 state-of-art attack
+scenarios as CTF exercises using common open source projects like Simulator
+and Tetragon.
 
 Remember, the best way to learn how to detect is to first know how to attack!
 
@@ -111,13 +124,24 @@ Remember, the best way to learn how to detect is to first know how to attack!
 - Where: [Kansas City, USA](https://www.kcdc.info/sessions)
 - Date: 08-10th August 2022
 
-We usually trust the hand that feeds, but what happens when we can't trust the hand that feeds us? How do we run applications when there is little to no trust?
+We usually trust the hand that feeds, but what happens when we can't trust the
+hand that feeds us? How do we run applications when there is little to no
+trust?
 
-In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack giving us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.
+In this session, we're going to start by taking a look at attack paths in and
+around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP
+vulnerability within a Supply Chain attack giving us an entry point. From
+there, together we'll explore how an attacker can take further control of the
+cluster via lateral and vertical movements.
 
-Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this up as a Blue Team. What do we have available from Kubernetes that can mitigate some of this disaster, and what practices should we put in place to further strengthen and defend our compute.
+Once we have your attention from seeing how this could be someone's worst day,
+we'll look at how we can patch this up as a Blue Team. What do we have
+available from Kubernetes that can mitigate some of this disaster, and what
+practices should we put in place to further strengthen and defend our compute.
 
-From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
+From attending this session, you'll leave with a Purple Team understanding of
+core concepts within Kubernetes, that defence is strengthened with depth, and
+how we can defend from Script Kiddies to Nation States.
 
 ### KCDC 2022 - The Lost Art Of Keeping A Secret
 
@@ -125,17 +149,29 @@ From attending this session, you'll leave with a Purple Team understanding of co
 - Where: [Kansas City, USA](https://www.kcdc.info/sessions)
 - Date: 08-10th August 2022
 
-One thing that `L****` has noticed recently is that with all the advances that we have in technology, we still appear to have problems in keeping secrets to ourselves.
+One thing that `L****` has noticed recently is that with all the advances that
+we have in technology, we still appear to have problems in keeping secrets to
+ourselves.
 
-In this talk, `*E***` will introduce the core concepts of secrets. We look at an overview as to how best we can manage secrets, from creating them to using them in our applications.
+In this talk, `*E***` will introduce the core concepts of secrets. We look at
+an overview as to how best we can manage secrets, from creating them to using
+them in our applications.
 
-`**W**` will then look at the actors involved, the role of a developer consuming a secret, an engineer providing and defending them to an attacker on the lookout for some more data.
+`**W**` will then look at the actors involved, the role of a developer
+consuming a secret, an engineer providing and defending them to an attacker on
+the lookout for some more data.
 
-`***I*` will then look at ways that we can manage secrets over many environments, from development to production. Finally, we check what to do when our secrets aren't so secret anymore.
+`***I*` will then look at ways that we can manage secrets over many
+environments, from development to production. Finally, we check what to do
+when our secrets aren't so secret anymore.
 
-Finally, `****S` will finish with case studies of where security first has won and the instances where the secrets have been given away.
+Finally, `****S` will finish with case studies of where security first has won
+and the instances where the secrets have been given away.
 
-This talk will focus on the implementation of secrets based on cloud technologies, but the core concepts can be used within any system and the best practices that should be followed to give you a fighting chance to keep it to yourself.
+This talk will focus on the implementation of secrets based on cloud
+technologies, but the core concepts can be used within any system and the best
+practices that should be followed to give you a fighting chance to keep it to
+yourself.
 
 ### DevSecCon24 - Threat Modelling Kubernetes: A Lightspeed Introduction
 
@@ -143,7 +179,13 @@ This talk will focus on the implementation of secrets based on cloud technologie
 - Where: [Online](https://www.meetup.com/devseccon-wales/events/286041178/)
 - Date: 14th June 2022
 
-Cloud native container and Kubernetes systems bring new threats and risks to our precious workloads. As cloud technologies undergo rapid innovation and new tools and techniques emerge, security can get left behind. The answer to this conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on threat modelling cloud native systems, understanding adversarial techniques and preventative measures, and helping security and engineering teams increase the security and velocity of system delivery.
+Cloud native container and Kubernetes systems bring new threats and risks to
+our precious workloads. As cloud technologies undergo rapid innovation and new
+tools and techniques emerge, security can get left behind. The answer to this
+conveyor-belt of potential insecurity? Threat modelling! Join us for a primer
+on threat modelling cloud native systems, understanding adversarial techniques
+and preventative measures, and helping security and engineering teams increase
+the security and velocity of system delivery.
 
 ### OWASP AppSec EU - The Hand That Feeds - How to Misuse Kubernetes
 
@@ -152,13 +194,23 @@ Cloud native container and Kubernetes systems bring new threats and risks to our
 - Where: Online
 - Date: 09th June 2022
 
-We usually trust the hand that feeds, but what happens when we can't? How do we run applications when there is little to no trust?
+We usually trust the hand that feeds, but what happens when we can't? How do we
+run applications when there is little to no trust?
 
-In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack to give us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements.
+In this session, we're going to start by taking a look at attack paths in and
+around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP
+vulnerability within a Supply Chain attack to give us an entry point. From
+there, together we'll explore how an attacker can take further control of the
+cluster via lateral and vertical movements.
 
-Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll see how Kubernetes can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.
+Once we have your attention from seeing how this could be someone's worst day,
+we'll look at how we can patch this attack up as a Blue Team. We’ll see how
+Kubernetes can mitigate some of this disaster, and what practices we should put
+in place to further strengthen and defend our compute.
 
-From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
+From attending this session, you'll leave with a Purple Team understanding of
+core concepts within Kubernetes, that defence is strengthened with depth, and
+how we can defend from Script Kiddies to Nation States.
 
 ### KubeCon EU 2022 - Threat Modelling Kubernetes: A Lightspeed Introduction
 
@@ -167,7 +219,13 @@ From attending this session, you'll leave with a Purple Team understanding of co
 - Where: Feria Valencia, Valencia, Spain
 - Date: 19th May 2022
 
-Cloud native container and Kubernetes systems bring new threats and risks to our precious workloads. As cloud technologies undergo rapid innovation and new tools and techniques emerge, security can get left behind. The answer to this conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on threat modelling cloud native systems, understanding adversarial techniques and preventative measures, and helping security and engineering teams increase the security and velocity of system delivery.
+Cloud native container and Kubernetes systems bring new threats and risks to
+our precious workloads. As cloud technologies undergo rapid innovation and new
+tools and techniques emerge, security can get left behind. The answer to this
+conveyor-belt of potential insecurity? Threat modelling! Join us for a primer
+on threat modelling cloud native systems, understanding adversarial techniques
+and preventative measures, and helping security and engineering teams increase
+the security and velocity of system delivery.
 
 ### Cloud Native Security Days EU 2022 - CTF Overview and Experience
 
@@ -177,9 +235,13 @@ Cloud native container and Kubernetes systems bring new threats and risks to our
 - Where: Feria Valencia, Valencia, Spain
 - Date: 16th May 2022
 
-Prepare yourself for tomorrow's CTF event with a warm-up session based on introductory SecurityCon CTF events. All experience levels are welcome!
+Prepare yourself for tomorrow's CTF event with a warm-up session based on
+introductory SecurityCon CTF events. All experience levels are welcome!
 
-Learn how to engage with confounding container breakouts, confusing Kubernetes misconfigurations, and the art of engaging with CTF events to prepare yourself for the high-flying no-holds-barred super-inverted gravity-defying capture the flag event at SecurityCon tomorrow!
+Learn how to engage with confounding container breakouts, confusing Kubernetes
+misconfigurations, and the art of engaging with CTF events to prepare yourself
+for the high-flying no-holds-barred super-inverted gravity-defying capture the
+flag event at SecurityCon tomorrow!
 
 ### NDC London 2022 - An Introduction to Kubernetes
 
@@ -188,16 +250,23 @@ Learn how to engage with confounding container breakouts, confusing Kubernetes m
 - Where: Queen Elizabeth II Centre, London
 - Date: 09th May 2022
 
-In this workshop, we're going to introduce you to the orchestrator formally known as Kubernetes. This isn't about why or if you should be using it, more of I need to work with a Kubernetes cluster and how do I connect to it and get it to work for me.
+In this workshop, we're going to introduce you to the orchestrator formally
+known as Kubernetes. This isn't about why or if you should be using it, more
+of I need to work with a Kubernetes cluster and how do I connect to it and get
+it to work for me.
 
 In this workshop, you will:
 
-- have your very own cluster already setup and show you how to connect to it from your own machine
+- have your very own cluster already setup and show you how to connect to it
+  from your own machine
 - understand how we run our workloads and how to update them
-- how do we load balancer our workloads and make them available to others on the internet
+- how do we load balancer our workloads and make them available to others on
+  the internet
 - some common mistakes that you can avoid
 
-By the end of the workshop, you will be able to hold your head high and say that you can work with a Kubernetes cluster and be ready for your next Cloud Native adventure!
+By the end of the workshop, you will be able to hold your head high and say
+that you can work with a Kubernetes cluster and be ready for your next Cloud
+Native adventure!
 
 ### DevSecCon Wales - HackTheBox-athon Workshop 2022
 
@@ -217,7 +286,19 @@ By the end of the workshop, you will be able to hold your head high and say that
 - Where: [Omaha, USA](https://kernelcon.org/)
 - Date: 02nd April 2022
 
-We usually trust the hand that feeds, but what happens when we can't? How do we run applications when there is little to no trust? In this session, we're going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain attack to give us an entry point. From there, together we'll explore how an attacker can take further control of the cluster via lateral and vertical movements. Once we have your attention from seeing how this could be someone's worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll see how Kubernetes can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute. From attending this session, you'll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
+We usually trust the hand that feeds, but what happens when we can't? How do we
+run applications when there is little to no trust? In this session, we're going
+to start by taking a look at attack paths in and around Kubernetes, acting as a
+Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain
+attack to give us an entry point. From there, together we'll explore how an
+attacker can take further control of the cluster via lateral and vertical
+movements. Once we have your attention from seeing how this could be someone's
+worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll
+see how Kubernetes can mitigate some of this disaster, and what practices we
+should put in place to further strengthen and defend our compute. From
+attending this session, you'll leave with a Purple Team understanding of core
+concepts within Kubernetes, that defence is strengthened with depth, and how we
+can defend from Script Kiddies to Nation States.
 
 ### .NET Beyond - The Hand That Feeds: How to Misuse Kubernetes
 
@@ -225,13 +306,24 @@ We usually trust the hand that feeds, but what happens when we can't? How do we 
 - Where: [Online](https://tanzu.vmware.com/developer/tv/dotnet-beyond/0012/)
 - Date: 31st March 2022
 
-We usually trust the hand that feeds, but what happens when we can’t trust the hand that feeds us? How do we run applications when there is little to no trust?
+We usually trust the hand that feeds, but what happens when we can’t trust the
+hand that feeds us? How do we run applications when there is little to no
+trust?
 
-In this session, we’re going to start by taking a look at attack paths in and around Kubernetes, acting as a Red Team. We’ll take advantage of an OWASP vulnerability within a supply chain attack giving us an entry point. From there, together we’ll explore how an attacker can take further control of the cluster via lateral and vertical movements.
+In this session, we’re going to start by taking a look at attack paths in and
+around Kubernetes, acting as a Red Team. We’ll take advantage of an OWASP
+vulnerability within a supply chain attack giving us an entry point. From
+there, together we’ll explore how an attacker can take further control of the
+cluster via lateral and vertical movements.
 
-Once we have your attention from seeing how this could be someone’s worst day, we’ll look at how we can patch this up as a Blue Team. We’ll see what we have available from Kubernetes that can mitigate some of this disaster, and what practices we should put in place to further strengthen and defend our compute.
+Once we have your attention from seeing how this could be someone’s worst day,
+we’ll look at how we can patch this up as a Blue Team. We’ll see what we have
+available from Kubernetes that can mitigate some of this disaster, and what
+practices we should put in place to further strengthen and defend our compute.
 
-From attending this session, you’ll leave with a Purple Team understanding of core concepts within Kubernetes, that defence is strengthened with depth, and how we can defend from Script Kiddies to Nation States.
+From attending this session, you’ll leave with a Purple Team understanding of
+core concepts within Kubernetes, that defence is strengthened with depth, and
+how we can defend from Script Kiddies to Nation States.
 
 ### KernelCon - Kubernetes Security: Learn By Hacking
 
@@ -239,12 +331,15 @@ From attending this session, you’ll leave with a Purple Team understanding of 
 - Where: [Omaha, USA](https://kernelcon.org/training#k8sec)
 - Date: 30th - 31st March 2022
 
-Understand why many cloud native services have evolved quickly, and often miss vital security considerations, with Hacking Kubernetes, GKE CIS Benchmark, and SANS authors:
+Understand why many cloud native services have evolved quickly, and often miss
+vital security considerations, with Hacking Kubernetes, GKE CIS Benchmark,
+and SANS authors:
 
 - Secure containerized applications and defend orchestration workloads.
 - Use real-world exploits to target key application deployment components.
 - Understand the risks involved in running cloud native infrastructure.
-- Explore vulnerabilities to cloud native deployments through authentication, pipeline, and supply chain exploits.
+- Explore vulnerabilities to cloud native deployments through authentication,
+  pipeline, and supply chain exploits.
 - Exploit and then secure application deployments via Docker and Kubernetes.
 - Determine how vulnerabilities are exploited and how defences are designed.
 
@@ -290,9 +385,9 @@ Understand why many cloud native services have evolved quickly, and often miss v
 - Where: [cosecast.com](https://cosecast.com/episode-8-kubecon-ctf)
 - Date: 10 January 2022.
 
-In this episode Steve speaks with the Control Plane Kubernetes security training
-gurus, Lewis Denham-Parry and Andy Martin about their brain-child, the KubeCon
-Capture the Flag!
+In this episode Steve speaks with the Control Plane Kubernetes security
+training gurus, Lewis Denham-Parry and Andy Martin about their brain-child, the
+KubeCon Capture the Flag!
 
 We get into how it began, the community the enables it and the inspiration for
 some of the concepts within its structure and scenes.
@@ -326,9 +421,16 @@ this is one to listen to before we meet up for KubeCon 2022.
 - Where: [London, UK](https://emamo.com/event/bsideslondon2021/r/speaker/lewis-denham-parry)
 - Date: 12th November 2021
 
-Delve deeper into the dark and mysterious world of Kubernetes security! Exploit a supply chain attack and start your journey deep inside the target infrastructure, exploit your position to hunt and collect the flags, and hopefully learn something new and wryly amusing along the way!
+Delve deeper into the dark and mysterious world of Kubernetes security!
+Exploit a supply chain attack and start your journey deep inside the target
+infrastructure, exploit your position to hunt and collect the flags, and
+hopefully learn something new and wryly amusing along the way!
 
-Attendees can play six increasingly beguiling and demanding scenarios to bushwhack their way through the dense jungle of Kubernetes security. Everybody is welcome, from beginner to hardened veteran, as we venture amongst the low-hanging fruits of insecure configuration and scale the lofty peaks of cluster compromise!
+Attendees can play six increasingly beguiling and demanding scenarios to
+bushwhack their way through the dense jungle of Kubernetes security. Everybody
+is welcome, from beginner to hardened veteran, as we venture amongst the
+low-hanging fruits of insecure configuration and scale the lofty peaks of
+cluster compromise!
 
 ### KubeCon Cloud Native Security Conference Day - Capture The Flag NA 2021
 
@@ -614,7 +716,9 @@ wide community.
 - Where: [Minnesota, USA](https://pubconf.io/events/2019/minnesota/)
 - Date: 08th May 2019
 
-### NDC Minnesota 2019 - Scaling Microservices with Message Queues, DotNet Core and Kubernetes
+### NDC Minnesota 2019 - Scaling Microservices with Message Queues, DotNet Core
+
+and Kubernetes
 
 - Type: Talk
 - Where: [Minnesota, USA](https://ndcminnesota.com/)
@@ -661,11 +765,13 @@ Find out the parallels of mental health to monoliths versus microservices!
 
 Rapid-fire funny talks, musical acts, and comedy stunts from amazing developers.
 
-### NDC London 2019 - Scaling Microservices with Message queues, .NET and Kubernetes
+### NDC London 2019 - Scaling Microservices with Message queues, .NET and
+
+Kubernetes
 
 - Type: Talk
 - Where: [London, UK](https://ndc-london.com)
-- Date:  30th January 2019
+- Date: 30th January 2019
 - Online: [YouTube](https://www.youtube.com/watch?v=si44LvcgXwU)
 
 When you design and build applications at scale, you deal with two significant
@@ -677,7 +783,8 @@ where instances of your applications are increased or decreased automatically
 based on metrics that you define.
 
 In this talk, you’ll learn how to design, package & deploy reliable .NET
-applications to Kubernetes & decouple several components using a message broker.
+applications to Kubernetes & decouple several components using a message
+broker.
 You will also learn how to set autoscaling rules to cope with an increasing
 influx of messages in the queue.
 
@@ -710,7 +817,8 @@ influx of messages in the queue.
 From working with a number of companies, the only constant is seeing that each
 company has their own way of migrating from a monolith to a microservice
 architecture, and it never working out as planned. In this talk Lewis will
-share with you the idea of embracing your monolith and making it a macroservice.
+share with you the idea of embracing your monolith and making it a
+macroservice.
 He’ll explore the benefits of this approach from both a technical and business
 perspective, and plan how to convert this macroserivce into microservices.
 
@@ -730,7 +838,7 @@ perspective, and plan how to convert this macroserivce into microservices.
 
 - Type: Workshop
 - Where: [London, UK](https://skillsmatter.com/conferences/10107-prognet-london-2018#skillscasts).
-- Date:  12th September 2018.
+- Date: 12th September 2018.
 
 With the explosive momentum of Docker, Kubernetes has become the de-facto
 standard for orchestrating and managing containerised apps in production.
