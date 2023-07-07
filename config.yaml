@@ -13,30 +13,30 @@ enableEmoji: true
 googleAnalytics: G-SNNE5MMPPC
 
 minify:
-    disableXML: true
-    minifyOutput: true
+  disableXML: true
+  minifyOutput: true
 
 params:
-    env: production
-    description: "This is the description"
-    defaultTheme: dark
-    showBreadCrumbs: false
-    profileMode:
-        enabled: true
-        title: "Did somebody say 🍰"
-    socialIcons:
-        - name: github
-          url: "https://github.com/denhamparry"
-        - name: twitter
-          url: "https://twitter.com/denhamparry"
-        - name: linkedin
-          url: "https://www.linkedin.com/in/denhamparry/"
+  env: production
+  description: "This is the description"
+  defaultTheme: dark
+  showBreadCrumbs: false
+  profileMode:
+    enabled: true
+    title: "Did somebody say 🍰"
+  socialIcons:
+    - name: github
+      url: "https://github.com/denhamparry"
+    - name: twitter
+      url: "https://twitter.com/denhamparry"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/denhamparry/"
 
 privacy:
-    twitter:
-        disabled: false
-        enableDNT: true
-        simple: true
-    youtube:
-        disabled: false
-        privacyEnhanced: true
+  twitter:
+    disabled: false
+    enableDNT: true
+    simple: true
+  youtube:
+    disabled: false
+    privacyEnhanced: true
