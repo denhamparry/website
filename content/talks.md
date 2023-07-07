@@ -36,37 +36,40 @@ Something soon...
 - Where: [YouTube](https://www.youtube.com/watch?v=8GKFzJaEHac)
 - Date: 23rd March 2023
 
-How do you know that the software you're running on your laptop or in
-production is actually the software you think you're running? Attackers may
-try to modify source code or compiled binaries/containers as they move about
-the internet and your network. We can check the authenticity of software and
-other digital artefacts with digital signatures. But, in practice, almost
-nobody does! Today, we'll see why not, and what the Sigstore project is doing
-to fix that. We'll explore digital signatures, losing your Yubikey on the
-street, why the price of security for OSS projects should be zero, how you
-achieve more security by promising less, and why software signatures need
-"sunshine laws," all in the context of the Sigstore project and its constituent
-components Fulcio, Rekor, and Cosign. You'll learn how the OSS ecosystem is
-getting more secure every day and how you can apply the same tools and
-principles.
+How do you know that the software you're running on your laptop or in production
+is actually the software you think you're running? Attackers may try to modify
+source code or compiled binaries/containers as they move about the internet and
+your network. We can check the authenticity of software and other digital
+artefacts with digital signatures. But, in practice, almost nobody does! Today,
+we'll see why not, and what the Sigstore project is doing to fix that. We'll
+explore digital signatures, losing your Yubikey on the street, why the price of
+security for OSS projects should be zero, how you achieve more security by
+promising less, and why software signatures need "sunshine laws," all in the
+context of the Sigstore project and its constituent components Fulcio, Rekor,
+and Cosign. You'll learn how the OSS ecosystem is getting more secure every day
+and how you can apply the same tools and principles.
 
 ### Cloud Native Manchester - _Some like it hot_ (SLSA)
 
 - Type: Talk
-- Where: [Manchester, UK](https://www.meetup.com/cloud-native-kubernetes-manchester/events/291823775/)
+- Where:
+  [Manchester, UK](https://www.meetup.com/cloud-native-kubernetes-manchester/events/291823775/)
 - Date: 21st March 2023
 
 ### Public Cloud Kubernetes London - _Some like it hot_ (SLSA)
 
 - Type: Talk
-- Where: [London, UK](https://www.meetup.com/public-cloud-kubernetes-london/events/291161443/)
+- Where:
+  [London, UK](https://www.meetup.com/public-cloud-kubernetes-london/events/291161443/)
 - Date: 09th March 2023
 
 ### Fosdem - What Does Rugby Have To Do With Sigstore?
 
 - Type: Talk
-- Video: [Website](https://fosdem.org/2023/schedule/event/security_rugby_sigstore/)
-- Where: [Brussels, Belgium](https://fosdem.org/2023/schedule/event/security_rugby_sigstore/)
+- Video:
+  [Website](https://fosdem.org/2023/schedule/event/security_rugby_sigstore/)
+- Where:
+  [Brussels, Belgium](https://fosdem.org/2023/schedule/event/security_rugby_sigstore/)
 - Date: 04-05th February 2023
 
 Cosign, fulcio, rekor are all components in keyless signing with Sigstore.
@@ -74,8 +77,8 @@ Cosign, fulcio, rekor are all components in keyless signing with Sigstore.
 Each piece has its responsibility to provide a smooth developer experience for
 container signing.
 
-How does it all work together to complete that complicated dance to tie
-identity to cryptographic signatures?
+How does it all work together to complete that complicated dance to tie identity
+to cryptographic signatures?
 
 And what's more cryptic than rugby?
 
@@ -91,12 +94,13 @@ this talk is for you.
 
 - Type: Talk
 - Video: [YouTube](https://www.youtube.com/watch?v=IZXVWyKGHi4)
-- Where: [Detroit, USA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/)
+- Where:
+  [Detroit, USA](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/)
 - Date: 26-28th October 2022
 
-Threat actors have always been looking to attack clusters. Do you have the
-right security in place to detect and defeat if they are targeting yours? Or
-they are already in?
+Threat actors have always been looking to attack clusters. Do you have the right
+security in place to detect and defeat if they are targeting yours? Or they are
+already in?
 
 Kubernetes has become the de facto cloud operating system and production
 environments have increased in maturity. So have the threats.
@@ -104,17 +108,16 @@ environments have increased in maturity. So have the threats.
 Security Teams don’t necessarily have the expertise to detect state-of-art
 attack scenarios specific to cloud-native environments, like Kubernetes.
 
-So, where do they get started? Capture-The-Flag (CTF) events are a great way
-to learn about the techniques of both attack (Red Team) and defence (Blue
-Team).
+So, where do they get started? Capture-The-Flag (CTF) events are a great way to
+learn about the techniques of both attack (Red Team) and defence (Blue Team).
 
 This talk will give you a framework for your own internal CTF events, with Red
 and Blue Team assessments, as a best practice for improving security in your
 organisation.
 
 We'll give a hands-on, live walkthrough of the top 3 state-of-art attack
-scenarios as CTF exercises using common open source projects like Simulator
-and Tetragon.
+scenarios as CTF exercises using common open source projects like Simulator and
+Tetragon.
 
 Remember, the best way to learn how to detect is to first know how to attack!
 
@@ -125,19 +128,18 @@ Remember, the best way to learn how to detect is to first know how to attack!
 - Date: 08-10th August 2022
 
 We usually trust the hand that feeds, but what happens when we can't trust the
-hand that feeds us? How do we run applications when there is little to no
-trust?
+hand that feeds us? How do we run applications when there is little to no trust?
 
 In this session, we're going to start by taking a look at attack paths in and
 around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP
-vulnerability within a Supply Chain attack giving us an entry point. From
-there, together we'll explore how an attacker can take further control of the
-cluster via lateral and vertical movements.
+vulnerability within a Supply Chain attack giving us an entry point. From there,
+together we'll explore how an attacker can take further control of the cluster
+via lateral and vertical movements.
 
 Once we have your attention from seeing how this could be someone's worst day,
-we'll look at how we can patch this up as a Blue Team. What do we have
-available from Kubernetes that can mitigate some of this disaster, and what
-practices should we put in place to further strengthen and defend our compute.
+we'll look at how we can patch this up as a Blue Team. What do we have available
+from Kubernetes that can mitigate some of this disaster, and what practices
+should we put in place to further strengthen and defend our compute.
 
 From attending this session, you'll leave with a Purple Team understanding of
 core concepts within Kubernetes, that defence is strengthened with depth, and
@@ -153,17 +155,17 @@ One thing that `L****` has noticed recently is that with all the advances that
 we have in technology, we still appear to have problems in keeping secrets to
 ourselves.
 
-In this talk, `*E***` will introduce the core concepts of secrets. We look at
-an overview as to how best we can manage secrets, from creating them to using
-them in our applications.
+In this talk, `*E***` will introduce the core concepts of secrets. We look at an
+overview as to how best we can manage secrets, from creating them to using them
+in our applications.
 
-`**W**` will then look at the actors involved, the role of a developer
-consuming a secret, an engineer providing and defending them to an attacker on
-the lookout for some more data.
+`**W**` will then look at the actors involved, the role of a developer consuming
+a secret, an engineer providing and defending them to an attacker on the lookout
+for some more data.
 
 `***I*` will then look at ways that we can manage secrets over many
-environments, from development to production. Finally, we check what to do
-when our secrets aren't so secret anymore.
+environments, from development to production. Finally, we check what to do when
+our secrets aren't so secret anymore.
 
 Finally, `****S` will finish with case studies of where security first has won
 and the instances where the secrets have been given away.
@@ -179,18 +181,19 @@ yourself.
 - Where: [Online](https://www.meetup.com/devseccon-wales/events/286041178/)
 - Date: 14th June 2022
 
-Cloud native container and Kubernetes systems bring new threats and risks to
-our precious workloads. As cloud technologies undergo rapid innovation and new
-tools and techniques emerge, security can get left behind. The answer to this
-conveyor-belt of potential insecurity? Threat modelling! Join us for a primer
-on threat modelling cloud native systems, understanding adversarial techniques
-and preventative measures, and helping security and engineering teams increase
-the security and velocity of system delivery.
+Cloud native container and Kubernetes systems bring new threats and risks to our
+precious workloads. As cloud technologies undergo rapid innovation and new tools
+and techniques emerge, security can get left behind. The answer to this
+conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on
+threat modelling cloud native systems, understanding adversarial techniques and
+preventative measures, and helping security and engineering teams increase the
+security and velocity of system delivery.
 
 ### OWASP AppSec EU - The Hand That Feeds - How to Misuse Kubernetes
 
 - Type: Talk
-- Link: [Online](https://whova.com/web/sT1P4N7cLm%2FUyeUd0yq6HLfmBOP%2FXqL042hVxqUa0ZA%3D/Speakers?utm_source=owasp-web&utm_medium=event-page&utm_campaign=none)
+- Link:
+  [Online](https://whova.com/web/sT1P4N7cLm%2FUyeUd0yq6HLfmBOP%2FXqL042hVxqUa0ZA%3D/Speakers?utm_source=owasp-web&utm_medium=event-page&utm_campaign=none)
 - Where: Online
 - Date: 09th June 2022
 
@@ -219,13 +222,13 @@ how we can defend from Script Kiddies to Nation States.
 - Where: Feria Valencia, Valencia, Spain
 - Date: 19th May 2022
 
-Cloud native container and Kubernetes systems bring new threats and risks to
-our precious workloads. As cloud technologies undergo rapid innovation and new
-tools and techniques emerge, security can get left behind. The answer to this
-conveyor-belt of potential insecurity? Threat modelling! Join us for a primer
-on threat modelling cloud native systems, understanding adversarial techniques
-and preventative measures, and helping security and engineering teams increase
-the security and velocity of system delivery.
+Cloud native container and Kubernetes systems bring new threats and risks to our
+precious workloads. As cloud technologies undergo rapid innovation and new tools
+and techniques emerge, security can get left behind. The answer to this
+conveyor-belt of potential insecurity? Threat modelling! Join us for a primer on
+threat modelling cloud native systems, understanding adversarial techniques and
+preventative measures, and helping security and engineering teams increase the
+security and velocity of system delivery.
 
 ### Cloud Native Security Days EU 2022 - CTF Overview and Experience
 
@@ -246,27 +249,28 @@ flag event at SecurityCon tomorrow!
 ### NDC London 2022 - An Introduction to Kubernetes
 
 - Type: Workshop
-- Link: [London, UK](https://ndclondon.com/agenda/an-introduction-to-kubernetes-part-i-02zg/0vh9oah807o)
+- Link:
+  [London, UK](https://ndclondon.com/agenda/an-introduction-to-kubernetes-part-i-02zg/0vh9oah807o)
 - Where: Queen Elizabeth II Centre, London
 - Date: 09th May 2022
 
 In this workshop, we're going to introduce you to the orchestrator formally
-known as Kubernetes. This isn't about why or if you should be using it, more
-of I need to work with a Kubernetes cluster and how do I connect to it and get
-it to work for me.
+known as Kubernetes. This isn't about why or if you should be using it, more of
+I need to work with a Kubernetes cluster and how do I connect to it and get it
+to work for me.
 
 In this workshop, you will:
 
 - have your very own cluster already setup and show you how to connect to it
   from your own machine
 - understand how we run our workloads and how to update them
-- how do we load balancer our workloads and make them available to others on
-  the internet
+- how do we load balancer our workloads and make them available to others on the
+  internet
 - some common mistakes that you can avoid
 
-By the end of the workshop, you will be able to hold your head high and say
-that you can work with a Kubernetes cluster and be ready for your next Cloud
-Native adventure!
+By the end of the workshop, you will be able to hold your head high and say that
+you can work with a Kubernetes cluster and be ready for your next Cloud Native
+adventure!
 
 ### DevSecCon Wales - HackTheBox-athon Workshop 2022
 
@@ -295,10 +299,10 @@ attacker can take further control of the cluster via lateral and vertical
 movements. Once we have your attention from seeing how this could be someone's
 worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll
 see how Kubernetes can mitigate some of this disaster, and what practices we
-should put in place to further strengthen and defend our compute. From
-attending this session, you'll leave with a Purple Team understanding of core
-concepts within Kubernetes, that defence is strengthened with depth, and how we
-can defend from Script Kiddies to Nation States.
+should put in place to further strengthen and defend our compute. From attending
+this session, you'll leave with a Purple Team understanding of core concepts
+within Kubernetes, that defence is strengthened with depth, and how we can
+defend from Script Kiddies to Nation States.
 
 ### .NET Beyond - The Hand That Feeds: How to Misuse Kubernetes
 
@@ -307,14 +311,13 @@ can defend from Script Kiddies to Nation States.
 - Date: 31st March 2022
 
 We usually trust the hand that feeds, but what happens when we can’t trust the
-hand that feeds us? How do we run applications when there is little to no
-trust?
+hand that feeds us? How do we run applications when there is little to no trust?
 
 In this session, we’re going to start by taking a look at attack paths in and
 around Kubernetes, acting as a Red Team. We’ll take advantage of an OWASP
-vulnerability within a supply chain attack giving us an entry point. From
-there, together we’ll explore how an attacker can take further control of the
-cluster via lateral and vertical movements.
+vulnerability within a supply chain attack giving us an entry point. From there,
+together we’ll explore how an attacker can take further control of the cluster
+via lateral and vertical movements.
 
 Once we have your attention from seeing how this could be someone’s worst day,
 we’ll look at how we can patch this up as a Blue Team. We’ll see what we have
@@ -332,8 +335,8 @@ how we can defend from Script Kiddies to Nation States.
 - Date: 30th - 31st March 2022
 
 Understand why many cloud native services have evolved quickly, and often miss
-vital security considerations, with Hacking Kubernetes, GKE CIS Benchmark,
-and SANS authors:
+vital security considerations, with Hacking Kubernetes, GKE CIS Benchmark, and
+SANS authors:
 
 - Secure containerized applications and defend orchestration workloads.
 - Use real-world exploits to target key application deployment components.
@@ -385,9 +388,9 @@ and SANS authors:
 - Where: [cosecast.com](https://cosecast.com/episode-8-kubecon-ctf)
 - Date: 10 January 2022.
 
-In this episode Steve speaks with the Control Plane Kubernetes security
-training gurus, Lewis Denham-Parry and Andy Martin about their brain-child, the
-KubeCon Capture the Flag!
+In this episode Steve speaks with the Control Plane Kubernetes security training
+gurus, Lewis Denham-Parry and Andy Martin about their brain-child, the KubeCon
+Capture the Flag!
 
 We get into how it began, the community the enables it and the inspiration for
 some of the concepts within its structure and scenes.
@@ -418,11 +421,12 @@ this is one to listen to before we meet up for KubeCon 2022.
 ### BSides London November 2021 - Kubernetes CTF
 
 - Type: CTF
-- Where: [London, UK](https://emamo.com/event/bsideslondon2021/r/speaker/lewis-denham-parry)
+- Where:
+  [London, UK](https://emamo.com/event/bsideslondon2021/r/speaker/lewis-denham-parry)
 - Date: 12th November 2021
 
-Delve deeper into the dark and mysterious world of Kubernetes security!
-Exploit a supply chain attack and start your journey deep inside the target
+Delve deeper into the dark and mysterious world of Kubernetes security! Exploit
+a supply chain attack and start your journey deep inside the target
 infrastructure, exploit your position to hunt and collect the flags, and
 hopefully learn something new and wryly amusing along the way!
 
@@ -435,7 +439,8 @@ cluster compromise!
 ### KubeCon Cloud Native Security Conference Day - Capture The Flag NA 2021
 
 - Type: CTF
-- Where: [LA, USA / Online](https://events.linuxfoundation.org/cloud-native-security-conference-north-america/)
+- Where:
+  [LA, USA / Online](https://events.linuxfoundation.org/cloud-native-security-conference-north-america/)
 - Date: 12th October 2021
 - Video: [YouTube - Introduction NA 2021](https://youtu.be/Bn_0NjvoDoo)
 - Video: [YouTube - Walkthrough NA 2021](https://youtu.be/phKBYX6Pd_A)
@@ -464,7 +469,8 @@ NA that was part of KubeCon NA 2021.
 ### KCD UK
 
 - Type: Conference
-- Where: [Online](https://community.cncf.io/events/details/cncf-kcd-uk-presents-kubernetes-community-days-uk-2021/)
+- Where:
+  [Online](https://community.cncf.io/events/details/cncf-kcd-uk-presents-kubernetes-community-days-uk-2021/)
 - Date: 16th September 2021
 
 ### Private Kubernetes Training September 2021 1/2
@@ -476,7 +482,8 @@ NA that was part of KubeCon NA 2021.
 ### KCD UK - Kubernetes Threat Modelling Workshop
 
 - Type: Workshop
-- Where: [Online](https://www.eventbrite.co.uk/x/kubernetes-threat-modelling-tickets-169847718097)
+- Where:
+  [Online](https://www.eventbrite.co.uk/x/kubernetes-threat-modelling-tickets-169847718097)
 - Date: 13th September 2021
 
 ### Private Kubernetes Security Training August 2021
@@ -494,7 +501,8 @@ NA that was part of KubeCon NA 2021.
 ### O'Reilly - Kubernetes Threat Modelling August 2021
 
 - Type: Workshop
-- Where: [Online](https://www.oreilly.com/live-events/kubernetes-threat-modeling/0636920055610/0636920055609/)
+- Where:
+  [Online](https://www.oreilly.com/live-events/kubernetes-threat-modeling/0636920055610/0636920055609/)
 - Date: 10th August 2021
 
 ### Private Kubernetes Talk August 2021
@@ -548,13 +556,15 @@ NA that was part of KubeCon NA 2021.
 ### KubeCon Cloud Native Security Day - Capture The Flag EU 2021
 
 - Type: CTF
-- Where: [Online](https://events.linuxfoundation.org/cloud-native-security-day-europe/)
+- Where:
+  [Online](https://events.linuxfoundation.org/cloud-native-security-day-europe/)
 - Date: 4th May 2021
 - Video: [YouTube - Capture the Flag overview](https://youtu.be/Bn_0NjvoDoo)
-- Video: [YouTube - Capture The Flag Summary + Wrap UpVirtual](https://youtu.be/phKBYX6Pd_A)
+- Video:
+  [YouTube - Capture The Flag Summary + Wrap UpVirtual](https://youtu.be/phKBYX6Pd_A)
 
-Review of the Capture the Flag event hosted at Cloud Native Security Day EU
-that was part of KubeCon EU 2021.
+Review of the Capture the Flag event hosted at Cloud Native Security Day EU that
+was part of KubeCon EU 2021.
 
 ### Cloud Natives UK - with special guest Dan "Pop" Papandrea
 
@@ -611,19 +621,22 @@ that was part of KubeCon EU 2021.
 ### Cloud Native Wales Meetup v1.6.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/266266702/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/266266702/)
 - Date: 14th Nov 2019
 
 ### Cloud Native Wales Meetup v1.5.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/266266702/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/266266702/)
 - Date: 10th Oct 2019
 
 ### Cloud Native Wales Meetup v1.4.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/266266702/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/266266702/)
 - Date: 12th Sept 2019
 
 ### KCDC - What vulnerabilities? Live hacking of Containers and Orchestrators
@@ -635,7 +648,8 @@ that was part of KubeCon EU 2021.
 ### Cloud Native Wales Meetup v1.2.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/csxbwqyzkbpb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/csxbwqyzkbpb/)
 - Date: 04th Jul 2019
 
 ### NDC Oslo - What vulnerabilities? Live hacking of Containers and Orchestrators
@@ -679,12 +693,14 @@ best to monitor your services to put preventative measures in place.
 ### µCon London 2019 - How do we become Cloud Native?
 
 - Type: Talk
-- Where: [London, UK](https://skillsmatter.com/conferences/11982-con-london-2019-the-conference-on-microservices-ddd-and-software-architecture#program)
+- Where:
+  [London, UK](https://skillsmatter.com/conferences/11982-con-london-2019-the-conference-on-microservices-ddd-and-software-architecture#program)
 
 ### KubeCon EU - How we contributed to the community with no code
 
 - Type: Lightning Talk
-- Where: [KubeCon CloudNative Europe / Barcelona](https://events.linuxfoundation.org/events/kubecon-cloudnativecon-europe-2019)
+- Where:
+  [KubeCon CloudNative Europe / Barcelona](https://events.linuxfoundation.org/events/kubecon-cloudnativecon-europe-2019)
 - Date: 19th May 2019
 - Online: [Barcelona, Spain](https://www.youtube.com/watch?v=4jEASYCaVDo)
 
@@ -707,7 +723,8 @@ wide community.
 ### Cloud Native Wales Meetup v1.0.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/csxbwqyzhbmb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/csxbwqyzhbmb/)
 - Date: 09th May 2019
 
 ### PubConf Minnesota 2019 - Captain Planet: Not the Hero We Want or Need
@@ -727,7 +744,8 @@ and Kubernetes
 ### Cloud Native Wales Meetup v0.12.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/csxbwqyzgbpb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/csxbwqyzgbpb/)
 - Date: 11th Apr 2019
 
 ### Docker London: State of the Union Address
@@ -739,13 +757,15 @@ and Kubernetes
 ### Cloud Native Wales Meetup v0.11.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyzfbsb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyzfbsb/)
 - Date: 14th Mar 2019
 
 ### Podcast - CTO and Co-Founder Talk with Dave Albert
 
 - Type: Podcast
-- Where: [player.fm](https://player.fm/series/cto-and-co-founder-talk-with-dave-albert/guest-lewis-denham-parry)
+- Where:
+  [player.fm](https://player.fm/series/cto-and-co-founder-talk-with-dave-albert/guest-lewis-denham-parry)
 - Date: 12th March 2019.
 
 Find out the parallels of mental health to monoliths versus microservices!
@@ -753,7 +773,8 @@ Find out the parallels of mental health to monoliths versus microservices!
 ### Cloud Native Wales Meetup v0.10.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyzdbsb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyzdbsb/)
 - Date: 07th Feb 2019
 
 ### PubConf London 2019 - Shaun of the Dev
@@ -783,15 +804,15 @@ where instances of your applications are increased or decreased automatically
 based on metrics that you define.
 
 In this talk, you’ll learn how to design, package & deploy reliable .NET
-applications to Kubernetes & decouple several components using a message
-broker.
+applications to Kubernetes & decouple several components using a message broker.
 You will also learn how to set autoscaling rules to cope with an increasing
 influx of messages in the queue.
 
 ### Cloud Native Wales Meetup v0.9.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyzdbsb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyzdbsb/)
 - Date: 10th Jan 2019
 
 ## 2018
@@ -799,33 +820,36 @@ influx of messages in the queue.
 ### Cloud Native Wales Meetup v0.8.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxqbrb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxqbrb/)
 - Date: 12th Dec 2018
 
 ### Cloud Native Wales Meetup v0.7.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxpblb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxpblb/)
 - Date: 08th Nov 2018
 
 ### µCon London 2018 - One Monolith / One Macroservice / Many Microservices
 
 - Type: Talk
-- Where: [London, UK](https://skillsmatter.com/conferences/10336-mucon-london-2018-the-microservices-conference#skillscasts)
+- Where:
+  [London, UK](https://skillsmatter.com/conferences/10336-mucon-london-2018-the-microservices-conference#skillscasts)
 - Date: 05th November 2018
 
 From working with a number of companies, the only constant is seeing that each
 company has their own way of migrating from a monolith to a microservice
-architecture, and it never working out as planned. In this talk Lewis will
-share with you the idea of embracing your monolith and making it a
-macroservice.
-He’ll explore the benefits of this approach from both a technical and business
+architecture, and it never working out as planned. In this talk Lewis will share
+with you the idea of embracing your monolith and making it a macroservice. He’ll
+explore the benefits of this approach from both a technical and business
 perspective, and plan how to convert this macroserivce into microservices.
 
 ### Cloud Native Wales Meetup v0.6.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxnbpb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxnbpb/)
 - Date: 11th Oct 2018
 
 ### Cloud Native Wales Meetup v0.5.0
@@ -837,7 +861,8 @@ perspective, and plan how to convert this macroserivce into microservices.
 ### ProgNet London 2018 - Use Kubernetes to Deploy .NET Applications
 
 - Type: Workshop
-- Where: [London, UK](https://skillsmatter.com/conferences/10107-prognet-london-2018#skillscasts).
+- Where:
+  [London, UK](https://skillsmatter.com/conferences/10107-prognet-london-2018#skillscasts).
 - Date: 12th September 2018.
 
 With the explosive momentum of Docker, Kubernetes has become the de-facto
@@ -846,23 +871,27 @@ standard for orchestrating and managing containerised apps in production.
 ### Cloud Native Wales Meetup v0.4.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxlbmb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxlbmb/)
 - Date: 09th Aug 2018
 
 ### Cloud Native Wales Meetup v0.3.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxkbqb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxkbqb/)
 - Date: 05th Jul 2018
 
 ### Cloud Native Wales Meetup v0.2.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxjbsb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxjbsb/)
 - Date: 20th Jun 2018
 
 ### Cloud Native Wales Meetup v0.1.0
 
 - Type: Meetup
-- Where: [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxhbnb/)
+- Where:
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyxhbnb/)
 - Date: 10th May 2018
