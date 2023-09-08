@@ -26,7 +26,25 @@ menu:
 
 ## Coming Up
 
-Something soon...
+### KubeCon NA 2023 - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
+
+- Type: Talk
+- Where: [Chicago, USA](https://kccncna2023.sched.com/event/1R2sC)
+- Date: 06-09th November 2023
+
+Ozzie the Overconfident Operator has secured their cluster! They have done it
+all: role-based access control, encryption at rest, TLS…and as they congratulate
+themself on a job well done, Nova the Nefarious Ne’er-do-well watches from
+around the corner, drooling with anticipation. Spoiler alert⎯Ozzie is about to
+get HACKED. In this talk, the speakers play the characters of Ozzie and Nova and
+playfully demo cluster security as Nefarious Nova exploits each of Ozzie’s
+security decisions. What can Overconfident Ozzie do when Nova gets the upper
+hand? How can Ozzie proactively keep Nova’s threats at bay? Take security beyond
+the firewall and discover cloud native security concepts such as identity
+management, container image scanning and signing, creating and implementing
+policies, runtime security, and secrets management. Learn security basics
+alongside Overconfident Ozzie, who is sure the cluster is COMPLETELY secure this
+time. There is nothing Nova can do to break… uh-oh. Not again!
 
 ## 2023
 
