@@ -48,6 +48,18 @@ time. There is nothing Nova can do to break… uh-oh. Not again!
 
 ## 2023
 
+### Lighting Talk 2 aka WTF is the Journey
+
+- Type: Lighting Talk
+- Where: [YouTube](https://www.youtube.com/watch?v=dR5T2qNAuCs&t=1s)
+- Date: 17th October 2023
+
+As per [X](https://x.com/denhamparry/status/1720177508279087147):
+
+> I gave a lightning talk at KCD UK 2023, it was impromptu, sleep deprived,
+> anxiety ridden, but described as a good rant. This is me sharing the advice I
+> wish I had when I got started in my career
+
 ### ⚡️ Enlightning - Signed, Sealed, Delivered, I’m Yours! An Introduction to Sigstore
 
 - Type: Discussion
