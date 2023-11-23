@@ -29,8 +29,8 @@ menu:
 ### KubeCon NA 2023 - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
 
 - Type: Talk
-- Where: [Chicago, USA](https://kccncna2023.sched.com/event/1R2sC) / YouTube soon
-- Date: 06-09th November 2023
+- Where: [YouTube](https://www.youtube.com/watch?v=Y1rJY_UlLmM)
+- Date: 08th November 2023
 
 Ozzie the Overconfident Operator has secured their cluster! They have done it
 all: role-based access control, encryption at rest, TLS…and as they congratulate
