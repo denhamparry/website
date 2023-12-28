@@ -24,6 +24,14 @@ menu:
   main: {}
 ---
 
+## 2024
+
+### Keynote with [Whitney Lee](https://www.linkedin.com/in/whitneylee/)
+
+- Type: Keynote
+- [Mexico](https://ccoss.org/)
+- Date: 24-24th February 2024
+
 ## 2023
 
 ### KubeCon NA 2023 - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
