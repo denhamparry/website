@@ -26,19 +26,11 @@ menu:
 
 ## 2024
 
-### Keynote with [Whitney Lee](https://www.linkedin.com/in/whitneylee/)
-
-- Type: Keynote
-- [Mexico](https://ccoss.org/)
-- Date: 24-24th February 2024
-
-## 2023
-
-### KubeCon NA 2023 - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
+### Open Source Summit North America - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
 
 - Type: Talk
-- Where: [YouTube](https://www.youtube.com/watch?v=Y1rJY_UlLmM)
-- Date: 08th November 2023
+- [Open Source Summit North America](https://events.linuxfoundation.org/open-source-summit-north-america/)
+- Date: 16-18th April 2024
 
 Ozzie the Overconfident Operator has secured their cluster! They have done it
 all: role-based access control, encryption at rest, TLS…and as they congratulate
@@ -53,6 +45,20 @@ management, container image scanning and signing, creating and implementing
 policies, runtime security, and secrets management. Learn security basics
 alongside Overconfident Ozzie, who is sure the cluster is COMPLETELY secure this
 time. There is nothing Nova can do to break… uh-oh. Not again!
+
+### KCD Guadalajara 2024 - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
+
+- Type: Keynote
+- [KCD Guadalajara](https://ccoss.org/)
+- Date: 24-24th February 2024
+
+## 2023
+
+### KubeCon NA 2023 - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
+
+- Type: Talk
+- Where: [YouTube](https://www.youtube.com/watch?v=Y1rJY_UlLmM)
+- Date: 08th November 2023
 
 ### Lighting Talk 2 aka WTF is the Journey
 
