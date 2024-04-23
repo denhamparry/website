@@ -1,7 +1,7 @@
 ---
 title: Talks
 date: 2022:04:22T21:00:00+00:00
-reviewed: 2024-02-01
+reviewed: 2024-03-28
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -26,7 +26,7 @@ menu:
 
 ## 2024
 
-### Open Source Summit North America - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
+### OSS North America - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
 
 - Type: Talk
 - [Open Source Summit North America](https://events.linuxfoundation.org/open-source-summit-north-america/)
