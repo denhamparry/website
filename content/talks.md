@@ -1,7 +1,7 @@
 ---
 title: Talks
 date: 2022:04:22T21:00:00+00:00
-reviewed: 2024-03-28
+reviewed: 2024-04-23
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -30,7 +30,7 @@ menu:
 
 - Type: Talk
 - [Open Source Summit North America](https://events.linuxfoundation.org/open-source-summit-north-america/)
-- Date: 16-18th April 2024
+- Date: 17th April 2024
 
 Ozzie the Overconfident Operator has secured their cluster! They have done it
 all: role-based access control, encryption at rest, TLS…and as they congratulate
