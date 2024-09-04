@@ -18,7 +18,7 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:
-  image: /images/talks/header.png
+  image: /images/talks/hotdog.jpg
 type: page
 menu:
   main: {}
