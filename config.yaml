@@ -31,6 +31,8 @@ params:
       url: "https://twitter.com/denhamparry"
     - name: linkedin
       url: "https://www.linkedin.com/in/denhamparry/"
+    - name: cv
+      url: "https://edera.dev"
 
 privacy:
   twitter:
