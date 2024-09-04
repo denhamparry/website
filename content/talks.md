@@ -1,7 +1,7 @@
 ---
 title: Talks
 date: 2022:04:22T21:00:00+00:00
-reviewed: 2024-05-24
+reviewed: 2024-09-04
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -18,7 +18,7 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:
-  image: /images/talks/header.png
+  image: /images/talks/hotdog.jpg
 type: page
 menu:
   main: {}
