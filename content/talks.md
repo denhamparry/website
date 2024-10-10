@@ -1,7 +1,7 @@
 ---
 title: Talks
 date: 2022:04:22T21:00:00+00:00
-reviewed: 2024-09-20
+reviewed: 2024-10-10
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -25,6 +25,12 @@ menu:
 ---
 
 ## 2024
+
+### The Cloud-Native Club | Project Spotlight: Edera
+
+- Type: Podcast
+- [Youtube](https://www.youtube.com/live/MXdmKViYV9Y?si=jhyyU4EIf4Y1wCe0)
+- Date: 26 Sept 2024
 
 ### OSS North America - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
 
