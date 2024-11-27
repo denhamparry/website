@@ -26,6 +26,12 @@ menu:
 
 ## 2024
 
+### The Cloud-Native Club | Project Spotlight: Edera
+
+- Type: Podcast
+- [Youtube](https://www.youtube.com/live/MXdmKViYV9Y?si=jhyyU4EIf4Y1wCe0)
+- Date: 26 Sept 2024
+
 ### OSS North America - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
 
 - Type: Talk

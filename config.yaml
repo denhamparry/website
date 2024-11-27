@@ -18,7 +18,7 @@ minify:
 
 params:
   env: production
-  description: "This is the description"
+  description: "The life and times of Lewis Denham-Parry"
   defaultTheme: dark
   showBreadCrumbs: false
   profileMode:
