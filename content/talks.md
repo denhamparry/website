@@ -1,7 +1,7 @@
 ---
 title: Talks
 date: 2022:04:22T21:00:00+00:00
-reviewed: 2025-03-26
+reviewed: 2025-05-09
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -29,7 +29,7 @@ menu:
 ### Container Runtimes... on Lockdown: The Hidden Costs of Multi-tenant Workloads
 
 - Type: Talk
-- [KubeCon EU 2025](https://kccnceu2025.sched.com/event/1txFY/container-runtimes-on-lockdown-the-hidden-costs-of-multi-tenant-workloads-lewis-denham-parry-edera-caleb-woodbine-iinz)
+- [YouTube](https://www.youtube.com/watch?v=I9t7qfOjgbo)
 - Date: 04th April 2025
 
 Container runtimes form the bedrock of Kubernetes, but running diverse workloads
