@@ -1,7 +1,9 @@
 baseURL: "https://denhamparry.co.uk"
 title: "Lewis Denham-Parry"
-paginate: 5
 theme: PaperMod
+
+pagination:
+  pagerSize: 5
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -35,7 +37,7 @@ params:
       url: "https://edera.dev"
 
 privacy:
-  twitter:
+  x:
     disabled: false
     enableDNT: true
     simple: true

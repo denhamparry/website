@@ -6,3 +6,11 @@ node_modules/
 .netlify
 .vscode/
 .hugo_build.lock
+
+# Nix and direnv
+.direnv/
+result
+result-*
+
+# envrc
+.envrc

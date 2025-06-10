@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Direnv configuration for automatic Nix environment loading
+
+# Load the Nix flake development shell
+use flake
+
+# Set environment variables for Hugo development
+export HUGO_ENVIRONMENT=development
+export HUGO_ENV=development
+
+# Add project root to path for easy access to scripts
+PROJECT_ROOT=$(pwd)
+export PROJECT_ROOT
+
+# Hugo development server settings
+export HUGO_BIND="0.0.0.0"
+export HUGO_PORT="1313"
+
+echo "🎨 Hugo development environment loaded!"
+echo "Run 'hugo-dev' for available commands"
