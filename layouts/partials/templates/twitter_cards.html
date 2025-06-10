@@ -1,0 +1,7 @@
+{{- /* Simplified Twitter Cards template for compatibility */ -}}
+<meta name="twitter:card" content="{{ if .Params.images }}summary_large_image{{ else }}summary{{ end }}" />
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}" />
+{{- if .Params.images }}
+<meta name="twitter:image" content="{{ index .Params.images 0 | absURL }}" />
+{{- end }}
