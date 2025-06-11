@@ -18,7 +18,7 @@
     "chalk": "^4.1.2",
     "jest": "^29.7.0",
     "linkinator": "^5.0.0",
-    "puppeteer": "^21.6.1"
+    "puppeteer": "^23.8.0"
   },
   "jest": {
     "testEnvironment": "node",

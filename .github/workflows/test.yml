@@ -12,7 +12,7 @@ jobs:
     
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [20.x]
     
     steps:
     - name: Checkout code
@@ -33,8 +33,21 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
+    - name: Cache Puppeteer browsers
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/puppeteer
+        key: ${{ runner.os }}-puppeteer-${{ hashFiles('package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-puppeteer-
+
     - name: Install dependencies
       run: npm ci
+      env:
+        PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
+
+    - name: Install Chromium for Puppeteer
+      run: npx puppeteer browsers install chrome
 
     - name: Run Hugo build tests
       run: npm run test:hugo
