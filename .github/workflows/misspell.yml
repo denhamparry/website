@@ -14,3 +14,4 @@ jobs:
           github_token: ${{ secrets.github_token }}
           locale: "UK"
           reporter: "github-check"
+          path: "content/talks.md"
