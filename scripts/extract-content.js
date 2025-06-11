@@ -50,8 +50,8 @@ function extractReadableContent(markdownContent) {
   content = content.replace(/[?&]t=[0-9]+s?/g, '');
   
   // Remove standalone technical identifiers (common patterns)
-  content = content.replace(/\b[a-zA-Z0-9]{10,}\b/g, ''); // Long alphanumeric strings
-  content = content.replace(/\b[A-Z0-9]{5,}\b/g, ''); // Short uppercase technical IDs
+  content = content.replace(/\b[a-f0-9]{32,}\b/gi, ''); // Hash-like strings (32+ hex chars)
+  content = content.replace(/\b[A-Z0-9]{8,}\b/g, ''); // All-caps technical IDs (8+ chars)
   
   // Remove dates in various formats
   content = content.replace(/\b\d{1,2}(st|nd|rd|th)?\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}\b/g, '');
