@@ -1,0 +1,29 @@
+{
+  "name": "denhamparry-website-tests",
+  "version": "1.0.0",
+  "description": "Testing suite for denhamparry.co.uk Hugo website",
+  "scripts": {
+    "test": "npm run test:hugo && npm run test:functional && npm run test:accessibility",
+    "test:hugo": "node tests/hugo/test-hugo-build.js",
+    "test:functional": "jest tests/functional",
+    "test:accessibility": "node tests/accessibility/test-accessibility.js",
+    "test:links": "linkinator public --recurse",
+    "serve": "hugo server -D",
+    "build": "hugo --gc --minify",
+    "build:preview": "hugo --gc --minify --buildFuture"
+  },
+  "devDependencies": {
+    "@axe-core/puppeteer": "^4.8.2",
+    "axios": "^1.6.2",
+    "chalk": "^4.1.2",
+    "jest": "^29.7.0",
+    "linkinator": "^5.0.0",
+    "puppeteer": "^21.6.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  }
+}
