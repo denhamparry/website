@@ -115,7 +115,7 @@ hugo server --port 1314
 ### Clean Start
 To reset everything:
 ```bash
-# Clean build artifacts
+# Clean build artefacts
 rm -rf public/ resources/
 
 # Reinitialize themes

@@ -20,7 +20,7 @@ This directory contains comprehensive tests for the denhamparry.co.uk website.
 - WCAG 2.1 AA compliance
 - Keyboard navigation
 - Screen reader compatibility
-- Color contrast validation
+- Colour contrast validation
 - ARIA labels and semantic HTML
 
 ## Running Tests Locally
@@ -101,7 +101,7 @@ describe('Feature Name', () => {
 When adding new features, ensure:
 - All images have alt text
 - Interactive elements are keyboard accessible
-- Sufficient color contrast (4.5:1 for normal text)
+- Sufficient colour contrast (4.5:1 for normal text)
 - Proper heading hierarchy
 - Form labels are associated with inputs
 

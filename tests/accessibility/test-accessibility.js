@@ -96,7 +96,7 @@ async function runAccessibilityTests() {
     console.log(chalk.yellow('\n💡 Tips for fixing accessibility issues:'));
     console.log(chalk.gray('  - Ensure all images have alt text'));
     console.log(chalk.gray('  - Use semantic HTML elements'));
-    console.log(chalk.gray('  - Ensure sufficient color contrast'));
+    console.log(chalk.gray('  - Ensure sufficient colour contrast'));
     console.log(chalk.gray('  - Make all interactive elements keyboard accessible'));
     console.log(chalk.gray('  - Use ARIA labels where appropriate'));
     process.exit(1);
