@@ -91,7 +91,7 @@ describe('Website Navigation Tests', () => {
       await page.click('#theme-toggle');
       
       // Wait for theme change
-      await page.waitForTimeout(100);
+      await new Promise(resolve => setTimeout(resolve, 100));
       
       // Check if theme changed
       const newTheme = await page.evaluate(() => {

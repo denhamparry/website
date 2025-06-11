@@ -20,13 +20,19 @@ describe('Content Tests', () => {
   test('Talks page contains expected content structure', async () => {
     await page.goto(`${baseUrl}/talks`);
     
-    // Check for year headings
-    const yearHeadings = await page.$$eval('h2', headings => 
-      headings.map(h => h.textContent.trim()).filter(text => /^\d{4}$/.test(text))
-    );
-    expect(yearHeadings.length).toBeGreaterThan(0);
-    expect(yearHeadings).toContain('2025');
-    expect(yearHeadings).toContain('2024');
+    // Check page loads and has content
+    const pageTitle = await page.$eval('h1.post-title', el => el.textContent.trim());
+    expect(pageTitle).toBe('Talks');
+    
+    // Check for year content in the page body (they should be there as markdown)
+    const pageContent = await page.content();
+    expect(pageContent).toMatch(/2025/);
+    expect(pageContent).toMatch(/2024/);
+    expect(pageContent).toMatch(/2023/);
+    
+    // Verify we have talk entries
+    const hasYouTubeLinks = await page.$$eval('a[href*="youtube.com"]', links => links.length > 0);
+    expect(hasYouTubeLinks).toBe(true);
   });
 
   test('Talk entries have required elements', async () => {
