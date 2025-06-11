@@ -23,6 +23,11 @@ This directory contains comprehensive tests for the denhamparry.co.uk website.
 - Colour contrast validation
 - ARIA labels and semantic HTML
 
+### 4. Spelling Tests (`scripts/`)
+- UK English spelling validation
+- Technical term recognition
+- Custom dictionary support for domain-specific words
+
 ## Running Tests Locally
 
 ### Prerequisites
@@ -42,6 +47,7 @@ npm run test:hugo          # Hugo build tests only
 npm run test:functional    # Functional tests only
 npm run test:accessibility # Accessibility tests only
 npm run test:links        # Link validation only
+npm run test:misspell      # Spelling tests only
 ```
 
 ### Running Tests Individually
@@ -69,6 +75,17 @@ hugo server
 node tests/accessibility/test-accessibility.js
 ```
 
+#### Spelling Tests
+```bash
+# Test spelling with custom dictionary
+npm run test:misspell
+
+# Or run directly
+./scripts/test-misspell.sh
+```
+
+**Note**: Spelling tests use UK English and include a custom dictionary (`.misspell-ignore`) for technical terms, proper nouns, and domain-specific words.
+
 ## CI/CD Integration
 
 Tests run automatically on:
@@ -83,6 +100,8 @@ GitHub Actions workflow includes:
 - HTML validation
 - Security header checks
 - Lighthouse performance audits
+- Spelling validation (UK English)
+- Commit message conformance
 
 ## Writing New Tests
 
@@ -128,3 +147,9 @@ Test results in CI are available in:
 - External links may fail due to rate limiting
 - Add exceptions in `linkinator` config if needed
 - Focus on internal broken links first
+
+### Spelling test issues
+- Add new technical terms to `.misspell-ignore`
+- Each word should be on its own line
+- Comments start with `#`
+- Test locally with `npm run test:misspell` before committing

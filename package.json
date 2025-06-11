@@ -8,6 +8,7 @@
     "test:functional": "jest tests/functional",
     "test:accessibility": "node tests/accessibility/test-accessibility.js",
     "test:links": "linkinator public --recurse --skip 'livereload.js' --skip 'googletagmanager.com'",
+    "test:misspell": "./scripts/test-misspell.sh",
     "serve": "hugo server -D",
     "build": "hugo --gc --minify",
     "build:preview": "hugo --gc --minify --buildFuture"

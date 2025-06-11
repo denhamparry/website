@@ -8,11 +8,33 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
-      - name: Run misspell check
-        uses: reviewdog/action-misspell@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          locale: "UK"
-          reporter: "github-pr-review"
-          path: "content/talks.md"
-          level: "error"
+          node-version: '18'
+          
+      - name: Install misspell
+        run: |
+          go install github.com/client9/misspell/cmd/misspell@latest
+          
+      - name: Run misspell check on talks content
+        run: |
+          # Extract readable content from talks markdown
+          node scripts/extract-content.js
+          
+          # Create ignore patterns from our dictionary
+          IGNORE_ARGS=""
+          while IFS= read -r word; do
+            # Skip comments and empty lines
+            [[ "$word" =~ ^#.*$ ]] && continue
+            [[ -z "$word" ]] && continue
+            IGNORE_ARGS="$IGNORE_ARGS -i $word"
+          done < .misspell-ignore
+          
+          # Run misspell on extracted content with ignore list
+          if [ -f ".talks-content-only.txt" ]; then
+            misspell -locale UK $IGNORE_ARGS .talks-content-only.txt
+          else
+            echo "Failed to extract content from talks.md"
+            exit 1
+          fi
