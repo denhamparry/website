@@ -95,7 +95,7 @@ time. There is nothing Nova can do to break… uh-oh. Not again!
 - Where: [YouTube](https://www.youtube.com/watch?v=dR5T2qNAuCs&t=1s)
 - Date: 17th October 2023
 
-As per [X](https://x.com/denhamparry/status/1720177508279087147):
+As per my [X/Twitter post](https://x.com/denhamparry/status/1720177508279087147):
 
 > I gave a lightning talk at KCD UK 2023, it was impromptu, sleep deprived,
 > anxiety ridden, but described as a good rant. This is me sharing the advice I

@@ -1,0 +1,37 @@
+# Spellcheck configuration for check-spelling action
+# Only check content in the talks directory
+
+# Files to check (only talks content)
+only: |
+  content/talks.md
+
+# Use British English dictionary
+dictionary_url: https://raw.githubusercontent.com/check-spelling/check-spelling/main/dictionaries/en_GB-ise.txt
+
+# Additional British English words
+extra_dictionaries:
+  - https://raw.githubusercontent.com/check-spelling/check-spelling/main/dictionaries/en_GB-ize.txt
+
+# Custom words to allow (technical terms, names, etc.)
+expect: |
+  KubeCon
+  CloudNative
+  DevSecCon
+  NDC
+  KCDC
+  Kubernetes
+  
+# Patterns to ignore
+patterns: |
+  # URLs
+  https?://[^\s)]+
+  # Email addresses  
+  [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
+  # YouTube video IDs
+  youtube\.com/watch\?v=[a-zA-Z0-9_-]+
+  # GitHub usernames/repos
+  github\.com/[a-zA-Z0-9_-]+
+  # Twitter/X handles
+  @[a-zA-Z0-9_]+
+  # Date formats
+  \d{1,2}(st|nd|rd|th)\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}

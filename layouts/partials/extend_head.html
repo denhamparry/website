@@ -1,0 +1,28 @@
+{{- /* Head custom content area start */ -}}
+<style>
+/* Improve link contrast for accessibility */
+.post-content a {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
+}
+
+.post-content a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Ensure top-link button is in a landmark */
+.top-link {
+  /* This button will be moved to main content area via JS if needed */
+}
+
+/* Better contrast for all links */
+body.dark a {
+  color: #58a6ff;
+}
+
+body:not(.dark) a {
+  color: #0969da;
+}
+</style>
+{{- /* Head custom content area end */ -}}
