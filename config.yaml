@@ -29,8 +29,6 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/denhamparry"
-    - name: twitter
-      url: "https://twitter.com/denhamparry"
     - name: linkedin
       url: "https://www.linkedin.com/in/denhamparry/"
     - name: cv

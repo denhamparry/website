@@ -86,7 +86,7 @@ The Nix flake provides:
 - ✅ Fixed missing `google_news.html` template
 - ✅ Resolved `.Site.Social` deprecation warnings
 - ✅ Corrected date format in content files
-- ✅ Simplified OpenGraph and Twitter Card templates
+- ✅ Simplified OpenGraph templates
 
 ## 🔄 Migration from Docker
 
