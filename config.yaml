@@ -33,6 +33,16 @@ params:
       url: "https://www.linkedin.com/in/denhamparry/"
     - name: cv
       url: "https://edera.dev"
+  
+  # Configure favicons to prevent 404s
+  assets:
+    disableHLJS: false
+    disableFingerprinting: false
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon.ico"
+    favicon32x32: "/favicon.ico" 
+    apple_touch_icon: "/favicon.ico"
+    safari_pinned_tab: "/favicon.ico"
 
 privacy:
   x:
