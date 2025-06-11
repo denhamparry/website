@@ -13,9 +13,15 @@ jobs:
         with:
           node-version: '18'
           
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+          
       - name: Install misspell
         run: |
           go install github.com/client9/misspell/cmd/misspell@latest
+          echo "$HOME/go/bin" >> $GITHUB_PATH
           
       - name: Run misspell check on talks content
         run: |
