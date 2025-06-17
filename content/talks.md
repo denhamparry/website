@@ -26,6 +26,29 @@ menu:
 
 ## 2025
 
+### Reimagining Container Runtimes: Security Without Sacrifice
+
+- Type: Talk
+- Date: 16th June 2025
+- Event: Kubernetes London
+
+Modern container platforms force organizations into an impossible choice between
+security, performance, and resource utilization. This talk challenges the status
+quo by exploring how Edera's container-native hypervisor eliminates traditional
+trade-offs through innovative architecture. We examine the fundamental security
+problems with shared kernel approaches, analyzing seven major container escape
+vulnerabilities from 2022-2024 that exploit namespace limitations. Through comprehensive
+benchmarks, we demonstrate how Edera Protect achieves Docker-level performance while
+providing VM-like isolation, running on any commodity hardware without specialized
+virtualization extensions. The presentation covers breakthrough capabilities including
+secure privileged container support, GPU driver isolation for AI workloads, and
+seamless Kubernetes integration requiring only a simple runtime class change. We
+explore Apple's recent validation of hypervisor-isolated containers and how this
+approach enables secure multi-tenancy at scale. Attendees will discover practical
+solutions for running sensitive workloads with strong isolation, strategies for
+eliminating the development-to-production security gap, and emerging patterns in
+container security architecture that prioritize both performance and protection.
+
 ### Container Runtimes... on Lockdown: The Hidden Costs of Multi-tenant Workloads
 
 - Type: Talk
