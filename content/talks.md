@@ -31,6 +31,7 @@ menu:
 - Type: Talk
 - Date: 16th June 2025
 - Event: Kubernetes London
+- Resources: [Slides]({{ "/slides/202506_kuberneteslondon.pdf" | relURL }})
 
 Modern container platforms force organizations into an impossible choice between
 security, performance, and resource utilization. This talk challenges the status
@@ -78,7 +79,7 @@ performance tradeoffs.
 - [Youtube](https://www.youtube.com/live/MXdmKViYV9Y?si=jhyyU4EIf4Y1wCe0)
 - Date: 26 Sept 2024
 
-### OSS North America - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
+### OSS North America - The Overconfident Operator Vs the Nefarious Ne'er-Do-Well
 
 - Type: Talk
 - [Open Source Summit North America](https://events.linuxfoundation.org/open-source-summit-north-america/)
@@ -86,19 +87,19 @@ performance tradeoffs.
 
 Ozzie the Overconfident Operator has secured their cluster! They have done it
 all: role-based access control, encryption at rest, TLS…and as they congratulate
-themself on a job well done, Nova the Nefarious Ne’er-do-well watches from
+themself on a job well done, Nova the Nefarious Ne'er-do-well watches from
 around the corner, drooling with anticipation. Spoiler alert⎯Ozzie is about to
 get HACKED. In this talk, the speakers play the characters of Ozzie and Nova and
-playfully demo cluster security as Nefarious Nova exploits each of Ozzie’s
+playfully demo cluster security as Nefarious Nova exploits each of Ozzie's
 security decisions. What can Overconfident Ozzie do when Nova gets the upper
-hand? How can Ozzie proactively keep Nova’s threats at bay? Take security beyond
+hand? How can Ozzie proactively keep Nova's threats at bay? Take security beyond
 the firewall and discover cloud native security concepts such as identity
 management, container image scanning and signing, creating and implementing
 policies, runtime security, and secrets management. Learn security basics
 alongside Overconfident Ozzie, who is sure the cluster is COMPLETELY secure this
 time. There is nothing Nova can do to break… uh-oh. Not again!
 
-### KCD Guadalajara 2024 - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
+### KCD Guadalajara 2024 - The Overconfident Operator Vs the Nefarious Ne'er-Do-Well
 
 - Type: Keynote
 - [KCD Guadalajara](https://ccoss.org/)
@@ -106,7 +107,7 @@ time. There is nothing Nova can do to break… uh-oh. Not again!
 
 ## 2023
 
-### KubeCon NA 2023 - The Overconfident Operator Vs the Nefarious Ne’er-Do-Well
+### KubeCon NA 2023 - The Overconfident Operator Vs the Nefarious Ne'er-Do-Well
 
 - Type: Talk
 - Where: [YouTube](https://www.youtube.com/watch?v=Y1rJY_UlLmM)
@@ -124,7 +125,7 @@ As per my [X/Twitter post](https://x.com/denhamparry/status/1720177508279087147)
 > anxiety ridden, but described as a good rant. This is me sharing the advice I
 > wish I had when I got started in my career
 
-### ⚡️ Enlightning - Signed, Sealed, Delivered, I’m Yours! An Introduction to Sigstore
+### ⚡️ Enlightning - Signed, Sealed, Delivered, I'm Yours! An Introduction to Sigstore
 
 - Type: Discussion
 - Where: [YouTube](https://www.youtube.com/watch?v=8GKFzJaEHac)
@@ -184,7 +185,7 @@ this talk is for you.
 
 ## 2022
 
-### KubeCon NA 2022 - Hack Back; Let’s Learn Security With CTFs
+### KubeCon NA 2022 - Hack Back; Let's Learn Security With CTFs
 
 - Type: Talk
 - Video: [YouTube](https://www.youtube.com/watch?v=IZXVWyKGHi4)
@@ -199,7 +200,7 @@ already in?
 Kubernetes has become the de facto cloud operating system and production
 environments have increased in maturity. So have the threats.
 
-Security Teams don’t necessarily have the expertise to detect state-of-art
+Security Teams don't necessarily have the expertise to detect state-of-art
 attack scenarios specific to cloud-native environments, like Kubernetes.
 
 So, where do they get started? Capture-The-Flag (CTF) events are a great way to
@@ -301,7 +302,7 @@ there, together we'll explore how an attacker can take further control of the
 cluster via lateral and vertical movements.
 
 Once we have your attention from seeing how this could be someone's worst day,
-we'll look at how we can patch this attack up as a Blue Team. We’ll see how
+we'll look at how we can patch this attack up as a Blue Team. We'll see how
 Kubernetes can mitigate some of this disaster, and what practices we should put
 in place to further strengthen and defend our compute.
 
@@ -391,7 +392,7 @@ Red Team. We'll take advantage of an OWASP vulnerability within a Supply Chain
 attack to give us an entry point. From there, together we'll explore how an
 attacker can take further control of the cluster via lateral and vertical
 movements. Once we have your attention from seeing how this could be someone's
-worst day, we'll look at how we can patch this attack up as a Blue Team. We’ll
+worst day, we'll look at how we can patch this attack up as a Blue Team. We'll
 see how Kubernetes can mitigate some of this disaster, and what practices we
 should put in place to further strengthen and defend our compute. From attending
 this session, you'll leave with a Purple Team understanding of core concepts
@@ -404,21 +405,21 @@ defend from Script Kiddies to Nation States.
 - Where: [Online](https://tanzu.vmware.com/developer/tv/dotnet-beyond/0012/)
 - Date: 31st March 2022
 
-We usually trust the hand that feeds, but what happens when we can’t trust the
+We usually trust the hand that feeds, but what happens when we can't trust the
 hand that feeds us? How do we run applications when there is little to no trust?
 
-In this session, we’re going to start by taking a look at attack paths in and
-around Kubernetes, acting as a Red Team. We’ll take advantage of an OWASP
+In this session, we're going to start by taking a look at attack paths in and
+around Kubernetes, acting as a Red Team. We'll take advantage of an OWASP
 vulnerability within a supply chain attack giving us an entry point. From there,
-together we’ll explore how an attacker can take further control of the cluster
+together we'll explore how an attacker can take further control of the cluster
 via lateral and vertical movements.
 
-Once we have your attention from seeing how this could be someone’s worst day,
-we’ll look at how we can patch this up as a Blue Team. We’ll see what we have
+Once we have your attention from seeing how this could be someone's worst day,
+we'll look at how we can patch this up as a Blue Team. We'll see what we have
 available from Kubernetes that can mitigate some of this disaster, and what
 practices we should put in place to further strengthen and defend our compute.
 
-From attending this session, you’ll leave with a Purple Team understanding of
+From attending this session, you'll leave with a Purple Team understanding of
 core concepts within Kubernetes, that defence is strengthened with depth, and
 how we can defend from Script Kiddies to Nation States.
 
@@ -897,7 +898,7 @@ application that scales dynamically? Kubernetes has a feature called autoscaler
 where instances of your applications are increased or decreased automatically
 based on metrics that you define.
 
-In this talk, you’ll learn how to design, package & deploy reliable .NET
+In this talk, you'll learn how to design, package & deploy reliable .NET
 applications to Kubernetes & decouple several components using a message broker.
 You will also learn how to set autoscaling rules to cope with an increasing
 influx of messages in the queue.
@@ -935,7 +936,7 @@ influx of messages in the queue.
 From working with a number of companies, the only constant is seeing that each
 company has their own way of migrating from a monolith to a microservice
 architecture, and it never working out as planned. In this talk Lewis will share
-with you the idea of embracing your monolith and making it a macroservice. He’ll
+with you the idea of embracing your monolith and making it a macroservice. He'll
 explore the benefits of this approach from both a technical and business
 perspective, and plan how to convert this macroserivce into microservices.
 
