@@ -31,7 +31,7 @@ menu:
 - Type: Talk
 - Date: 16th June 2025
 - Event: Kubernetes London
-- Resources: [Slides]({{ "/slides/202506_kuberneteslondon.pdf" | relURL }})
+- Resources: [Slides](/slides/202506_kuberneteslondon.pdf)
 
 Modern container platforms force organizations into an impossible choice between
 security, performance, and resource utilization. This talk challenges the status
