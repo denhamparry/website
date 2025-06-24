@@ -16,11 +16,11 @@ git_submodules: ## Update submodules for Hugo
 	git submodule update --remote --rebase
 
 .PHONY: hugo_build_image
-hugo_build_image: git_submodules ## Build Hugo image
+hugo_build_image: ## Build Hugo image
 	docker build -t $(REGISTRY)/$(IMAGE_NAME) .
 
 .PHONY: hugo_serve
-hugo_serve: stop_container hugo_build_image git_submodules  ## Serve slides on http://localhost:1313
+hugo_serve: stop_container hugo_build_image  ## Serve slides on http://localhost:1313
 	docker run --rm -p 1313:1313 \
 	-v $(CURDIR):/hugo-project --name ${CONTAINER_NAME} \
 	$(REGISTRY)/$(IMAGE_NAME)

@@ -10,7 +10,7 @@ RUN apt-get update && apt-get upgrade -y \
       && rm -rf /var/lib/apt/lists/* \
       && rm -rf /tmp/*
 RUN gem install --no-document asciidoctor asciidoctor-revealjs \
-         rouge asciidoctor-confluence asciidoctor-diagram coderay pygments.rb
+         rouge:3.30.0 asciidoctor-confluence asciidoctor-diagram coderay pygments.rb:2.4.1
 
 ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz /tmp/hugo.tgz
 RUN cd /usr/local/bin && tar -xzf /tmp/hugo.tgz && rm /tmp/hugo.tgz
