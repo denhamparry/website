@@ -1,16 +1,19 @@
 # Hugo Website Development with Nix
 
-This project uses Nix flakes for a reproducible development environment. No Docker required!
+This project uses Nix flakes for a reproducible development environment. No
+Docker required!
 
 ## Quick Start
 
 ### 1. Prerequisites
+
 - [Nix](https://nixos.org/download.html) with flakes enabled
 - [direnv](https://direnv.net/) (optional but recommended)
 
 ### 2. Setup
 
 **With direnv (recommended):**
+
 ```bash
 # Allow direnv to load the environment
 direnv allow
@@ -23,6 +26,7 @@ hugo-serve
 ```
 
 **Without direnv:**
+
 ```bash
 # Enter development shell
 nix develop
@@ -49,6 +53,7 @@ hugo-build   # Build site for production
 ## Development Workflow
 
 ### Creating New Content
+
 ```bash
 # Create a new blog post
 hugo-new posts/my-awesome-post.md
@@ -58,6 +63,7 @@ hugo-new about.md
 ```
 
 ### Live Development
+
 ```bash
 # Start the development server
 hugo-serve
@@ -67,6 +73,7 @@ hugo-serve
 ```
 
 ### Production Build
+
 ```bash
 # Build optimized site
 hugo-build
@@ -92,18 +99,23 @@ nix develop .#extended
 ## Troubleshooting
 
 ### Theme Issues
+
 If you see template errors, ensure the theme is properly initialized:
+
 ```bash
 hugo-init
 ```
 
 This will:
+
 - Initialize git submodules
 - Clone PaperMod theme if submodules fail
 - Verify theme installation
 
 ### Port Already in Use
+
 If port 1313 is busy, stop any existing Hugo processes:
+
 ```bash
 # Find and kill Hugo processes
 pkill hugo
@@ -113,7 +125,9 @@ hugo server --port 1314
 ```
 
 ### Clean Start
+
 To reset everything:
+
 ```bash
 # Clean build artefacts
 rm -rf public/ resources/
@@ -127,9 +141,11 @@ hugo-serve
 
 ## Hugo Version
 
-This environment uses Hugo from nixpkgs-unstable, which should be compatible with the production Netlify deployment (v0.82.1+).
+This environment uses Hugo from nixpkgs-unstable, which should be compatible
+with the production Netlify deployment (v0.82.1+).
 
 Check your version:
+
 ```bash
 hugo version
 ```
@@ -137,6 +153,7 @@ hugo version
 ## Integration with Existing Workflow
 
 The Nix environment is designed to work alongside your existing:
+
 - Git workflow
 - Netlify deployment
 - Content structure

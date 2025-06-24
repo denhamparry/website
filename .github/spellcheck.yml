@@ -20,12 +20,12 @@ expect: |
   NDC
   KCDC
   Kubernetes
-  
+
 # Patterns to ignore
 patterns: |
   # URLs
   https?://[^\s)]+
-  # Email addresses  
+  # Email addresses
   [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
   # YouTube video IDs
   youtube\.com/watch\?v=[a-zA-Z0-9_-]+

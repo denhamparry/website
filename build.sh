@@ -5,4 +5,4 @@ set -e
 echo "Building Hugo site without npm dependencies..."
 
 # Just run Hugo
-hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL
+hugo --gc --minify --buildFuture -b "$DEPLOY_PRIME_URL"
