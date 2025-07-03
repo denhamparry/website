@@ -1,7 +1,7 @@
 ---
 title: Talks
 date: 2022-04-22T21:00:00+00:00
-reviewed: 2025-06-04
+reviewed: 2025-07-03
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -38,17 +38,18 @@ security, performance, and resource utilization. This talk challenges the status
 quo by exploring how Edera's container-native hypervisor eliminates traditional
 trade-offs through innovative architecture. We examine the fundamental security
 problems with shared kernel approaches, analyzing seven major container escape
-vulnerabilities from 2022-2024 that exploit namespace limitations. Through comprehensive
-benchmarks, we demonstrate how Edera Protect achieves Docker-level performance while
-providing VM-like isolation, running on any commodity hardware without specialized
-virtualization extensions. The presentation covers breakthrough capabilities including
-secure privileged container support, GPU driver isolation for AI workloads, and
-seamless Kubernetes integration requiring only a simple runtime class change. We
-explore Apple's recent validation of hypervisor-isolated containers and how this
-approach enables secure multi-tenancy at scale. Attendees will discover practical
-solutions for running sensitive workloads with strong isolation, strategies for
-eliminating the development-to-production security gap, and emerging patterns in
-container security architecture that prioritize both performance and protection.
+vulnerabilities from 2022-2024 that exploit namespace limitations. Through
+comprehensive benchmarks, we demonstrate how Edera Protect achieves Docker-level
+performance while providing VM-like isolation, running on any commodity hardware
+without specialized virtualization extensions. The presentation covers
+breakthrough capabilities including secure privileged container support, GPU
+driver isolation for AI workloads, and seamless Kubernetes integration requiring
+only a simple runtime class change. We explore Apple's recent validation of
+hypervisor-isolated containers and how this approach enables secure
+multi-tenancy at scale. Attendees will discover practical solutions for running
+sensitive workloads with strong isolation, strategies for eliminating the
+development-to-production security gap, and emerging patterns in container
+security architecture that prioritize both performance and protection.
 
 ### Container Runtimes... on Lockdown: The Hidden Costs of Multi-tenant Workloads
 
@@ -58,18 +59,17 @@ container security architecture that prioritize both performance and protection.
 
 Container runtimes form the bedrock of Kubernetes, but running diverse workloads
 side-by-side introduces complex security challenges that many teams overlook.
-This talk peels back the layers of container isolation, starting with the fundamentals
-of how containers operate as Linux processes and evolving through today's runtime
-landscape.
-We'll dive deep into the hidden costs and security implications of different container
-runtime choices in multi-tenant environments. Through real-world examples and
-performance benchmarks, we'll explore the delicate balance between isolation and
-efficiency.
-You'll learn about emerging solutions in the container runtime space and practical
-approaches to securing workloads without sacrificing performance.
-Attendees will leave with critical security considerations for choosing container
-runtimes, strategies for workload isolation, and tools to evaluate isolation versus
-performance tradeoffs.
+This talk peels back the layers of container isolation, starting with the
+fundamentals of how containers operate as Linux processes and evolving through
+today's runtime landscape. We'll dive deep into the hidden costs and security
+implications of different container runtime choices in multi-tenant
+environments. Through real-world examples and performance benchmarks, we'll
+explore the delicate balance between isolation and efficiency. You'll learn
+about emerging solutions in the container runtime space and practical approaches
+to securing workloads without sacrificing performance. Attendees will leave with
+critical security considerations for choosing container runtimes, strategies for
+workload isolation, and tools to evaluate isolation versus performance
+tradeoffs.
 
 ## 2024
 
@@ -119,7 +119,8 @@ time. There is nothing Nova can do to break… uh-oh. Not again!
 - Where: [YouTube](https://www.youtube.com/watch?v=dR5T2qNAuCs&t=1s)
 - Date: 17th October 2023
 
-As per my [X/Twitter post](https://x.com/denhamparry/status/1720177508279087147):
+As per my
+[X/Twitter post](https://x.com/denhamparry/status/1720177508279087147):
 
 > I gave a lightning talk at KCD UK 2023, it was impromptu, sleep deprived,
 > anxiety ridden, but described as a good rant. This is me sharing the advice I
