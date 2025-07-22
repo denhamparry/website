@@ -1,0 +1,43 @@
+{
+  "version": "0.2",
+  "language": "en-GB",
+  "ignorePaths": [
+    "node_modules/**",
+    ".git/**",
+    "themes/**",
+    "public/**",
+    "resources/**",
+    "*.log",
+    ".talks-content-only.txt",
+    "static/keybase.txt"
+  ],
+  "words": [],
+  "dictionaries": [
+    "en-gb",
+    "typescript",
+    "node",
+    "html",
+    "css",
+    "bash",
+    "markdown",
+    "custom-words"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "custom-words",
+      "path": "./.spelling.txt",
+      "addWords": true
+    }
+  ],
+  "import": [],
+  "ignoreWords": [],
+  "ignoreRegExpList": [
+    "/https?:\\/\\/[^\\s]+/g",
+    "/[a-f0-9]{32,}/gi",
+    "/[A-Z0-9]{8,}/g",
+    "/\\b[a-zA-Z0-9_-]{11}\\b/g",
+    "/[?&]v=[a-zA-Z0-9_-]+/g",
+    "/[?&]si=[a-zA-Z0-9_-]+/g",
+    "/[?&]t=[0-9]+s?/g"
+  ]
+}

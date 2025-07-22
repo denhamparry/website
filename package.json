@@ -8,7 +8,7 @@
     "test:functional": "jest tests/functional",
     "test:accessibility": "node tests/accessibility/test-accessibility.js",
     "test:links": "linkinator public --recurse --skip 'livereload.js' --skip 'googletagmanager.com'",
-    "test:misspell": "./scripts/test-misspell.sh",
+    "test:spell": "cspell '**/*.md' '**/*.txt' --no-progress",
     "serve": "hugo server -D",
     "build": "hugo --gc --minify",
     "build:preview": "hugo --gc --minify --buildFuture"
@@ -17,6 +17,7 @@
     "@axe-core/puppeteer": "^4.8.2",
     "axios": "^1.6.2",
     "chalk": "^4.1.2",
+    "cspell": "^8.3.2",
     "jest": "^29.7.0",
     "linkinator": "^5.0.0",
     "puppeteer": "^23.8.0"
