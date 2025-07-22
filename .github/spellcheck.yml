@@ -12,20 +12,11 @@ dictionary_url: https://raw.githubusercontent.com/check-spelling/check-spelling/
 extra_dictionaries:
   - https://raw.githubusercontent.com/check-spelling/check-spelling/main/dictionaries/en_GB-ize.txt
 
-# Custom words to allow (technical terms, names, etc.)
-expect: |
-  KubeCon
-  CloudNative
-  DevSecCon
-  NDC
-  KCDC
-  Kubernetes
-  
 # Patterns to ignore
 patterns: |
   # URLs
   https?://[^\s)]+
-  # Email addresses  
+  # Email addresses
   [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
   # YouTube video IDs
   youtube\.com/watch\?v=[a-zA-Z0-9_-]+

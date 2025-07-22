@@ -1,0 +1,33 @@
+# Custom words for denhamparry.co.uk
+# One word per line
+athon
+cosecast
+denhamparry
+Denham
+direnv
+Edera
+envrc
+Feria
+Fulcio
+hidemeta
+hotdog
+hugo
+KCDC
+keybase
+Klustered
+Lightspeed
+linkinator
+macroservice
+meetups
+netlify
+nixpkgs
+Papandrea
+papermod
+Parry
+pkill
+Rekor
+Sigstore
+SLSA
+Tanzu
+WCAG
+Yubikey

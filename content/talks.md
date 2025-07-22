@@ -37,7 +37,7 @@ Modern container platforms force organizations into an impossible choice between
 security, performance, and resource utilization. This talk challenges the status
 quo by exploring how Edera's container-native hypervisor eliminates traditional
 trade-offs through innovative architecture. We examine the fundamental security
-problems with shared kernel approaches, analyzing seven major container escape
+problems with shared kernel approaches, analysing seven major container escape
 vulnerabilities from 2022-2024 that exploit namespace limitations. Through
 comprehensive benchmarks, we demonstrate how Edera Protect achieves Docker-level
 performance while providing VM-like isolation, running on any commodity hardware
@@ -69,7 +69,7 @@ about emerging solutions in the container runtime space and practical approaches
 to securing workloads without sacrificing performance. Attendees will leave with
 critical security considerations for choosing container runtimes, strategies for
 workload isolation, and tools to evaluate isolation versus performance
-tradeoffs.
+trade-offs.
 
 ## 2024
 
@@ -261,7 +261,7 @@ for some more data.
 
 `***I*` will then look at ways that we can manage secrets over many
 environments, from development to production. Finally, we check what to do when
-our secrets aren't so secret anymore.
+our secrets aren't so secret any more.
 
 Finally, `****S` will finish with case studies of where security first has won
 and the instances where the secrets have been given away.
@@ -939,7 +939,7 @@ company has their own way of migrating from a monolith to a microservice
 architecture, and it never working out as planned. In this talk Lewis will share
 with you the idea of embracing your monolith and making it a macroservice. He'll
 explore the benefits of this approach from both a technical and business
-perspective, and plan how to convert this macroserivce into microservices.
+perspective, and plan how to convert this macroservice into microservices.
 
 ### Cloud Native Wales Meetup v0.6.0
 
