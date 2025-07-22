@@ -5,18 +5,21 @@ This directory contains comprehensive tests for the denhamparry.co.uk website.
 ## Test Categories
 
 ### 1. Hugo Build Tests (`hugo/`)
+
 - Verifies Hugo builds successfully
 - Checks generated file structure
 - Validates HTML output
 - Ensures static assets are copied correctly
 
 ### 2. Functional Tests (`functional/`)
+
 - **Navigation Tests**: Menu, links, and page routing
 - **Content Tests**: Proper rendering of talks and metadata
 - **Theme Tests**: Dark/light mode switching
 - **SEO Tests**: Meta tags and structured data
 
 ### 3. Accessibility Tests (`accessibility/`)
+
 - WCAG 2.1 AA compliance
 - Keyboard navigation
 - Screen reader compatibility
@@ -24,6 +27,7 @@ This directory contains comprehensive tests for the denhamparry.co.uk website.
 - ARIA labels and semantic HTML
 
 ### 4. Spelling Tests (`scripts/`)
+
 - UK English spelling validation
 - Technical term recognition
 - Custom dictionary support for domain-specific words
@@ -31,12 +35,14 @@ This directory contains comprehensive tests for the denhamparry.co.uk website.
 ## Running Tests Locally
 
 ### Prerequisites
+
 ```bash
 # Install dependencies
 npm install
 ```
 
 ### Run All Tests
+
 ```bash
 # Run the complete test suite
 ./test.sh
@@ -53,11 +59,13 @@ npm run test:misspell      # Spelling tests only
 ### Running Tests Individually
 
 #### Hugo Build Tests
+
 ```bash
 node tests/hugo/test-hugo-build.js
 ```
 
 #### Functional Tests (requires Hugo server)
+
 ```bash
 # Start Hugo server in one terminal
 hugo server
@@ -67,6 +75,7 @@ npm run test:functional
 ```
 
 #### Accessibility Tests (requires Hugo server)
+
 ```bash
 # Start Hugo server in one terminal
 hugo server
@@ -76,23 +85,28 @@ node tests/accessibility/test-accessibility.js
 ```
 
 #### Spelling Tests
+
 ```bash
 # Test spelling with custom dictionary
-npm run test:misspell
+npm run test:spell
 
 # Or run directly
 ./scripts/test-misspell.sh
 ```
 
-**Note**: Spelling tests use UK English and include a custom dictionary (`.misspell-ignore`) for technical terms, proper nouns, and domain-specific words.
+**Note**: Spelling tests use UK English and include a custom dictionary
+(`.misspell-ignore`) for technical terms, proper nouns, and domain-specific
+words.
 
 ## CI/CD Integration
 
 Tests run automatically on:
+
 - Every push to `main` branch
 - Every pull request
 
 GitHub Actions workflow includes:
+
 - Hugo build verification
 - Functional testing
 - Accessibility testing
@@ -106,18 +120,21 @@ GitHub Actions workflow includes:
 ## Writing New Tests
 
 ### Adding Functional Tests
+
 Create new test files in `tests/functional/` following the Jest pattern:
 
 ```javascript
-describe('Feature Name', () => {
-  test('specific behavior', async () => {
+describe("Feature Name", () => {
+  test("specific behavior", async () => {
     // Test implementation
   });
 });
 ```
 
 ### Accessibility Guidelines
+
 When adding new features, ensure:
+
 - All images have alt text
 - Interactive elements are keyboard accessible
 - Sufficient colour contrast (4.5:1 for normal text)
@@ -127,6 +144,7 @@ When adding new features, ensure:
 ## Test Results
 
 Test results in CI are available in:
+
 - GitHub Actions tab for each PR/commit
 - Netlify preview deployments for PRs
 - Lighthouse reports for performance metrics
@@ -134,21 +152,25 @@ Test results in CI are available in:
 ## Troubleshooting
 
 ### Tests fail locally but pass in CI
+
 - Ensure Hugo version matches CI (check `.github/workflows/test.yml`)
 - Clear Hugo cache: `hugo mod clean`
 - Rebuild: `hugo --gc`
 
 ### Accessibility test failures
+
 - Use browser DevTools accessibility inspector
 - Check axe DevTools extension for detailed reports
 - Refer to specific WCAG guidelines linked in test output
 
 ### Link checker false positives
+
 - External links may fail due to rate limiting
 - Add exceptions in `linkinator` config if needed
 - Focus on internal broken links first
 
 ### Spelling test issues
+
 - Add new technical terms to `.misspell-ignore`
 - Each word should be on its own line
 - Comments start with `#`

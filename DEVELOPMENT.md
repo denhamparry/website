@@ -1,14 +1,17 @@
 # Hugo Website Development
 
-This Hugo website now has a modern Nix-based development environment that replaces the previous Docker setup.
+This Hugo website now has a modern Nix-based development environment that
+replaces the previous Docker setup.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - [Nix](https://nixos.org/download.html) with flakes enabled
 - [direnv](https://direnv.net/) (recommended for automatic environment loading)
 
 ### Setup with direnv (Recommended)
+
 ```bash
 # Allow direnv to automatically load the Nix environment
 direnv allow
@@ -18,6 +21,7 @@ hugo-serve
 ```
 
 ### Setup without direnv
+
 ```bash
 # Enter the Nix development shell
 nix develop
@@ -26,23 +30,24 @@ nix develop
 hugo-serve
 ```
 
-Your site will be available at **http://localhost:1313** with hot reloading.
+Your site will be available at <http://localhost:1313> with hot reloading.
 
 ## 📋 Available Commands
 
 Once in the Nix environment, these commands are available:
 
-| Command | Description |
-|---------|-------------|
-| `hugo-dev` | Show all available commands |
-| `hugo-serve` | Start development server at http://localhost:1313 |
-| `hugo-new` | Create new content (e.g., `hugo-new posts/my-post.md`) |
-| `hugo-build` | Build site for production |
-| `hugo-init` | Initialize/reinstall themes (if needed) |
+| Command      | Description                                            |
+| ------------ | ------------------------------------------------------ |
+| `hugo-dev`   | Show all available commands                            |
+| `hugo-serve` | Start development server at <http://localhost:1313>    |
+| `hugo-new`   | Create new content (e.g., `hugo-new posts/my-post.md`) |
+| `hugo-build` | Build site for production                              |
+| `hugo-init`  | Initialize/reinstall themes (if needed)                |
 
 ## 🛠 Development Workflow
 
 ### Daily Development
+
 ```bash
 # Start the server
 hugo-serve
@@ -50,11 +55,12 @@ hugo-serve
 # Create new content
 hugo-new posts/my-awesome-post.md
 
-# Edit content in your favorite editor
+# Edit content in your favourite editor
 # Changes are automatically reloaded in browser
 ```
 
 ### Production Build
+
 ```bash
 # Build optimized site (same as Netlify)
 hugo-build
@@ -65,6 +71,7 @@ hugo-build
 ## 🔧 What's Included
 
 The Nix flake provides:
+
 - **Hugo** (latest stable version, compatible with Netlify)
 - **Git** with submodule support
 - **Development scripts** for common tasks
@@ -73,15 +80,17 @@ The Nix flake provides:
 
 ## 🎯 Key Improvements
 
-### Compared to Docker Setup:
+### Compared to Docker Setup
+
 - ✅ **Faster startup** (no container overhead)
-- ✅ **Automatic theme initialization** 
+- ✅ **Automatic theme initialization**
 - ✅ **Native file watching** (better hot reload)
 - ✅ **Hugo version compatibility** with Netlify
 - ✅ **Simplified commands** (`hugo-serve` vs `make hugo_serve`)
 - ✅ **Cross-platform** (works on macOS, Linux, NixOS)
 
-### Fixed Compatibility Issues:
+### Fixed Compatibility Issues
+
 - ✅ Updated config for Hugo v0.124+ (pagination, privacy settings)
 - ✅ Fixed missing `google_news.html` template
 - ✅ Resolved `.Site.Social` deprecation warnings
@@ -90,23 +99,27 @@ The Nix flake provides:
 
 ## 🔄 Migration from Docker
 
-The old Docker-based commands still work, but the new Nix commands are recommended:
+The old Docker-based commands still work, but the new Nix commands are
+recommended:
 
-| Old (Docker) | New (Nix) | Notes |
-|--------------|-----------|-------|
-| `make hugo_serve` | `hugo-serve` | Faster, native |
+| Old (Docker)                | New (Nix)      | Notes          |
+| --------------------------- | -------------- | -------------- |
+| `make hugo_serve`           | `hugo-serve`   | Faster, native |
 | `make hugo_create POST=...` | `hugo-new ...` | Simpler syntax |
-| `make hugo_build` | `hugo-build` | Same output |
+| `make hugo_build`           | `hugo-build`   | Same output    |
 
 ## 🐛 Troubleshooting
 
 ### Theme Issues
+
 If you see template errors:
+
 ```bash
 hugo-init  # Reinstalls PaperMod theme
 ```
 
 ### Port Already in Use
+
 ```bash
 # Kill existing Hugo processes
 pkill hugo
@@ -116,6 +129,7 @@ hugo server --port 1314
 ```
 
 ### Environment Issues
+
 ```bash
 # Exit and re-enter Nix shell
 exit
@@ -140,7 +154,7 @@ nix develop .#extended
 
 ## 📁 Project Structure
 
-```
+```text
 .
 ├── flake.nix              # Nix development environment
 ├── .envrc                 # Direnv configuration
@@ -153,10 +167,5 @@ nix develop .#extended
 
 ## 🚢 Deployment
 
-The site deploys automatically to Netlify when you push to the main branch. The Nix environment ensures your local development matches the production build.
-
----
-
-**Happy coding! 🎉**
-
-For questions or issues, the Nix environment includes all the tools you need to debug and develop efficiently.
+The site deploys automatically to Netlify when you push to the main branch. The
+Nix environment ensures your local development matches the production build.
