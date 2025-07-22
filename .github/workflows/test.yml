@@ -86,23 +86,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check for spelling errors
-        uses: check-spelling/check-spelling@main
-        with:
-          config: .github/spellcheck.yml
-          extra_dictionaries: |
-            cspell:software-terms/dict/softwareTerms.txt
-            cspell:npm/dict/npm.txt
-            cspell:k8s/dict/k8s.txt
-            cspell:filetypes/filetypes.txt
-            cspell:node/dict/node.txt
-            cspell:html/dict/html.txt
-            cspell:aws/aws.txt
-            cspell:django/dict/django.txt
-            cspell:dotnet/dict/dotnet.txt
-            cspell:svelte/dict/svelte.txt
-        continue-on-error: true
-
       - name: Validate HTML
         uses: Cyb3r-Jak3/html5validator-action@v7.2.0
         with:
