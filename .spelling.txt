@@ -1,5 +1,6 @@
 # Custom words for denhamparry.co.uk
 # One word per line
+agentic
 athon
 cosecast
 denhamparry

@@ -26,6 +26,36 @@ menu:
 
 ## 2025
 
+## Let The Hardened Runtime Era Begin
+
+- Type: Webinar
+- Date: 26th August 2025
+- Event: Edera Runtime Rumble
+- Resources:
+  [Recording](https://us06web.zoom.us/rec/component-page?eagerLoadZvaPages=&accessLevel=meeting&hasValidToken=false&clusterId=us06&action=play&filePlayId=&componentName=recording-register&meetingId=0mrWcyOekpaK5qQAhl6__tvKTHliIZuHU6U9Zm68thLg3qdlVvqt8ngDn_0xtXO9.RN75jIBtmvgVtdE2&originRequestUrl=https://us06web.zoom.us/rec/share/TtUmYC62cGbCNbiahRxMVWZbu4Mhmng7qR8-P1zjVFngvVpU6GS6jCdLeUIsD3Ta.d0Ou14Iad-NFzaj-)
+
+Your security stack is living in the past while your threats are living in the
+future. Modern applications and AI agents are outpacing traditional security
+models. Detection-heavy tools flood teams with alerts but fail to prevent real
+threats.
+
+Edera is changing that.
+
+Join us as we introduce the Hardened Runtime—a new security category
+purpose-built to prevent breaches at the infrastructure level. Learn how
+production-grade sandboxing, attack surface elimination, and instant breach
+containment are reshaping how security teams think about runtime protection.
+
+Whether you’re building agentic apps, running containers in production, or
+leading cloud security architecture, this session will equip you with the
+technical context and strategic framework to understand:
+
+- Why detection-first runtime security is fundamentally broken
+- What defines a Hardened Runtime (and how it compares to legacy solutions)
+- How to secure AI workloads and cloud-native systems without slowing
+  development
+- What Edera’s approach means for security, DevOps, and innovation velocity
+
 ### Reimagining Container Runtimes: Security Without Sacrifice
 
 - Type: Talk
