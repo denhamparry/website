@@ -1,20 +1,30 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with
+code in this repository.
 
 ## Project Overview
-This is Lewis Denham-Parry's personal website built with Hugo static site generator (v0.87.0) using the PaperMod theme. The site is deployed on Netlify at https://denhamparry.co.uk.
+
+This is Lewis Denham-Parry's personal website built with Hugo static site
+generator using the PaperMod theme. The site is deployed on Netlify at
+<https://denhamparry.co.uk>.
+
+**Version notes**: Local dev uses Hugo v0.87.0 (Dockerfile), Netlify uses
+v0.82.1 (netlify.toml)
 
 ## Essential Commands
 
 ### Local Development
+
 ```bash
-make hugo_serve         # Start Hugo development server at http://localhost:1313 (runs in Docker)
+# Start Hugo development server (runs in Docker)
+make hugo_serve         # Access at http://localhost:1313
 make stop_container     # Stop running Docker containers
 make git_submodules     # Update theme submodules
 ```
 
 ### Content Creation
+
 ```bash
 # Create new blog post
 hugo new posts/my-post-title.md
@@ -24,6 +34,7 @@ make hugo_create POST="posts/my-post-title.md"
 ```
 
 ### Build Commands
+
 ```bash
 # Production build (used by Netlify)
 hugo --gc --minify
@@ -32,44 +43,85 @@ hugo --gc --minify
 hugo --gc --minify --buildFuture
 ```
 
-### Linting and Testing
-Run these commands before committing:
+### Testing
+
 ```bash
-# Check for spelling errors (via GitHub Actions)
-# Commit message conformance is checked automatically
+npm test                  # Run all tests (Hugo build, functional, accessibility)
+npm run test:hugo         # Test Hugo build only
+npm run test:functional   # Run Jest functional tests
+npm run test:accessibility # Run accessibility tests with Puppeteer
+npm run test:links        # Check for broken links in public/ directory
+npm run test:spell        # Run cspell spell check
 ```
+
+### Linting and Quality Checks
+
+- **Spell check**: Uses cspell with en-GB locale (config: cspell.json, custom
+  words: .spelling.txt)
+- **Commit messages**: Validated via conform GitHub Action (.conform.yaml) -
+  must follow conventional commit format
+- Both checks run automatically on pull requests
 
 ## Architecture & Key Files
 
 ### Configuration
-- **config.yaml**: Main Hugo configuration - site settings, theme, social links, privacy settings
-- **netlify.toml**: Deployment configuration - build commands, Hugo version, CORS headers
-- **Makefile**: Development automation - Docker-based Hugo commands
-- **Dockerfile**: Development container setup (Ubuntu 18.04 + Hugo 0.87.0 + Ruby gems)
+
+- **config.yaml**: Main Hugo configuration - site settings, theme, social links,
+  privacy settings, Google Analytics
+- **netlify.toml**: Deployment configuration - build commands, Hugo version
+  (0.82.1), CORS headers, context-specific builds
+- **Makefile**: Development automation - all commands use Docker for consistency
+- **Dockerfile**: Development container (Ubuntu 18.04 + Hugo 0.87.0 +
+  Ruby/Asciidoctor)
+- **cspell.json**: Spell check configuration (en-GB, custom dictionary at
+  .spelling.txt)
+- **.conform.yaml**: Commit message policy (conventional commits, 72 char limit)
 
 ### Content Structure
+
 - **/content/**: Main content directory (currently contains talks.md)
-- **/static/**: Static assets - images organized by year/month, favicon, keybase.txt
+- **/static/**: Static assets - images organized by year/month, favicon,
+  keybase.txt
 - **/themes/PaperMod/**: Theme files (git submodule - don't edit directly)
-- **_redirects**: Netlify redirect rules for legacy URLs
+- **/archetypes/default.md**: Template for new content (sets draft: true by
+  default)
+- **/tests/**: Test suite (Hugo build, functional, accessibility tests)
+- **\_redirects**: Netlify redirect rules for legacy URLs
 
 ### Deployment
+
 - **Auto-deployment**: Push to main branch triggers Netlify deployment
-- **Preview deployments**: PRs get preview URLs automatically
+- **Preview deployments**: PRs get preview URLs automatically (includes future
+  posts via --buildFuture)
 - **Build output**: Generated in /public/ directory (gitignored)
+- **GitHub Actions**: Run on PRs to validate commits (conform) and spell check
+  (misspell)
 
 ## Development Workflow
 
 1. **Start development server**: `make hugo_serve`
 2. **Create/edit content**: Files in /content/ directory
-3. **Preview changes**: View at http://localhost:1313
+3. **Preview changes**: View at <http://localhost:1313>
 4. **Commit changes**: Follow conventional commit format
 5. **Push to GitHub**: Auto-deploys via Netlify
 
 ## Important Notes
 
-- Theme is loaded as a git submodule - use `make git_submodules` to update
-- Development uses Docker for consistency - all make commands run in containers
-- Site uses UK English spelling (configured in GitHub Actions)
-- Privacy-focused configuration for embedded content (Twitter, YouTube)
-- Google Analytics tracking is enabled
+- **Theme management**: PaperMod theme is a git submodule - use
+  `make git_submodules` to update, never edit theme files directly
+- **Docker-based development**: All `make` commands run in Docker containers for
+  consistency across environments
+- **Spelling**: Site uses UK English (en-GB) - add custom words to
+  .spelling.txt, not cspell.json
+- **Commit format**: All commits must follow conventional commit format
+  (enforced by conform action)
+  - Types: feat, fix, docs, style, refactor, test, chore, ci, perf, revert,
+    build
+  - Optional scopes: website, content, tests, ci, deps
+  - Format: `type(scope): subject` (max 72 chars, lowercase, imperative)
+- **Content defaults**: New posts created via `hugo new` are marked as draft by
+  default
+- **Privacy configuration**: Embedded content (X/Twitter, YouTube) uses
+  privacy-enhanced modes
+- **Node dependencies**: If package.json changes, run `npm install` to update
+  test dependencies

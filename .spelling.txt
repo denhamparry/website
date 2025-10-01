@@ -10,6 +10,7 @@ Edera
 envrc
 Feria
 Fulcio
+Gotchas
 hidemeta
 hotdog
 hugo
@@ -20,12 +21,17 @@ Lightspeed
 linkinator
 macroservice
 meetups
+mypy
 netlify
+newtalk
+newpost
 nixpkgs
 Papandrea
 papermod
 Parry
 pkill
+Pylint
+Pytest
 Rekor
 Sigstore
 SLSA
