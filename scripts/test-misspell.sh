@@ -26,8 +26,8 @@ done < .misspell-ignore
 # Run misspell on extracted content with British English and ignore list
 echo "Running misspell on extracted content with ignore list..."
 if [ -f ".talks-content-only.txt" ]; then
-    misspell -locale UK $IGNORE_ARGS .talks-content-only.txt
-    
+    misspell -locale UK "$IGNORE_ARGS" .talks-content-only.txt
+
     # Clean up temporary file
     rm .talks-content-only.txt
     echo "✅ Misspell check complete!"

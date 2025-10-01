@@ -1,0 +1,14 @@
+# Hugo template files
+layouts/**/*.html
+archetypes/**/*.html
+
+# Build output
+public/**
+resources/**
+
+# Dependencies
+node_modules/**
+themes/**
+
+# Other
+.git/**
