@@ -9,6 +9,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Required for conventional commit validation
+          fetch-depth: 0 # Required for conventional commit validation
       - name: Conform Action
         uses: siderolabs/conform@v0.1.0-alpha.30

@@ -10,10 +10,10 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        
+
         # Pin Hugo version for consistency with Netlify deployment
         hugo = pkgs.hugo;
-        
+
         # Development scripts
         dev-scripts = pkgs.writeShellScriptBin "hugo-dev" ''
           echo "🚀 Hugo Website Development Environment"
@@ -30,7 +30,7 @@
 
         hugo-init = pkgs.writeShellScriptBin "hugo-init" ''
           echo "🔧 Initializing Hugo website..."
-          
+
           # Initialize git submodules for themes
           if [ -d .git ]; then
             echo "Initializing git submodules..."
@@ -51,7 +51,7 @@
           else
             echo "Not in a git repository, skipping submodule initialization"
           fi
-          
+
           # Check if themes are properly installed
           if [ -d "themes/PaperMod" ] && [ -n "$(ls -A themes/PaperMod)" ]; then
             echo "✅ Theme installation verified"
@@ -59,25 +59,25 @@
             echo "❌ Theme installation failed"
             exit 1
           fi
-          
+
           echo ""
           echo "🎉 Setup complete! Run 'hugo-serve' to start development server"
         '';
 
         hugo-serve = pkgs.writeShellScriptBin "hugo-serve" ''
           echo "🚀 Starting Hugo development server..."
-          
+
           # Check if themes are available
           if [ ! -d "themes/PaperMod" ] || [ -z "$(ls -A themes/PaperMod)" ]; then
             echo "❌ PaperMod theme not found. Run 'hugo-init' first."
             exit 1
           fi
-          
+
           # Start Hugo server with development-friendly settings
           echo "Starting server at http://localhost:1313"
           echo "Press Ctrl+C to stop"
           echo ""
-          
+
           hugo server \
             --bind 0.0.0.0 \
             --port 1313 \
@@ -94,10 +94,10 @@
             echo "Example: hugo-new posts/my-new-post.md"
             exit 1
           fi
-          
+
           echo "📝 Creating new content: $1"
           hugo new "$1"
-          
+
           if [ $? -eq 0 ]; then
             echo "✅ Content created successfully"
             echo "Edit: content/$1"
@@ -109,16 +109,16 @@
 
         hugo-build = pkgs.writeShellScriptBin "hugo-build" ''
           echo "🏗️  Building Hugo site for production..."
-          
+
           # Check if themes are available
           if [ ! -d "themes/PaperMod" ] || [ -z "$(ls -A themes/PaperMod)" ]; then
             echo "❌ PaperMod theme not found. Run 'hugo-init' first."
             exit 1
           fi
-          
+
           # Build with production settings (matches Netlify config)
           hugo --gc --minify
-          
+
           if [ $? -eq 0 ]; then
             echo "✅ Site built successfully in ./public/"
           else
@@ -135,14 +135,14 @@
             hugo
             git
             gnumake
-            
+
             # Development scripts
             dev-scripts
             hugo-init
             hugo-serve
             hugo-new
             hugo-build
-            
+
             # Nice to have for content creation
             tree
             fd
@@ -165,7 +165,7 @@
             echo ""
             echo "🔧 Hugo version: $(hugo version | head -n1)"
             echo ""
-            
+
             # Auto-check if initialization is needed
             if [ ! -d "themes/PaperMod" ] || [ -z "$(ls -A themes/PaperMod 2>/dev/null)" ]; then
               echo "⚠️  Theme not initialized. Run 'hugo-init' to get started."

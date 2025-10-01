@@ -52,7 +52,7 @@ npm run test:links
 LINK_TEST_RESULT=$?
 
 # Kill Hugo server if we started it
-if [ ! -z "$HUGO_PID" ]; then
+if [ -n "$HUGO_PID" ]; then
     echo -e "\n${YELLOW}Stopping Hugo server...${NC}"
     kill $HUGO_PID 2>/dev/null
 fi
