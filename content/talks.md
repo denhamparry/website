@@ -26,7 +26,23 @@ menu:
 
 ## 2025
 
-## Let The Hardened Runtime Era Begin
+### Edera: Tag Team Champions: Confidential Computing meets Edera
+
+- Type: Webinar
+- Date: 16th October 2025
+- Event: Edera Runtime Rumble
+- Resources:
+  [Sign up link](https://us06web.zoom.us/webinar/register/4017575425840/WN_viySTZz6Tr2-yzSjpWS6eQ#/registration)
+
+Confidential Computing promises hardware-based security for sensitive
+workloads—but adoption hurdles and misconceptions remain. In this webinar,
+Edera’s experts demystify confidential computing, compare it with
+container-native isolation, and show how combining the two unlocks stronger,
+more practical protections. Join us to learn when you need hardware-backed
+trust, when software isolation is enough, and how to get both without trade
+offs.
+
+### Edera: Let The Hardened Runtime Era Begin
 
 - Type: Webinar
 - Date: 26th August 2025
@@ -56,7 +72,7 @@ technical context and strategic framework to understand:
   development
 - What Edera’s approach means for security, DevOps, and innovation velocity
 
-### Reimagining Container Runtimes: Security Without Sacrifice
+### Kubernetes London: Reimagining Container Runtimes: Security Without Sacrifice
 
 - Type: Talk
 - Date: 16th June 2025
@@ -81,7 +97,9 @@ sensitive workloads with strong isolation, strategies for eliminating the
 development-to-production security gap, and emerging patterns in container
 security architecture that prioritize both performance and protection.
 
-### Container Runtimes... on Lockdown: The Hidden Costs of Multi-tenant Workloads
+### KubeCon EU 2025: Container Runtimes... on Lockdown: The Hidden Costs of
+
+Multi-tenant Workloads
 
 - Type: Talk
 - [YouTube](https://www.youtube.com/watch?v=I9t7qfOjgbo)
