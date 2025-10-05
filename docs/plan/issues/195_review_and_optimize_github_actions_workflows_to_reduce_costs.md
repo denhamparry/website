@@ -1,7 +1,7 @@
 # GitHub Issue #195: Review and optimize GitHub Actions workflows to reduce costs
 
 **Issue:** [#195](https://github.com/denhamparry/website/issues/195) **Status:**
-Open **Date:** 2025-10-05
+Complete **Date:** 2025-10-05
 
 ## Problem Statement
 

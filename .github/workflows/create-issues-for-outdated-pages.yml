@@ -5,9 +5,7 @@ permissions:
 on:
   schedule:
     - cron: "30 5 * * *"
-  push:
-    branches:
-      - main
+  workflow_dispatch: # Allow manual trigger for testing
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
   MODIFIED_DAYS: 14 # Set the number of days after which a page is considered outdated
