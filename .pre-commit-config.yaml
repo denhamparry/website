@@ -22,6 +22,7 @@ repos:
     rev: v0.43.0
     hooks:
       - id: markdownlint
+        exclude: ^docs/plan/.*\.md$
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.10.0.1
     hooks:

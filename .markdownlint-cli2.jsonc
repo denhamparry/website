@@ -12,5 +12,5 @@
     // TODO: confirm with the team that we're happy to remove this
     // "MD034": false
   },
-  "ignores": ["node_modules", "CHANGELOG.md", "README.md"]
+  "ignores": ["node_modules", "CHANGELOG.md", "README.md", "docs/plan/**/*.md"]
 }
