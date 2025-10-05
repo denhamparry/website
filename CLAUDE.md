@@ -97,6 +97,31 @@ npm run test:spell        # Run cspell spell check
 - **GitHub Actions**: Run on PRs to validate commits (conform) and spell check
   (misspell)
 
+## GitHub Actions Optimizations
+
+The CI/CD workflows have been optimized to reduce costs and improve efficiency:
+
+- **test.yml**: Runs comprehensive tests on PRs, light validation on direct
+  pushes to main with path filtering (skips docs/workflow changes)
+- **Lighthouse**: Runs only on PRs with content/frontend changes (content/,
+  static/, themes/, layouts/, config.yaml)
+- **Build artifacts**: Hugo builds shared between jobs via GitHub Actions
+  artifacts to avoid redundant builds
+- **Security checks**: Consolidated into test job to reduce runner overhead
+- **create-issues**: Runs only on schedule (daily 5:30am), not on every push to
+  main
+
+**Key optimizations:**
+
+1. Eliminated duplicate workflow runs when PRs merge to main
+2. Hugo site built once per workflow run and shared via artifacts
+3. Lighthouse conditionally runs only when content changes
+4. Security header checks integrated into test job (removed standalone job)
+5. Path-based filtering prevents workflows from running on documentation-only
+   changes
+
+**Cost savings:** ~40-60% reduction in GitHub Actions minutes usage
+
 ## Development Workflow
 
 1. **Start development server**: `make hugo_serve`

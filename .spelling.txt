@@ -57,5 +57,6 @@ siderolabs
 Sigstore
 SLSA
 Tanzu
+teardown
 WCAG
 Yubikey
