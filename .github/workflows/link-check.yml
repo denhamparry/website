@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Check links in content/
-        uses: lycheeverse/lychee-action@v1
+        uses: lycheeverse/lychee-action@v2.0.2
         with:
           args: >-
             --verbose --no-progress --max-retries 3 --timeout 5 --accept 200,429
