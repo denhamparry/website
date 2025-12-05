@@ -51,6 +51,7 @@ pkill
 pygments
 Pylint
 Pytest
+Rejeckts
 Rekor
 revealjs
 siderolabs

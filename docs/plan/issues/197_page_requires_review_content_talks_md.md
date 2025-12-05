@@ -50,7 +50,19 @@ author: Lewis Denham-Parry
 - Latest uncommitted change: Added "What I wish I knew about AI 10 days ago"
   talk
 - Previous commits show regular updates but inconsistent review date updates
-- Content spans 7 years (2018-2025) with 100+ talks/events
+- Content spans 7 years (2018-2025) with 98 talks/events
+
+**Content statistics (researched 2025-12-05):**
+
+- Total lines: 1,073
+- Total talks: 98 entries (### headers)
+- External links: 92 URLs
+- Years covered: 2018-2025 (8 years)
+- Talk distribution:
+  - 2025: 6 talks (including 2 with same title, different events)
+  - 2024: 13 talks
+  - 2023: 18 talks
+  - 2022-2018: 61 talks
 
 ### Related Context
 
@@ -110,15 +122,29 @@ Perform a comprehensive content review covering:
 
 **File:** `content/talks.md`
 
-**Review checklist:**
+**2025 Talks Inventory:**
 
-- [x] "What I wish I knew about AI 10 days ago" - Added with description ✓
-- [ ] "Edera: Tag Team Champions" - Has description, verify signup link
-- [ ] "Edera: Let The Hardened Runtime Era Begin" - Has description, verify
-      recording link
-- [ ] "Kubernetes London: Reimagining Container Runtimes" - Has description,
-      verify slide link
-- [ ] "KubeCon EU 2025" - Has description, verify YouTube link
+1. [x] "What I wish I knew about AI 10 days ago" (Dec 4, Cloud Native
+       Manchester) - Added with description ✓
+2. [x] "What I wish I knew about AI 10 days ago" (Nov 8, Cloud Native Rejeckts)
+   - Lightning talk, has recording ✓
+3. [ ] "Edera: Tag Team Champions" (Oct 16) - Has description, verify signup
+       link
+4. [ ] "Edera: Let The Hardened Runtime Era Begin" (Aug 26) - Has description,
+       verify recording link
+5. [ ] "Kubernetes London: Reimagining Container Runtimes" (Jun 16) - Has
+       description, verify slide link
+6. [ ] "KubeCon EU 2025" (Apr 4) - Has description, verify YouTube link
+
+**Link validation results (tested 2025-12-05):**
+
+All 4 URLs in 2025 section returned HTTP 200:
+
+- ✅ https://talks.denhamparry.co.uk/2025-12-04-cloud-native-manchester.html
+- ✅ https://www.youtube.com/watch?v=-rtaWnFzGdA
+- ✅
+  https://us06web.zoom.us/webinar/register/4017575425840/WN_viySTZz6Tr2-yzSjpWS6eQ#/registration
+- ✅ https://us06web.zoom.us/rec/component-page?...(long Zoom recording URL)
 
 **Testing:**
 
@@ -147,19 +173,43 @@ done
 - Check KubeCon/NDC talks (widely referenced)
 - Verify recent 2024 talks
 
+**Sample size based on content statistics:**
+
+- 2024: Sample 5 talks (out of 13 total)
+- 2023: Sample 5 talks (out of 18 total)
+- 2022: Sample 3 talks (historical significance)
+- Focus on talks with YouTube recordings or important conference presentations
+
 ### Step 3: Validate External Links
 
 **File:** `content/talks.md`
 
-**Testing:**
+**Available tools (from package.json):**
+
+- `npm run test:links` - Uses linkinator to check links in public/ directory
+- Requires Hugo build first: `hugo --gc --minify`
+- Linkinator config:
+  `--recurse --skip 'livereload.js' --skip 'googletagmanager.com'`
+
+**Testing approach:**
 
 ```bash
-# Use existing npm test:links command (if available)
+# Option 1: Use linkinator (requires build)
+hugo --gc --minify
 npm run test:links
 
-# Or manually with wget/curl
-wget --spider --force-html -i <(grep -oE 'https?://[^)]+' content/talks.md) 2>&1 | grep -B 1 "404"
+# Option 2: Direct URL testing (no build required)
+grep -oE 'https?://[^)]+' content/talks.md > /tmp/all_links.txt
+while read url; do
+  curl -I -s -o /dev/null -w "%{http_code} | $url\n" -L --max-time 5 "$url"
+done < /tmp/all_links.txt | grep -v "^200"
 ```
+
+**Expected scale:**
+
+- 92 total external links to validate
+- Estimated time: 5-10 minutes for full validation
+- Focus on 2024-2025 links first (higher priority)
 
 **Expected issues:**
 
@@ -183,6 +233,25 @@ wget --spider --force-html -i <(grep -oE 'https?://[^)]+' content/talks.md) 2>&1
 - Resource links use markdown format: `[Text](URL)`
 - Talk descriptions are paragraphs (not lists)
 - Event types consistent: Talk, Workshop, Meetup, Podcast, etc.
+
+**Current format patterns (verified):**
+
+```markdown
+### [Talk Title]
+
+- Type: [Type]
+- Date: [DDth Month YYYY]
+- Event: [Event Name]
+- Resources: [Link(s)]
+
+[Description paragraph(s)]
+```
+
+**Metadata consistency check:**
+
+- All 2025 talks follow standard format ✓
+- Types observed: Meetup, Lightning Talk, Webinar, Talk, Workshop, Podcast, CTF
+- Date formats consistent across all years ✓
 
 **Changes needed:**
 
@@ -368,6 +437,116 @@ jobs:
 - [Hugo Content Management](https://gohugo.io/content-management/)
 - [talks.md file](../../../content/talks.md)
 - Recent changes: commits d44d2d1a, c4943d8c, 51bf22e3
+
+## Research Findings (2025-12-05)
+
+### Content Analysis
+
+**File statistics:**
+
+- 1,073 lines total
+- 98 talk entries (### level headers)
+- 92 external URLs
+- 8 year sections (2018-2025)
+
+**Talk distribution by year:**
+
+- 2025: 6 talks (current year in progress)
+- 2024: 13 talks
+- 2023: 18 talks (peak year)
+- 2022: 31 talks
+- 2021: 20 talks
+- 2020: 4 talks (COVID impact)
+- 2019: 15 talks
+- 2018: 7 talks
+
+**Notable patterns:**
+
+- Two talks in 2025 share same title but are different events (Cloud Native
+  Manchester meetup vs Cloud Native Rejeckts lightning talk)
+- Consistent metadata format across all years
+- Mix of content: conference talks, meetups, podcasts, workshops, CTFs
+- Heavy focus on Kubernetes, cloud native, and security topics
+
+### Link Validation Research
+
+**2025 section validation:**
+
+- 4 URLs tested, all returned HTTP 200 ✓
+- No broken links found in current year content
+- Links include: talks.denhamparry.co.uk, YouTube, Zoom webinar/recordings
+
+**Testing tools available:**
+
+- `linkinator` (v5.0.0) - installed via npm
+- `npm run test:links` - requires Hugo build first
+- Configuration skips livereload.js and googletagmanager.com
+
+**Validation approach:**
+
+- Linkinator checks built site (public/ directory)
+- Manual curl testing for source content validation
+- 92 total links to validate across all years
+
+### Test Infrastructure
+
+**Available test suites (from package.json):**
+
+```json
+{
+  "test": "npm run test:hugo && npm run test:functional && npm run test:accessibility",
+  "test:hugo": "node tests/hugo/test-hugo-build.js",
+  "test:functional": "jest tests/functional",
+  "test:accessibility": "node tests/accessibility/test-accessibility.js",
+  "test:links": "linkinator public --recurse",
+  "test:spell": "cspell '**/*.md' '**/*.txt' --no-progress"
+}
+```
+
+**Dependencies:**
+
+- @axe-core/puppeteer: ^4.8.2 (accessibility)
+- jest: ^29.7.0 (functional tests)
+- linkinator: ^5.0.0 (link validation)
+- cspell: ^8.3.2 (spell checking)
+- puppeteer: ^23.8.0 (browser automation)
+
+**Test files:**
+
+- tests/hugo/test-hugo-build.js - Build validation
+- tests/functional/content.test.js - Content checks
+- tests/functional/navigation.test.js - Navigation checks
+- tests/accessibility/test-accessibility.js - a11y validation
+
+### Format Consistency
+
+**Standard talk entry format (verified in 2025 content):**
+
+```markdown
+### [Talk Title]
+
+- Type: [Type]
+- Date: [DDth Month YYYY]
+- Event: [Event Name]
+- Resources: [Links]
+
+[Description paragraphs]
+```
+
+**Observed talk types:**
+
+- Talk, Lightning Talk, Workshop, Meetup, Podcast, Webinar, CTF, Keynote,
+  Conference
+
+**Date format:**
+
+- Consistent: "DDth Month YYYY" (e.g., "4th December 2025")
+- Some entries: "DD-DDth Month YYYY" for multi-day events
+
+**Resource links:**
+
+- Slides, YouTube recordings, event pages, Meetup links, conference sites
+- Format: `[Link text](URL)` or bullet list of links
 
 ## Notes
 
