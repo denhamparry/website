@@ -1,0 +1,68 @@
+name: Link Checker
+permissions:
+  contents: read
+  issues: write
+
+on:
+  schedule:
+    - cron: "0 0 1 * *" # Monthly on 1st at midnight UTC
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  linkchecker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check links in content/
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: >-
+            --verbose --no-progress --max-retries 3 --timeout 5 --accept 200,429
+            --exclude-path '.git' --exclude-path 'themes' 'content/**/*.md'
+          fail: true # Fail job if broken links found
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create issue if links broken
+        if: failure()
+        uses: actions/github-script@v6
+        env:
+          LABELS: '["documentation", "help wanted"]'
+          ASSIGNEES: '["denhamparry"]'
+        with:
+          script: |
+            const LABELS = JSON.parse(process.env.LABELS);
+            const ASSIGNEES = JSON.parse(process.env.ASSIGNEES);
+            const TITLE = 'Broken links detected in talks.md';
+
+            // Check if issue already exists
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+            });
+
+            const existingIssue = issues.data.find(issue => issue.title === TITLE);
+            if (existingIssue) {
+              console.log('Issue already exists with number:', existingIssue.number);
+              // Add comment to existing issue
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existingIssue.number,
+                body: `Broken links still detected on ${new Date().toISOString().split('T')[0]}. See [workflow run](${context.payload.repository.html_url}/actions/runs/${context.runId}) for details.`
+              });
+            } else {
+              // Create new issue
+              const issue = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: TITLE,
+                body: `## Automated Link Validation Failure\n\nBroken links detected during monthly validation check.\n\n**Workflow Run:** [View Details](${context.payload.repository.html_url}/actions/runs/${context.runId})\n\n**Date:** ${new Date().toISOString().split('T')[0]}\n\n### Action Required\n\n1. Review the workflow run logs to identify broken links\n2. Check if links are permanently broken or temporarily unavailable\n3. Fix or remove broken links in content/talks.md\n4. Consider using archive.org for important archived content\n5. Close this issue once links are fixed\n\n### Common Link Issues\n\n- Meetup.com events archived/expired\n- YouTube videos set to private/unlisted\n- Conference websites taken down\n- Domain name expired\n\n*This issue was automatically created by the Link Checker workflow.*`,
+                labels: LABELS,
+                assignees: ASSIGNEES
+              });
+              console.log('Issue created with number:', issue.data.number);
+            }

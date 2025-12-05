@@ -62,6 +62,36 @@ npm run test:spell        # Run cspell spell check
   must follow conventional commit format
 - Both checks run automatically on pull requests
 
+### Link Validation
+
+```bash
+# Manual link check (requires Hugo build)
+hugo --gc --minify
+npm run test:links
+
+# Automated monthly check (GitHub Actions)
+# Workflow: .github/workflows/link-check.yml
+# Schedule: 1st of each month at midnight UTC
+# Manual trigger: Actions tab → Link Checker → Run workflow
+```
+
+**Link validation notes:**
+
+- Monthly automated checks create GitHub issues if broken links found
+- Uses lychee link checker (faster than linkinator for CI)
+- Checks all markdown files in content/ directory
+- Retries 3 times for transient failures
+- Accepts HTTP 200-299 and 429 (rate limited)
+- Configuration: .lychee.toml
+
+**Handling broken links:**
+
+1. Review workflow logs to identify broken links
+2. Check if links are permanently broken or temporarily unavailable
+3. Fix or remove broken links in content files
+4. Consider using archive.org for archived content
+5. Close automated issue once resolved
+
 ## Architecture & Key Files
 
 ### Configuration

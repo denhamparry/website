@@ -1,7 +1,7 @@
 # GitHub Issue #199: Add automated link validation workflow for talks.md
 
 **Issue:** [#199](https://github.com/denhamparry/website/issues/199) **Status:**
-Open **Date:** 2025-12-05
+Complete **Date:** 2025-12-05
 
 ## Problem Statement
 
