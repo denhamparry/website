@@ -1,0 +1,16 @@
+# Lychee link checker configuration
+# Used by: .github/workflows/link-check.yml
+
+# Request settings
+max_retries = 3
+timeout = 5
+accept = [200, 429]
+
+# Exclusions
+exclude_path = [".git", "themes"]
+
+# Exclude known problematic domains (add as needed)
+# Example: exclude = ["^https://www.meetup.com/.*events/.*"]
+
+# Headers (if needed for authentication)
+# Example: headers = ["Authorization: Bearer token"]
