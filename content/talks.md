@@ -1,7 +1,7 @@
 ---
 title: Talks
 date: 2022-04-22T21:00:00+00:00
-reviewed: 2025-08-19
+reviewed: 2025-12-05
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -25,6 +25,41 @@ menu:
 ---
 
 ## 2025
+
+### What I wish I knew about AI 10 days ago
+
+- Type: Meetup
+- Date: 4th December 2025
+- Event: Cloud Native Manchester
+- Resources:
+  [Slides](https://talks.denhamparry.co.uk/2025-12-04-cloud-native-manchester.html)
+
+This talk bridges the gap between AI hype and practical reality through
+IvySketch, a production-ready GenAI application for generating custom Axolotl
+characters. Rather than focusing on theoretical concerns about AI, this session
+demonstrates real-world architecture patterns combining Ollama for LLM
+processing, ComfyUI for image generation, NATS JetStream for async workflows,
+and React with Server-Sent Events for real-time streaming. The presentation
+covers full-stack Kubernetes deployment including GPU node scheduling, sealed
+secrets management, Kustomize configuration, and comprehensive observability
+with OpenTelemetry, Prometheus, and Grafana. Attendees learn how to build
+AI-assisted applications with clean middleware patterns, distributed tracing,
+and production-grade infrastructure rather than just leveraging AI tools for
+development.
+
+<!-- markdownlint-disable MD024 -->
+
+### What I wish I knew about AI 10 days ago
+
+<!-- markdownlint-enable MD024 -->
+
+- Type: Lightning Talk
+- Date: 8th November 2025
+- Event: Cloud Native Rejeckts
+- Resources: [Recording](https://www.youtube.com/watch?v=-rtaWnFzGdA)
+
+A lightning talk sharing insights on developing an application in 10 days using
+an AI agent to write all the code.
 
 ### Edera: Tag Team Champions: Confidential Computing meets Edera
 

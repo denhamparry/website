@@ -1,7 +1,7 @@
 # GitHub Issue #197: Page requires review: content/talks.md
 
 **Issue:** [#197](https://github.com/denhamparry/website/issues/197) **Status:**
-Open **Date:** 2025-12-05
+Complete **Date:** 2025-12-05
 
 ## Problem Statement
 
