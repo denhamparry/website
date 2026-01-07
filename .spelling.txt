@@ -22,6 +22,7 @@ hotdog
 hugo
 jpegoptim
 KCDC
+kernelcon
 keybase
 Klustered
 Lastmod
@@ -59,6 +60,7 @@ siderolabs
 signup
 Sigstore
 SLSA
+blueconf
 Tanzu
 teardown
 WCAG
