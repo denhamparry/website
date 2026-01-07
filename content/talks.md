@@ -303,7 +303,7 @@ Remember, the best way to learn how to detect is to first know how to attack!
 ### KCDC 2022 - The Hand That Feeds - How to Misuse Kubernetes
 
 - Type: Talk
-- Where: [Kansas City, USA](https://www.kcdc.info/sessions)
+- Where: [Kansas City, USA](https://www.kcdc.info/)
 - Date: 08-10th August 2022
 
 We usually trust the hand that feeds, but what happens when we can't trust the
@@ -327,7 +327,7 @@ how we can defend from Script Kiddies to Nation States.
 ### KCDC 2022 - The Lost Art Of Keeping A Secret
 
 - Type: Talk
-- Where: [Kansas City, USA](https://www.kcdc.info/sessions)
+- Where: [Kansas City, USA](https://www.kcdc.info/)
 - Date: 08-10th August 2022
 
 One thing that `L****` has noticed recently is that with all the advances that
@@ -510,7 +510,7 @@ how we can defend from Script Kiddies to Nation States.
 ### KernelCon - Kubernetes Security: Learn By Hacking
 
 - Type: Workshop
-- Where: [Omaha, USA](https://kernelcon.org/training#k8sec)
+- Where: [Omaha, USA](https://kernelcon.org/)
 - Date: 30th - 31st March 2022
 
 Understand why many cloud native services have evolved quickly, and often miss
@@ -860,13 +860,15 @@ best to monitor your services to put preventative measures in place.
 ### BlueConf - Contributing With No Code
 
 - Type: Lightning Talks
-- Where: [BlueConf](https://blueconf.co.uk/)
+- Where:
+  [BlueConf](https://web.archive.org/web/20220521180658/https://blueconf.co.uk/)
 - Date 08th Jun 2019
 
 ### BlueConf - WTF is Cloud Native
 
 - Type: Talk
-- Where: [Cardiff, UK](https://blueconf.co.uk/)
+- Where:
+  [Cardiff, UK](https://web.archive.org/web/20220521180658/https://blueconf.co.uk/)
 - Date 08th Jun 2019
 
 ### µCon London 2019 - How do we become Cloud Native?

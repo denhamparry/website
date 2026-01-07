@@ -1,7 +1,7 @@
 # GitHub Issue #205: Broken links detected in content files
 
 **Issue:** [#205](https://github.com/denhamparry/website/issues/205) **Status:**
-Open **Date:** 2026-01-07 **Labels:** bug, documentation, ci
+Complete **Date:** 2026-01-07 **Labels:** bug, documentation, ci
 
 ## Problem Statement
 
