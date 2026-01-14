@@ -32,6 +32,7 @@ Lightspeed
 linkinator
 macroservice
 meetups
+Multitenancy
 mypy
 netlify
 networkidle
@@ -46,6 +47,7 @@ Ollama
 optipng
 Papandrea
 papermod
+paravirtualization
 Parry
 peaceiris
 pkgs
@@ -63,5 +65,6 @@ SLSA
 blueconf
 Tanzu
 teardown
+trilemma
 WCAG
 Yubikey
