@@ -24,6 +24,31 @@ menu:
   main: {}
 ---
 
+## 2026
+
+### The Road to Multitenancy: Running Secure Multi-Tenant Workloads at Scale
+
+- Type: Talk
+- Date: 14th January 2026
+- Event:
+  [London Platform User Group (LoPUG)](https://www.meetup.com/london-platform-user-group-lopug/events/311100198)
+- Resources:
+  [Slides](https://talks.denhamparry.co.uk/2026-01-14-road-to-multitenancy.html)
+
+Platform engineers face an impossible choice when running multi-tenant
+workloads: security, performance, or scale—pick two. This talk explores the
+fundamental trade-offs in container isolation, examining six different
+approaches from separate machines to bare metal, and why each forces
+compromises. Discover how traditional solutions like Kata Containers, gVisor,
+and Firecracker sacrifice either speed or simplicity to achieve security, and
+why shared kernel approaches fail compliance requirements. Learn about the
+container runtime innovation that finally breaks the trilemma, delivering
+VM-level isolation with near-native performance through paravirtualization. The
+presentation includes a detailed comparison matrix, real-world use cases from
+SaaS platforms to GPU-accelerated AI workloads, and practical guidance for
+platform teams building secure, scalable multi-tenant systems without
+architectural compromises.
+
 ## 2025
 
 ### What I wish I knew about AI 10 days ago
