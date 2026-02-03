@@ -626,7 +626,7 @@ this is one to listen to before we meet up for KubeCon 2022.
 
 - Type: CTF
 - Where:
-  [London, UK](https://emamo.com/event/bsideslondon2021/r/speaker/lewis-denham-parry)
+  [London, UK](https://web.archive.org/web/20220711204907/https://emamo.com/event/bsideslondon2021/r/speaker/lewis-denham-parry)
 - Date: 12th November 2021
 
 Delve deeper into the dark and mysterious world of Kubernetes security! Exploit
@@ -971,7 +971,7 @@ and Kubernetes
 
 - Type: Podcast
 - Where:
-  [player.fm](https://player.fm/series/cto-and-co-founder-talk-with-dave-albert/guest-lewis-denham-parry)
+  [player.fm](https://web.archive.org/web/20220624230804/https://player.fm/series/cto-and-co-founder-talk-with-dave-albert/guest-lewis-denham-parry)
 - Date: 12th March 2019.
 
 Find out the parallels of mental health to monoliths versus microservices!
