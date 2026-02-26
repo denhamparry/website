@@ -16,6 +16,7 @@ envrc
 Feria
 Fulcio
 gnumake
+gohugo
 googletagmanager
 Gotchas
 hidemeta
@@ -49,6 +50,8 @@ optipng
 Papandrea
 papermod
 paravirtualization
+pctx
+ShowFullTextinRSS
 Parry
 peaceiris
 pkgs
