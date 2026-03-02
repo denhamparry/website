@@ -65,6 +65,7 @@ revealjs
 siderolabs
 signup
 Sigstore
+skillsmatter
 SLSA
 blueconf
 Tanzu
