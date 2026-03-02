@@ -899,8 +899,7 @@ best to monitor your services to put preventative measures in place.
 ### µCon London 2019 - How do we become Cloud Native?
 
 - Type: Talk
-- Where:
-  [London, UK](https://skillsmatter.com/conferences/11982-con-london-2019-the-conference-on-microservices-ddd-and-software-architecture#program)
+- Where: London, UK
 
 ### KubeCon EU - How we contributed to the community with no code
 
@@ -1040,8 +1039,7 @@ influx of messages in the queue.
 ### µCon London 2018 - One Monolith / One Macroservice / Many Microservices
 
 - Type: Talk
-- Where:
-  [London, UK](https://skillsmatter.com/conferences/10336-mucon-london-2018-the-microservices-conference#skillscasts)
+- Where: London, UK
 - Date: 05th November 2018
 
 From working with a number of companies, the only constant is seeing that each
@@ -1067,8 +1065,7 @@ perspective, and plan how to convert this macroservice into microservices.
 ### ProgNet London 2018 - Use Kubernetes to Deploy .NET Applications
 
 - Type: Workshop
-- Where:
-  [London, UK](https://skillsmatter.com/conferences/10107-prognet-london-2018#skillscasts).
+- Where: London, UK.
 - Date: 12th September 2018.
 
 With the explosive momentum of Docker, Kubernetes has become the de-facto
