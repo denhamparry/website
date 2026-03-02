@@ -1,7 +1,7 @@
 # GitHub Issue #218: Broken links detected in talks.md
 
 **Issue:** [#218](https://github.com/denhamparry/website/issues/218) **Status:**
-Planning **Date:** 2026-03-02
+Reviewed (Approved) **Date:** 2026-03-02
 
 ## Problem Statement
 
@@ -232,3 +232,145 @@ lychee --accept 200,429 content/**/*.md
    context ✅ (preferred when archive exists)
 3. **Replace with archive.org links** - Chosen: stable, returns 200, preserves
    history ✅
+
+---
+
+## Plan Review
+
+**Reviewer:** Claude Code (workflow-research-plan) **Review Date:** 2026-03-02
+**Original Plan Date:** 2026-03-02
+
+### Review Summary
+
+- **Overall Assessment:** Approved (with required changes)
+- **Confidence Level:** High
+- **Recommendation:** Proceed to implementation with updated approach
+
+### Critical Finding: Archive.org Has No Snapshots
+
+Independent research via the Wayback Machine availability API confirms that
+**none of the three skillsmatter.com pages are archived**:
+
+1. `skillsmatter.com/conferences/11982-con-london-2019-...` →
+   `archived_snapshots: {}`
+2. `skillsmatter.com/conferences/10107-prognet-london-2018` →
+   `archived_snapshots: {}`
+3. `skillsmatter.com/conferences/10336-mucon-london-2018-...` →
+   `archived_snapshots: {}`
+
+The entire `skillsmatter.com` domain has no captured snapshots in archive.org.
+
+**Impact**: The plan's primary approach (replace with archive.org links) is not
+feasible. The fallback approach (remove links, keep plain text) MUST be used for
+all three links.
+
+### Strengths
+
+1. **Correct problem identification**: All three broken links correctly
+   identified from workflow logs
+2. **Fallback logic exists**: Plan correctly anticipates the case where
+   archive.org has no snapshot and specifies removing links
+3. **Conservative scope**: Only modifies `content/talks.md`, no other files
+4. **Consistent with project conventions**: Follows the same pattern used in
+   issue #209 resolution
+5. **No risk of introducing new broken links**: Removing URLs entirely is safe
+
+### Required Changes
+
+**The following update must be reflected during implementation (plan need not be
+rewritten — implement the fallback path directly):**
+
+- [ ] Since no archive.org snapshots exist, **remove all three broken links**
+      rather than replacing them
+- [ ] For µCon London 2019: Remove the `Where:` field URL, change to plain text
+- [ ] For µCon London 2018: Remove the URL from the `Where:` field
+- [ ] For ProgNet London 2018: Remove the URL from the `Where:` field
+- [ ] The URL format issue in plan examples (using `*` which is a calendar page,
+      not a direct snapshot) is moot since no archives exist
+
+### Concrete Implementation Changes
+
+Since archive.org has no snapshots, the three edits needed are:
+
+**Change 1** — µCon London 2019 (~line 903):
+
+```markdown
+# Before:
+
+- Where:
+  [London, UK](https://skillsmatter.com/conferences/11982-con-london-2019-the-conference-on-microservices-ddd-and-software-architecture#program)
+
+# After:
+
+- Where: London, UK
+```
+
+**Change 2** — µCon London 2018 (~line 1044):
+
+```markdown
+# Before:
+
+- Where:
+  [London, UK](https://skillsmatter.com/conferences/10336-mucon-london-2018-the-microservices-conference#skillscasts)
+
+# After:
+
+- Where: London, UK
+```
+
+**Change 3** — ProgNet London 2018 (~line 1071):
+
+```markdown
+# Before:
+
+- Where:
+  [London, UK](https://skillsmatter.com/conferences/10107-prognet-london-2018#skillscasts).
+
+# After:
+
+- Where: London, UK.
+```
+
+### Edge Cases Verified
+
+1. **Other broken links**: Only the three skillsmatter.com links were flagged by
+   the workflow run. No other links in talks.md returned errors.
+2. **OWASP AppSec EU whova.com link** (~line 400): Not flagged — returns 200 or
+   accepted status.
+3. **Removing Where: field vs. keeping plain text**: Keeping
+   `- Where: London, UK` maintains consistent formatting with other entries.
+
+### Alternative Approaches
+
+1. **Add skillsmatter.com to lychee exclusions** — Rejected. Links are genuinely
+   dead; exclusions would hide the problem from visitors.
+2. **Remove entire talk entries** — Rejected. Historical record has value even
+   without event URLs.
+3. **Replace with archive.org links** — Not feasible; no snapshots exist.
+4. **Plain text location (chosen)** — Best option: maintains event record,
+   removes dead links, clean formatting.
+
+### Verification Checklist
+
+- [x] Solution addresses root cause (3 broken skillsmatter.com links)
+- [x] Archive.org availability independently verified (no snapshots)
+- [x] Fallback approach is correctly specified in plan
+- [x] File paths and line numbers verified against actual file
+- [x] Security implications N/A (documentation only)
+- [x] Performance impact N/A (no code changes)
+- [x] Test strategy adequate (pre-commit hooks + PR CI)
+- [x] No breaking changes
+- [x] Consistent with prior issue #209 resolution pattern
+
+### Optional Improvements
+
+- [ ] Run full link check on all content files after the fix to catch any other
+      broken links proactively
+- [ ] Consider adding a comment to `.lychee.toml` documenting that
+      skillsmatter.com is permanently down
+
+---
+
+**Review completed by Claude Code workflow-research-plan** **Confidence: High**
+| **Recommendation: Proceed to implementation (remove links, no archive
+available)**
