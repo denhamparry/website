@@ -9,3 +9,12 @@ updates:
       - "javascript"
     commit-message:
       prefix: "fix(deps)"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "ci(deps)"
