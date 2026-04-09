@@ -22,12 +22,14 @@ hugo_build_image: git_submodules ## Build Hugo image
 .PHONY: hugo_serve
 hugo_serve: stop_container hugo_build_image git_submodules  ## Serve slides on http://localhost:1313
 	docker run --rm -p 1313:1313 \
+	--user "$$(id -u):$$(id -g)" \
 	-v $(CURDIR):/hugo-project --name ${CONTAINER_NAME} \
 	$(REGISTRY)/$(IMAGE_NAME)
 
 .PHONY: hugo_create
 hugo_create: stop_container hugo_build_image git_submodules  ## Serve slides on http://localhost:1313
 	docker run --rm -p 1313:1313 \
+	--user "$$(id -u):$$(id -g)" \
 	-v $(CURDIR):/hugo-project --name ${CONTAINER_NAME} \
 	$(REGISTRY)/$(IMAGE_NAME) hugo ${POST}
 

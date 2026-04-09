@@ -1,11 +1,11 @@
-FROM ubuntu:18.04
+FROM ubuntu:24.04
 
 ARG HUGO_VERSION=0.87.0
 ENV DOCUMENT_DIR=/hugo-project
 
 RUN apt-get update && apt-get upgrade -y \
       && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-           ruby ruby-dev make cmake build-essential bison flex \
+           ruby ruby-dev make cmake build-essential bison flex curl \
       && apt-get clean \
       && rm -rf /var/lib/apt/lists/* \
       && rm -rf /tmp/*
@@ -19,5 +19,10 @@ RUN mkdir ${DOCUMENT_DIR}
 WORKDIR ${DOCUMENT_DIR}
 
 VOLUME ${DOCUMENT_DIR}
+
+RUN useradd -m hugo
+USER hugo
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 CMD curl -f http://localhost:1313/ || exit 1
 
 CMD ["hugo","server","--bind","0.0.0.0", "--buildDrafts"]

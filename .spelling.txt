@@ -5,6 +5,7 @@ anthropics
 athon
 autorun
 coderay
+CURDIR
 copybutton
 cosecast
 Denham
