@@ -11,10 +11,11 @@ labels: dependencies, javascript, security
 
 ## Summary
 
-A Shoulder.dev scan and `npm audit` identified 3 vulnerable packages (6 total
-advisories) in the project's devDependencies. All affected packages are used
-exclusively in the testing/development pipeline and are not bundled into the
-production Hugo site output.
+A Shoulder.dev scan and `npm audit` identified 3 vulnerable packages with 5
+distinct advisories (brace-expansion appears at two dependency tree locations)
+in the project's devDependencies. All affected packages are used exclusively in
+the testing/development pipeline and are not bundled into the production Hugo
+site output.
 
 ## Current State (npm audit findings)
 
@@ -63,7 +64,7 @@ npm install --save-dev --save-exact axios@1.15.0
 ```
 
 **Validation**: Verify no breaking changes in axios changelog between 1.9.0 and
-1.15.0. The update is a minor version bump within the 1.x range.
+1.15.0. The update stays within the same major version (1.x).
 
 ### Step 2: Fix transitive dependencies via npm audit fix
 
@@ -105,10 +106,10 @@ Confirm cspell (which depends on yaml transitively) still functions correctly.
 
 ## Files Modified
 
-| File                | Change                                                                              |
-| ------------------- | ----------------------------------------------------------------------------------- |
-| `package.json`      | Update axios version from `1.9.0` to `1.15.0`                                       |
-| `package-lock.json` | Updated lock file reflecting axios 1.15.0, brace-expansion 1.1.13/2.0.3, yaml 2.8.3 |
+| File                | Change                                                                                                                                                                    |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `package.json`      | Update axios version from `1.9.0` to `1.15.0`                                                                                                                             |
+| `package-lock.json` | Updated lock file reflecting axios 1.15.0 and its updated transitive dependencies (follow-redirects, form-data, proxy-from-env), brace-expansion 1.1.13/2.0.3, yaml 2.8.3 |
 
 ## Acceptance Criteria
 
