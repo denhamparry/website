@@ -23,6 +23,6 @@ VOLUME ${DOCUMENT_DIR}
 RUN useradd -m hugo
 USER hugo
 
-HEALTHCHECK --interval=30s --timeout=5s CMD curl -f http://localhost:1313/ || exit 1
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 CMD curl -f http://localhost:1313/ || exit 1
 
 CMD ["hugo","server","--bind","0.0.0.0", "--buildDrafts"]

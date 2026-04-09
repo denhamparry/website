@@ -100,6 +100,7 @@ No Makefile changes expected.
 ## Files Modified
 
 - `Dockerfile` — base image upgrade, non-root user, healthcheck
+- `Makefile` — add `--user` flag for macOS UID compatibility
 
 ## Acceptance Criteria
 
