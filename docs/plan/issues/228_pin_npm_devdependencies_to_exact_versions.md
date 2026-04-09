@@ -1,7 +1,7 @@
 # GitHub Issue #228: Pin npm devDependencies to exact versions
 
 **Issue:** [#228](https://github.com/denhamparry/website/issues/228) **Status:**
-Planning **Date:** 2026-04-09
+Reviewed (Approved) **Date:** 2026-04-09
 
 ## Problem Statement
 
@@ -32,15 +32,15 @@ without a lockfile. A Shoulder.dev scan flagged this as a supply chain risk.
 
 ### Packages to Pin
 
-| Package             | Current Specifier | Pinned Version |
-| ------------------- | ----------------- | -------------- |
-| @axe-core/puppeteer | ^4.8.2            | 4.8.2          |
-| axios               | ^1.6.2            | 1.6.2          |
-| chalk               | ^4.1.2            | 4.1.2          |
-| cspell              | ^8.3.2            | 8.3.2          |
-| jest                | ^29.7.0           | 29.7.0         |
-| linkinator          | ^5.0.0            | 5.0.0          |
-| puppeteer           | ^23.8.0           | 23.8.0         |
+| Package             | Current Specifier | Lockfile Resolved | Pinned Version |
+| ------------------- | ----------------- | ----------------- | -------------- |
+| @axe-core/puppeteer | ^4.8.2            | 4.10.2            | 4.10.2         |
+| axios               | ^1.6.2            | 1.9.0             | 1.9.0          |
+| chalk               | ^4.1.2            | 4.1.2             | 4.1.2          |
+| cspell              | ^8.3.2            | 8.19.4            | 8.19.4         |
+| jest                | ^29.7.0           | 29.7.0            | 29.7.0         |
+| linkinator          | ^5.0.0            | 5.0.2             | 5.0.2          |
+| puppeteer           | ^23.8.0           | 23.11.1           | 23.11.1        |
 
 ## Solution Design
 
@@ -73,17 +73,18 @@ without a lockfile. A Shoulder.dev scan flagged this as a supply chain risk.
 
 **Changes:**
 
-Remove `^` prefix from all devDependency version specifiers:
+Remove `^` prefix and pin to the lockfile-resolved versions (not the
+package.json minimums):
 
 ```json
 "devDependencies": {
-  "@axe-core/puppeteer": "4.8.2",
-  "axios": "1.6.2",
+  "@axe-core/puppeteer": "4.10.2",
+  "axios": "1.9.0",
   "chalk": "4.1.2",
-  "cspell": "8.3.2",
+  "cspell": "8.19.4",
   "jest": "29.7.0",
-  "linkinator": "5.0.0",
-  "puppeteer": "23.8.0"
+  "linkinator": "5.0.2",
+  "puppeteer": "23.11.1"
 }
 ```
 
@@ -242,3 +243,73 @@ npm test
    ❌
 2. **Pin + `.npmrc` + Dependabot** - Complete solution with automated update
    path ✅
+
+## Plan Review
+
+**Reviewer:** Claude Code (workflow-research-plan) **Review Date:** 2026-04-09
+**Original Plan Date:** 2026-04-09
+
+### Review Summary
+
+- **Overall Assessment:** Approved
+- **Confidence Level:** High
+- **Recommendation:** Proceed to implementation with required changes applied
+
+### Strengths
+
+- Plan correctly identifies all 7 devDependencies needing pinning
+- Solution includes `.npmrc` for future enforcement — prevents regression
+- Adding Dependabot ensures pinned deps don't go stale
+- Well-structured with clear steps and testing strategy
+
+### Gaps Identified
+
+1. **Gap 1:** Plan originally pinned to package.json minimums, not lockfile
+   resolved versions
+   - **Impact:** High — pinning to `4.8.2` when lockfile has `4.10.2` would
+     downgrade on next `npm install`, potentially breaking tests
+   - **Recommendation:** Pin to lockfile-resolved versions (APPLIED to plan)
+
+### Edge Cases Not Covered
+
+1. **CI uses `npm ci`**: CI typically uses `npm ci` which ignores `package.json`
+   ranges and strictly follows `package-lock.json`. The pinning primarily
+   benefits developers running `npm install` locally or fresh CI without
+   lockfile.
+   - **Current Plan:** Acknowledged in notes but not explicitly in steps
+   - **Recommendation:** No action needed — the fix is still correct
+
+### Risks and Concerns
+
+1. **Risk 1:** `npm install` after pinning to lockfile versions may update
+   lockfile metadata even without version changes
+   - **Likelihood:** Medium
+   - **Impact:** Low — cosmetic lockfile diff
+   - **Mitigation:** Review lockfile diff before committing; accept if only
+     metadata changes
+
+### Required Changes
+
+**Changes that must be made before implementation (all applied):**
+
+- [x] Pin to lockfile-resolved versions instead of package.json minimums
+
+### Optional Improvements
+
+- [ ] Consider adding Dependabot groups to batch related updates (e.g. testing
+      tools together)
+- [ ] Add `engine-strict=true` to `.npmrc` if a Node.js engine constraint is
+      desired
+
+### Verification Checklist
+
+- [x] Solution addresses root cause identified in GitHub issue
+- [x] All acceptance criteria from issue are covered
+- [x] Implementation steps are specific and actionable
+- [x] File paths and code references are accurate
+- [x] Security implications considered (supply chain hardening)
+- [x] Performance impact assessed (none)
+- [x] Test strategy covers critical paths and edge cases
+- [x] Documentation updates planned (none needed beyond .npmrc)
+- [x] Related issues/dependencies identified
+- [x] Breaking changes documented (none)
