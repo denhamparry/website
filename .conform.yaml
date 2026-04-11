@@ -12,8 +12,6 @@ policies:
         required: false # Don't require body for simple changes
       dco: false
       gpg: false # Don't require GPG signing
-      spellcheck:
-        locale: GB
       conventional:
         types:
           - feat # New feature
