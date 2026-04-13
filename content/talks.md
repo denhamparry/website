@@ -1,7 +1,7 @@
 ---
 title: Talks
 date: 2022-04-22T21:00:00+00:00
-reviewed: 2026-02-27
+reviewed: 2026-04-14
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -25,6 +25,32 @@ menu:
 ---
 
 ## 2026
+
+### Beyond Containers: Why MicroVMs Are Essential for Multi-Tenant Workloads
+
+- Type: Talk
+- Date: 14th April 2026
+- Event:
+  [Cloud Native and Kubernetes Edinburgh](https://www.meetup.com/cloud-native-kubernetes-edinburgh/events/313744012/)
+- Resources:
+  [Slides](https://talks.denhamparry.co.uk/2026-04-14-beyond-containers.html)
+
+Containers are the de facto deployment model for our applications today, but is
+your container runtime appropriate for multi-tenant workloads? If you don't know
+which container runtime you're using, it's likely a shared kernel — and your
+multi-tenant workloads aren't as isolated as you might think. This talk
+demonstrates how MicroVMs provide a hardened container runtime by giving each
+workload its own kernel, enforced by hardware virtualization. We explore why
+namespaces and cgroups are limited as security boundaries, walk through recent
+container escape CVEs (Leaky Vessels, NVIDIAScape, runc masked-path race), and
+survey the open-source MicroVM landscape — Firecracker, Cloud Hypervisor, Kata
+Containers, and Edera. The session includes two live demos on a multi-tenant
+Kubernetes cluster: first an attack that breaks container isolation on a
+shared-kernel runtime, then the same attack contained by a MicroVM-based
+runtime. Attendees leave with concrete steps to audit their own runtime,
+hands-on resources including Edera On for reproducing the demos locally, and a
+clearer mental model of where the container-as-security-boundary abstraction
+breaks down.
 
 ### The Road to Multitenancy: Running Secure Multi-Tenant Workloads at Scale
 
