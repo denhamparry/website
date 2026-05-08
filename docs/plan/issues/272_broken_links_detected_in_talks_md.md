@@ -3,7 +3,7 @@
 # GitHub Issue #272: Broken links detected in talks.md
 
 **Issue:** [#272](https://github.com/denhamparry/website/issues/272) **Status:**
-Planning **Date:** 2026-05-08
+Reviewed (Approved) **Date:** 2026-05-08
 
 ## Problem Statement
 
@@ -333,3 +333,139 @@ Expected: workflow passes.
 
 - After this lands, the next monthly link-check run is a free regression test.
   If new breakage appears, it's net-new content rot, not a recurrence.
+
+---
+
+## Plan Review
+
+**Reviewer:** Claude Code (workflow-research-plan) **Review Date:** 2026-05-08
+**Original Plan Date:** 2026-05-08
+
+### Review Summary
+
+- **Overall Assessment:** Approved (with one required clarification)
+- **Confidence Level:** High
+- **Recommendation:** Proceed to implementation; apply the clarification to Step
+  3 during implementation rather than rewriting the plan.
+
+### Strengths
+
+1. **Correct disambiguation of failure modes.** The plan splits one "broken
+   links" issue into two root causes (content rot vs CI false positive) and
+   proposes targeted fixes for each. Treating them as one bug would have
+   produced an incorrect or wasteful fix.
+2. **Conservative scope.** Only `content/talks.md` and `.lychee.toml` are
+   modified. No content beyond the offending entry is touched.
+3. **Follows existing precedent.** Uses the same archive.org-or-remove pattern
+   that resolved #209 and #218.
+4. **Trade-offs documented.** The plan explicitly considered and rejected
+   excluding `/slides/*` from lychee and rebuilding Hugo first — both reasonable
+   alternatives, both rejected with clear rationale.
+5. **Future-proofing rationale.** The `base = "static"` change prevents an
+   entire class of future false positives, not just the immediate symptom.
+
+### Critical Finding: Archive.org Has No Snapshot for the Whova URL
+
+Independent verification via the Wayback Machine availability API:
+
+```text
+{"url": "whova.com/web/sT1P4N7cLm%2FUyeUd0yq6HLfmBOP%2FXqL042hVxqUa0ZA%3D/Speakers",
+ "archived_snapshots": {}}
+```
+
+**Impact:** the plan's primary path (replace with archive.org snapshot) is not
+available. The fallback path (remove the URL) MUST be used. This is the same
+situation as #218.
+
+### Required Changes
+
+Apply during Step 3 implementation — plan rewrite not required.
+
+- [ ] **Use the fallback path only.** Skip the archive.org check at runtime
+      (already verified empty during this review) and go straight to the URL
+      removal.
+
+- [ ] **Fix the misleading fallback example.** The plan's Step 3 currently shows
+      the "After" state as `- Where: Online`, but `Where: Online` already exists
+      at line 399 of `content/talks.md`. Implementing the example literally
+      would produce a duplicate `Where: Online` line.
+
+      The actual edit is to **delete lines 397–398 only** (the `- Link:`
+      list item and its `[Online](...)` continuation), leaving line 399
+      (`- Where: Online`) untouched. The resulting OWASP entry is:
+
+      ```markdown
+      ### OWASP AppSec EU - The Hand That Feeds - How to Misuse Kubernetes
+
+      - Type: Talk
+      - Where: Online
+      - Date: 09th June 2022
+      ```
+
+### Edge Cases Verified
+
+1. **No other broken links missed.** Reviewed the full lychee output from
+   workflow run 25196761806. Only two errors: the slides path resolution error
+   and the Whova HTTP 410. All other entries returned 200 (some via redirects,
+   which lychee follows).
+2. **Hugo `staticDir` defaults to `static`.** The repo's `config.yaml` does not
+   override `staticDir`, so Hugo serves files in `./static/` at root. Setting
+   `base = "static"` in `.lychee.toml` correctly mirrors Hugo's runtime path
+   resolution.
+3. **`base = "static"` does not break URL link resolution.** Lychee's `base`
+   setting only applies to root-relative paths (paths starting with `/`).
+   Absolute URLs (`https://...`) and relative paths (`./foo.md`) continue to
+   resolve as before.
+4. **Slides PDF exists.** `static/slides/202506_kuberneteslondon.pdf` is present
+   in the repo (verified via `ls`).
+
+### Risks and Concerns
+
+1. **Risk: lychee `base` config setting name verification.**
+
+   - **Likelihood:** Low — `base` is the documented config key for the
+     directory/URL that root-relative paths resolve against; lychee's own error
+     message ("provide a root dir") confirms this is the intended mechanism.
+   - **Impact:** Medium — if the config key is wrong, the false positive would
+     persist on the next monthly run, but the Whova fix would still land.
+   - **Mitigation:** PR CI is the verification mechanism. If the
+     `link-check.yml` workflow can be triggered via `workflow_dispatch` on the
+     PR branch, run it manually before merging to confirm. Otherwise, accept the
+     risk — the next monthly cron run will surface any issue and a follow-up fix
+     is cheap.
+
+2. **Risk: removing the OWASP entry's only outbound link is a small regression
+   in user experience.**
+   - **Likelihood:** N/A — already happening; the link returns 410.
+   - **Impact:** Low — the entry retains all other context (date, where,
+     description). No archive replacement is available.
+   - **Mitigation:** None required. This matches how #209 and #218 handled
+     equivalent dead-link cases.
+
+### Optional Improvements
+
+- [ ] Consider running `gh workflow run link-check.yml` on the PR branch after
+      push to verify the `base = "static"` fix lands cleanly before merge. Not
+      required but cheap.
+- [ ] Consider a follow-up issue (or PR-local note) to rebuild Hugo first and
+      run lychee against `public/` for stronger end-to-end coverage. Not
+      required for this PR — the `base` fix addresses the immediate problem.
+
+### Verification Checklist
+
+- [x] Solution addresses both root causes (content rot + CI false positive)
+- [x] Archive.org availability independently verified (no snapshot)
+- [x] File paths and line numbers verified against actual file
+- [x] Hugo `staticDir` default verified — matches the proposed `base` value
+- [x] Full workflow log reviewed — no missed broken links
+- [x] Security implications N/A (documentation + CI config)
+- [x] Performance impact N/A
+- [x] Test strategy adequate (pre-commit + PR CI)
+- [x] No breaking changes
+- [x] Consistent with prior issue #209 / #218 resolution patterns
+
+---
+
+**Review completed by Claude Code workflow-research-plan** **Confidence: High**
+| **Recommendation: Proceed to implementation (apply Required Changes inline; no
+plan rewrite needed)**
