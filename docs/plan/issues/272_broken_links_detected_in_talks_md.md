@@ -3,7 +3,7 @@
 # GitHub Issue #272: Broken links detected in talks.md
 
 **Issue:** [#272](https://github.com/denhamparry/website/issues/272) **Status:**
-Reviewed (Approved) **Date:** 2026-05-08
+Complete **Date:** 2026-05-08
 
 ## Problem Statement
 
@@ -381,11 +381,11 @@ situation as #218.
 
 Apply during Step 3 implementation — plan rewrite not required.
 
-- [ ] **Use the fallback path only.** Skip the archive.org check at runtime
+- [x] **Use the fallback path only.** Skip the archive.org check at runtime
       (already verified empty during this review) and go straight to the URL
       removal.
 
-- [ ] **Fix the misleading fallback example.** The plan's Step 3 currently shows
+- [x] **Fix the misleading fallback example.** The plan's Step 3 currently shows
       the "After" state as `- Where: Online`, but `Where: Online` already exists
       at line 399 of `content/talks.md`. Implementing the example literally
       would produce a duplicate `Where: Online` line.

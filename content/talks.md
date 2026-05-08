@@ -394,8 +394,6 @@ security and velocity of system delivery.
 ### OWASP AppSec EU - The Hand That Feeds - How to Misuse Kubernetes
 
 - Type: Talk
-- Link:
-  [Online](https://whova.com/web/sT1P4N7cLm%2FUyeUd0yq6HLfmBOP%2FXqL042hVxqUa0ZA%3D/Speakers?utm_source=owasp-web&utm_medium=event-page&utm_campaign=none)
 - Where: Online
 - Date: 09th June 2022
 

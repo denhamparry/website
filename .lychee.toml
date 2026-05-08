@@ -6,6 +6,10 @@ max_retries = 3
 timeout = 5
 accept = [200, 429]
 
+# Resolve root-relative paths (e.g., /slides/foo.pdf) against the static/
+# directory so Hugo's static asset links validate correctly in raw markdown.
+base = "static"
+
 # Exclusions
 exclude_path = [".git", "themes"]
 
