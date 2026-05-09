@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@axe-core/puppeteer": "4.11.3",
-    "axios": "1.15.2",
+    "axios": "1.16.0",
     "chalk": "4.1.2",
     "cspell": "10.0.0",
     "jest": "30.4.2",
