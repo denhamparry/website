@@ -565,7 +565,7 @@ jobs:
 
    - Doesn't verify content accuracy (dates, descriptions)
    - Can't assess quality/completeness
-   - Lacks human judgment for archived links
+   - Lacks human judgement for archived links
 
 2. **Full historical link audit** - Why not chosen ❌
 
