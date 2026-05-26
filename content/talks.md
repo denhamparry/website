@@ -123,8 +123,8 @@ workloads—but adoption hurdles and misconceptions remain. In this webinar,
 Edera’s experts demystify confidential computing, compare it with
 container-native isolation, and show how combining the two unlocks stronger,
 more practical protections. Join us to learn when you need hardware-backed
-trust, when software isolation is enough, and how to get both without trade
-offs.
+trust, when software isolation is enough, and how to get both without
+trade-offs.
 
 ### Edera: Let The Hardened Runtime Era Begin
 
