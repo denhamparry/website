@@ -5,7 +5,9 @@ https://denhamparry.netlify.com/* https://denhamparry.co.uk/:splat 301!
 http://blog.denhamparry.co.uk/* https://denhamparry.co.uk/:splat 301!
 https://blog.denhamparry.co.uk/* https://denhamparry.co.uk/:splat 301!
 
-# Redirect all old blog posts and pages to homepage
-https://denhamparry.co.uk/posts/* https://denhamparry.co.uk/:splat 301!
-https://denhamparry.co.uk/page/* https://denhamparry.co.uk/:splat 301!
-https://denhamparry.co.uk/cv/* https://denhamparry.co.uk/:splat 301!
+# Old blog posts and pages were permanently removed. Serve 410 Gone so Google
+# drops them from the index cleanly, rather than 301-ing to the homepage
+# (which Google treats as a soft 404). See issue #290.
+/posts/* /404.html 410
+/page/* /404.html 410
+/cv/* /404.html 410
