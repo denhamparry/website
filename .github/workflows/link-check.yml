@@ -19,8 +19,9 @@ jobs:
         uses: lycheeverse/lychee-action@8646ba30535128ac92d33dfc9133794bfdd9b411 # v2.8.0
         with:
           args: >-
-            --verbose --no-progress --max-retries 3 --timeout 5 --accept 200,429
-            --exclude-path '.git' --exclude-path 'themes' 'content/**/*.md'
+            --verbose --no-progress --max-retries 3 --timeout 20 --accept
+            200,429 --root-dir '${{ github.workspace }}/static' --exclude-path
+            '.git' --exclude-path 'themes' 'content/**/*.md'
           fail: true # Fail job if broken links found
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
