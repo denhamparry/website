@@ -1,14 +1,21 @@
 # Lychee link checker configuration
 # Used by: .github/workflows/link-check.yml
+#
+# NOTE: the workflow passes all settings inline via `args:` and does not load
+# this file (lychee auto-discovers `lychee.toml`, not the dotfile `.lychee.toml`,
+# and the workflow does not pass `--config`). Keep this file in sync with the
+# workflow if it is ever wired in via `--config`.
+#
+# Root-relative links (e.g. /slides/foo.pdf) are resolved in the workflow with
+# `--root-dir '${{ github.workspace }}/static'`. `--root-dir` requires an
+# absolute path, so it cannot be a committed value here. A previous attempt to
+# resolve them with `base = "static"` (issue #272) was ineffective: `base` sets
+# a base URL for remote relative links, not a root dir for local absolute links.
 
 # Request settings
 max_retries = 3
-timeout = 5
+timeout = 20
 accept = [200, 429]
-
-# Resolve root-relative paths (e.g., /slides/foo.pdf) against the static/
-# directory so Hugo's static asset links validate correctly in raw markdown.
-base = "static"
 
 # Exclusions
 exclude_path = [".git", "themes"]

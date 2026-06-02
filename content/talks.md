@@ -295,9 +295,9 @@ and how you can apply the same tools and principles.
 
 - Type: Talk
 - Video:
-  [Website](https://fosdem.org/2023/schedule/event/security_rugby_sigstore/)
+  [Website](https://archive.fosdem.org/2023/schedule/event/security_rugby_sigstore/)
 - Where:
-  [Brussels, Belgium](https://fosdem.org/2023/schedule/event/security_rugby_sigstore/)
+  [Brussels, Belgium](https://archive.fosdem.org/2023/schedule/event/security_rugby_sigstore/)
 - Date: 04-05th February 2023
 
 Cosign, fulcio, rekor are all components in keyless signing with Sigstore.
