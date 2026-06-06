@@ -20,7 +20,7 @@
     "axios": "1.16.1",
     "babel-jest": "30.4.1",
     "chalk": "4.1.2",
-    "cspell": "10.0.0",
+    "cspell": "10.0.1",
     "jest": "30.4.2",
     "linkinator": "5.0.2",
     "puppeteer": "25.1.0"
