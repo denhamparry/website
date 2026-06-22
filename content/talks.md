@@ -1,7 +1,7 @@
 ---
 title: Talks
 date: 2022-04-22T21:00:00+00:00
-reviewed: 2026-04-14
+reviewed: 2026-06-22
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -97,6 +97,19 @@ with OpenTelemetry, Prometheus, and Grafana. Attendees learn how to build
 AI-assisted applications with clean middleware patterns, distributed tracing,
 and production-grade infrastructure rather than just leveraging AI tools for
 development.
+
+### Edera: Multi-Tenant Melee: Achieving Secure Isolation for Modern Container Platforms
+
+- Type: Webinar
+- Date: 20th November 2025
+- Event: Edera Runtime Rumble
+- Resources: [Recording](https://edera.link/vev4oth)
+
+This Runtime Rumble session explores why shared-kernel Kubernetes multi-tenancy
+can fall short as a security boundary, and how platform teams can evaluate
+stronger isolation without giving up operational efficiency. The discussion
+focuses on practical risks in modern container platforms and the trade-offs
+between developer workflow, performance, and workload separation.
 
 <!-- markdownlint-disable MD024 -->
 
