@@ -14,7 +14,7 @@
     "build:preview": "hugo --gc --minify --buildFuture"
   },
   "devDependencies": {
-    "@axe-core/puppeteer": "4.11.3",
+    "@axe-core/puppeteer": "4.12.1",
     "@babel/core": "8.0.1",
     "@babel/preset-env": "8.0.2",
     "axios": "1.18.1",
