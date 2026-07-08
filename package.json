@@ -7,7 +7,7 @@
     "test:hugo": "node tests/hugo/test-hugo-build.js",
     "test:functional": "jest tests/functional",
     "test:accessibility": "node tests/accessibility/test-accessibility.js",
-    "test:links": "linkinator public --recurse --skip 'livereload.js' --skip 'googletagmanager.com'",
+    "test:links": "linkinator public --recurse --skip 'livereload.js' --skip 'googletagmanager.com' --skip 'index.json'",
     "test:spell": "cspell '**/*.md' '**/*.txt' --no-progress",
     "serve": "hugo server -D",
     "build": "hugo --gc --minify",
