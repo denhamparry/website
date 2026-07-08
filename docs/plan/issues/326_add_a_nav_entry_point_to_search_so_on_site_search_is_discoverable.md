@@ -138,3 +138,7 @@ Also verify the generated or served site includes:
 - Served localhost check - passed; the homepage contains the search link and
   Talks/Search menu order, and `http://localhost:1313/index.json` includes
   Talks.
+- Post-PR GitHub Actions `test (22.x)` initially failed because `hugo server` in
+  CI rendered localhost URLs while the new functional tests expected production
+  `baseURL` URLs. Updated the tests to assert URL paths instead of origins for
+  the search and Talks links.
