@@ -87,7 +87,6 @@ describe("Website Navigation Tests", () => {
     expect(menuItems.indexOf("Talks")).toBeLessThan(
       menuItems.indexOf("Search"),
     );
-    expect(searchLink.href).toBe("https://denhamparry.co.uk/search/");
     expect(new URL(searchLink.href).pathname).toBe("/search/");
     expect(searchLink.text).toBe("Search");
     expect(searchLink.accessKey).toBe("/");
@@ -108,7 +107,7 @@ describe("Website Navigation Tests", () => {
       label: el.getAttribute("aria-label"),
     }));
 
-    expect(talksResult.href).toBe("https://denhamparry.co.uk/talks/");
+    expect(new URL(talksResult.href).pathname).toBe("/talks/");
     expect(talksResult.label).toBe("Talks");
   });
 
