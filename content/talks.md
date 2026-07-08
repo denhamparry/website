@@ -1,7 +1,7 @@
 ---
 title: Talks
 date: 2022-04-22T21:00:00+00:00
-reviewed: 2026-06-22
+reviewed: 2026-07-08
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -194,13 +194,15 @@ sensitive workloads with strong isolation, strategies for eliminating the
 development-to-production security gap, and emerging patterns in container
 security architecture that prioritize both performance and protection.
 
-### KubeCon EU 2025: Container Runtimes... on Lockdown: The Hidden Costs of
+<!-- markdownlint-disable MD013 -->
 
-Multi-tenant Workloads
+### KubeCon EU 2025: Container Runtimes... on Lockdown: The Hidden Costs of Multi-tenant Workloads
+
+<!-- markdownlint-enable MD013 -->
 
 - Type: Talk
-- [YouTube](https://www.youtube.com/watch?v=I9t7qfOjgbo)
 - Date: 04th April 2025
+- Resources: [Recording](https://www.youtube.com/watch?v=I9t7qfOjgbo)
 
 Container runtimes form the bedrock of Kubernetes, but running diverse workloads
 side-by-side introduces complex security challenges that many teams overlook.
@@ -221,14 +223,16 @@ trade-offs.
 ### The Cloud-Native Club | Project Spotlight: Edera
 
 - Type: Podcast
-- [Youtube](https://www.youtube.com/live/MXdmKViYV9Y?si=jhyyU4EIf4Y1wCe0)
-- Date: 26 Sept 2024
+- Date: 26th September 2024
+- Resources:
+  [Recording](https://www.youtube.com/live/MXdmKViYV9Y?si=jhyyU4EIf4Y1wCe0)
 
 ### OSS North America - The Overconfident Operator Vs the Nefarious Ne'er-Do-Well
 
 - Type: Talk
-- [Open Source Summit North America](https://events.linuxfoundation.org/open-source-summit-north-america/)
 - Date: 17th April 2024
+- Event:
+  [Open Source Summit North America](https://events.linuxfoundation.org/open-source-summit-north-america/)
 
 Ozzie the Overconfident Operator has secured their cluster! They have done it
 all: role-based access control, encryption at rest, TLS…and as they congratulate
@@ -247,8 +251,8 @@ time. There is nothing Nova can do to break… uh-oh. Not again!
 ### KCD Guadalajara 2024 - The Overconfident Operator Vs the Nefarious Ne'er-Do-Well
 
 - Type: Keynote
-- [KCD Guadalajara](https://ccoss.org/)
-- Date: 24-24th February 2024
+- Date: 23-24th February 2024
+- Event: [KCD Guadalajara](https://ccoss.org/)
 
 ## 2023
 
@@ -258,9 +262,9 @@ time. There is nothing Nova can do to break… uh-oh. Not again!
 - Where: [YouTube](https://www.youtube.com/watch?v=Y1rJY_UlLmM)
 - Date: 08th November 2023
 
-### Lighting Talk 2 aka WTF is the Journey
+### Lightning Talk 2 aka WTF is the Journey
 
-- Type: Lighting Talk
+- Type: Lightning Talk
 - Where: [YouTube](https://www.youtube.com/watch?v=dR5T2qNAuCs&t=1s)
 - Date: 17th October 2023
 
@@ -589,7 +593,7 @@ SANS authors:
 
 - Type: Meetup
 - Where: [Cardiff, UK](https://www.meetup.com/AI-Wales/events/283883339/)
-- Date: 03th Mar 2022
+- Date: 03rd March 2022
 
 ### Private Kubernetes Training February 2/2
 
@@ -625,7 +629,7 @@ SANS authors:
 
 - Type: Podcast
 - Where: [cosecast.com](https://cosecast.com/episode-8-kubecon-ctf)
-- Date: 10 January 2022.
+- Date: 10th January 2022
 
 In this episode Steve speaks with the Control Plane Kubernetes security training
 gurus, Lewis Denham-Parry and Andy Martin about their brain-child, the KubeCon
@@ -922,18 +926,19 @@ best to monitor your services to put preventative measures in place.
 - Type: Lightning Talks
 - Where:
   [BlueConf](https://web.archive.org/web/20220521180658/https://blueconf.co.uk/)
-- Date 08th Jun 2019
+- Date: 08th June 2019
 
 ### BlueConf - WTF is Cloud Native
 
 - Type: Talk
 - Where:
   [Cardiff, UK](https://web.archive.org/web/20220521180658/https://blueconf.co.uk/)
-- Date 08th Jun 2019
+- Date: 08th June 2019
 
 ### µCon London 2019 - How do we become Cloud Native?
 
 - Type: Talk
+- Date: 29-31st May 2019
 - Where: London, UK
 
 ### KubeCon EU - How we contributed to the community with no code
@@ -944,7 +949,7 @@ best to monitor your services to put preventative measures in place.
 - Date: 19th May 2019
 - Online: [Barcelona, Spain](https://www.youtube.com/watch?v=4jEASYCaVDo)
 
-This time last year, two people from Wales, United Kingdom decried to bring the
+This time last year, two people from Wales, United Kingdom decided to bring the
 CNCF to their doorstep.
 
 Previously, they were attending international conferences and national meetups
@@ -973,9 +978,11 @@ wide community.
 - Where: [Minnesota, USA](https://pubconf.io/events/2019/minnesota/)
 - Date: 08th May 2019
 
-### NDC Minnesota 2019 - Scaling Microservices with Message Queues, DotNet Core
+<!-- markdownlint-disable MD013 -->
 
-and Kubernetes
+### NDC Minnesota 2019 - Scaling Microservices with Message Queues, DotNet Core and Kubernetes
+
+<!-- markdownlint-enable MD013 -->
 
 - Type: Talk
 - Where: [Minnesota, USA](https://ndcminnesota.com/)
@@ -1022,13 +1029,11 @@ Find out the parallels of mental health to monoliths versus microservices!
 - Type: Talk
 - Where: [London, UK](https://pubconf.io)
 - Date: 1st February 2019
-- Online [YouTube](https://www.youtube.com/watch?v=9NEGZQ3rRQ4)
+- Online: [YouTube](https://www.youtube.com/watch?v=9NEGZQ3rRQ4)
 
 Rapid-fire funny talks, musical acts, and comedy stunts from amazing developers.
 
-### NDC London 2019 - Scaling Microservices with Message queues, .NET and
-
-Kubernetes
+### NDC London 2019 - Scaling Microservices with Message queues, .NET and Kubernetes
 
 - Type: Talk
 - Where: [London, UK](https://ndc-london.com)
