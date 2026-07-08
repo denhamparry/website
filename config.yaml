@@ -12,6 +12,12 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 googleAnalytics: G-SNNE5MMPPC
 
 minify:
