@@ -871,15 +871,13 @@ was part of KubeCon EU 2021.
 ### Cloud Native Wales Meetup v1.5.0
 
 - Type: Meetup
-- Where:
-  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/266266702/)
+- Where: Cardiff, UK
 - Date: 10th Oct 2019
 
 ### Cloud Native Wales Meetup v1.4.0
 
 - Type: Meetup
-- Where:
-  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/266266702/)
+- Where: Cardiff, UK
 - Date: 12th Sept 2019
 
 ### KCDC - What vulnerabilities? Live hacking of Containers and Orchestrators
