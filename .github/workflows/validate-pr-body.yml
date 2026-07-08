@@ -1,0 +1,29 @@
+name: Validate PR body
+
+on:
+  pull_request:
+    types:
+      - edited
+      - opened
+      - ready_for_review
+      - reopened
+      - synchronize
+
+permissions:
+  pull-requests: read
+
+jobs:
+  escaped-newlines:
+    name: Reject escaped newlines
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR body
+        env:
+          PR_BODY: ${{ github.event.pull_request.body || '' }}
+        run: |
+          if printf '%s' "${PR_BODY}" | grep -Fq '\n'; then
+            echo "::error title=Invalid PR body::The PR body contains an escaped newline sequence. Edit the description so section breaks use real newlines and closing keywords stay standalone."
+            exit 1
+          fi
+
+          echo "PR body uses real newlines."
