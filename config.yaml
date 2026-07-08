@@ -18,6 +18,13 @@ outputs:
     - RSS
     - JSON
 
+menu:
+  main:
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 20
+
 googleAnalytics: G-SNNE5MMPPC
 
 minify:
