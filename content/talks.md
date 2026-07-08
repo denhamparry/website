@@ -695,8 +695,6 @@ cluster compromise!
 - Date: 12th October 2021
 - Event:
   [LA, USA / Online](https://events.linuxfoundation.org/cloud-native-security-conference-north-america/)
-- Resources: [Introduction NA 2021](https://youtu.be/Bn_0NjvoDoo),
-  [Walkthrough NA 2021](https://youtu.be/phKBYX6Pd_A)
 
 Review of the Capture the Flag event hosted at Cloud Native Security Conference
 NA that was part of KubeCon NA 2021.
@@ -1069,7 +1067,7 @@ influx of messages in the queue.
 - Type: Meetup
 - Date: 10th January 2019
 - Event:
-  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/lxwbppyzdbsb/)
+  [Cardiff, UK](https://www.meetup.com/cloudnativewales/events/250631354/)
 
 ## 2018
 
