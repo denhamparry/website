@@ -134,6 +134,7 @@ an AI agent to write all the code.
 - Type: Webinar
 - Date: 16th October 2025
 - Event: Edera Runtime Rumble
+- Resources: [Recording](https://www.youtube.com/watch?v=t_2TfygTlV8)
 
 Confidential Computing promises hardware-based security for sensitive
 workloads—but adoption hurdles and misconceptions remain. In this webinar,
