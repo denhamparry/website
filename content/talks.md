@@ -21,7 +21,8 @@ cover:
   image: /images/talks/hotdog.jpg
 type: page
 menu:
-  main: {}
+  main:
+    weight: 10
 ---
 
 ## 2026

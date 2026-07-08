@@ -71,6 +71,47 @@ describe("Website Navigation Tests", () => {
     expect(pageTitle).toBe("Talks");
   });
 
+  test("Search page is reachable from the header navigation", async () => {
+    await page.goto(baseUrl);
+
+    const menuItems = await page.$$eval("#menu a", (links) =>
+      links.map((link) => link.textContent.trim()),
+    );
+    const searchLink = await page.$eval('#menu a[href$="/search/"]', (el) => ({
+      href: el.href,
+      text: el.textContent.trim(),
+      accessKey: el.getAttribute("accesskey"),
+    }));
+
+    expect(menuItems).toEqual(expect.arrayContaining(["Talks", "Search"]));
+    expect(menuItems.indexOf("Talks")).toBeLessThan(
+      menuItems.indexOf("Search"),
+    );
+    expect(searchLink.href).toBe("https://denhamparry.co.uk/search/");
+    expect(new URL(searchLink.href).pathname).toBe("/search/");
+    expect(searchLink.text).toBe("Search");
+    expect(searchLink.accessKey).toBe("/");
+  });
+
+  test("Search returns the Talks page", async () => {
+    await page.goto(`${baseUrl}/search/`, { waitUntil: "networkidle0" });
+    await page.type("#searchInput", "Talks");
+
+    await page.waitForFunction(() => {
+      return Array.from(
+        document.querySelectorAll("#searchResults .entry-header"),
+      ).some((el) => el.textContent.includes("Talks"));
+    });
+
+    const talksResult = await page.$eval("#searchResults li a", (el) => ({
+      href: el.href,
+      label: el.getAttribute("aria-label"),
+    }));
+
+    expect(talksResult.href).toBe("https://denhamparry.co.uk/talks/");
+    expect(talksResult.label).toBe("Talks");
+  });
+
   test("Talks page has table of contents", async () => {
     await page.goto(`${baseUrl}/talks`);
     const toc = await page.$(".toc");
