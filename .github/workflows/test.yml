@@ -126,10 +126,10 @@ jobs:
       - name: Check for content changes
         id: content-changed
         run: |
-          if git diff --name-only HEAD^ HEAD | grep -qE '^(content/|static/|themes/|layouts/|config\.yaml)'; then
-            echo "changed=true" >> $GITHUB_OUTPUT
+          if git diff --name-only "HEAD^" "HEAD" | grep -qE '^(content/|static/|themes/|layouts/|config\.yaml)'; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           else
-            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Download Hugo build
@@ -161,39 +161,3 @@ jobs:
           hugo server &
           sleep 5
           lhci autorun --collect.url=http://localhost:1313 --collect.url=http://localhost:1313/talks || true
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-
-  deploy-preview:
-    runs-on: ubuntu-latest
-    needs: [test, lint]
-    if: github.event_name == 'pull_request'
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
-        with:
-          submodules: true
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
-        with:
-          hugo-version: "latest"
-
-      - name: Build site
-        run: hugo --gc --minify --buildFuture
-
-      - name: Deploy to Netlify Preview
-        uses: nwtgck/actions-netlify@d22a32a27c918fe470bbc562e984f80ec48c2668 # v4.0.0
-        with:
-          publish-dir: "./public"
-          production-deploy: false
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Deploy from GitHub Actions"
-          enable-pull-request-comment: true
-          enable-commit-comment: false
-          overwrites-pull-request-comment: true
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 1
