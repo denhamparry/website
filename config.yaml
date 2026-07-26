@@ -44,8 +44,8 @@ params:
       url: "https://github.com/denhamparry"
     - name: linkedin
       url: "https://www.linkedin.com/in/denhamparry/"
-    - name: cv
-      url: "https://edera.dev"
+    - name: nscale
+      url: "https://nscale.com"
 
   # Configure favicons to prevent 404s
   assets:
