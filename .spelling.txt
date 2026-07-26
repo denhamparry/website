@@ -41,6 +41,7 @@ netlify
 networkidle
 newpost
 newtalk
+Nscale
 nixos
 nixpkgs
 noninteractive

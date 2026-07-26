@@ -60,9 +60,51 @@ describe("Website Navigation Tests", () => {
     );
     expect(linkedinLink).toBe("https://www.linkedin.com/in/denhamparry/");
 
-    // Check CV link
-    const cvLink = await page.$eval('a[href*="edera.dev"]', (el) => el.href);
-    expect(cvLink).toBe("https://edera.dev/");
+    // Check Nscale link and logo
+    const nscaleLink = await page.$eval('a[href*="nscale.com"]', (el) => {
+      const icon = el.querySelector("svg");
+
+      return {
+        href: el.href,
+        title: el.title,
+        viewBox: icon?.getAttribute("viewBox"),
+        fill: icon?.getAttribute("fill"),
+        pathCount: icon?.querySelectorAll("path").length,
+      };
+    });
+    expect(nscaleLink).toEqual({
+      href: "https://nscale.com/",
+      title: "Nscale",
+      viewBox: "0 0 36 20",
+      fill: "currentColor",
+      pathCount: 3,
+    });
+    expect(await page.$('a[href*="edera.dev"]')).toBeNull();
+  });
+
+  test("Nscale logo follows light and dark theme colours", async () => {
+    await page.goto(baseUrl);
+    await page.evaluate(() => localStorage.setItem("pref-theme", "dark"));
+    await page.reload();
+
+    const darkFill = await page.$eval(
+      'a[href*="nscale.com"] svg',
+      (icon) => getComputedStyle(icon).fill,
+    );
+
+    await page.click("#theme-toggle");
+    await new Promise((resolve) => setTimeout(resolve, 100));
+
+    const lightFill = await page.$eval(
+      'a[href*="nscale.com"] svg',
+      (icon) => getComputedStyle(icon).fill,
+    );
+
+    expect(darkFill).not.toBe(lightFill);
+    expect(darkFill).not.toBe("none");
+    expect(lightFill).not.toBe("none");
+
+    await page.evaluate(() => localStorage.setItem("pref-theme", "dark"));
   });
 
   test("Talks page is accessible", async () => {
