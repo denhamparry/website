@@ -3,16 +3,16 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-const chalk = require("chalk");
+const { styleText } = require("node:util");
 
-console.log(chalk.blue("🔨 Running Hugo Build Tests...\n"));
+console.log(styleText("blue", "🔨 Running Hugo Build Tests...\n"));
 
 const tests = [
   {
     name: "Hugo Version Check",
     test: () => {
       const version = execSync("hugo version", { encoding: "utf8" });
-      console.log(chalk.gray(`Hugo version: ${version.trim()}`));
+      console.log(styleText("gray", `Hugo version: ${version.trim()}`));
       return version.includes("hugo");
     },
   },
@@ -23,7 +23,7 @@ const tests = [
         execSync("hugo --gc --minify", { stdio: "inherit" });
         return true;
       } catch (error) {
-        console.error(chalk.red("Build failed:", error.message));
+        console.error(styleText("red", `Build failed: ${error.message}`));
         return false;
       }
     },
@@ -86,10 +86,13 @@ const tests = [
         indexContent.includes("<body>") || indexContent.includes("<body ");
 
       if (!hasDoctype)
-        console.error(chalk.yellow("  Missing DOCTYPE declaration"));
-      if (!hasHtmlTag) console.error(chalk.yellow("  Missing <html> tag"));
-      if (!hasHeadTag) console.error(chalk.yellow("  Missing <head> tag"));
-      if (!hasBodyTag) console.error(chalk.yellow("  Missing <body> tag"));
+        console.error(styleText("yellow", "  Missing DOCTYPE declaration"));
+      if (!hasHtmlTag)
+        console.error(styleText("yellow", "  Missing <html> tag"));
+      if (!hasHeadTag)
+        console.error(styleText("yellow", "  Missing <head> tag"));
+      if (!hasBodyTag)
+        console.error(styleText("yellow", "  Missing <body> tag"));
 
       return hasDoctype && hasHtmlTag && hasHeadTag && hasBodyTag;
     },
@@ -102,26 +105,26 @@ let failed = 0;
 tests.forEach(({ name, test }) => {
   try {
     if (test()) {
-      console.log(chalk.green(`✓ ${name}`));
+      console.log(styleText("green", `✓ ${name}`));
       passed++;
     } else {
-      console.log(chalk.red(`✗ ${name}`));
+      console.log(styleText("red", `✗ ${name}`));
       failed++;
     }
   } catch (error) {
-    console.log(chalk.red(`✗ ${name}`));
-    console.error(chalk.red(`  Error: ${error.message}`));
+    console.log(styleText("red", `✗ ${name}`));
+    console.error(styleText("red", `  Error: ${error.message}`));
     failed++;
   }
 });
 
-console.log("\n" + chalk.bold("Test Results:"));
-console.log(chalk.green(`  Passed: ${passed}`));
-console.log(chalk.red(`  Failed: ${failed}`));
+console.log("\n" + styleText("bold", "Test Results:"));
+console.log(styleText("green", `  Passed: ${passed}`));
+console.log(styleText("red", `  Failed: ${failed}`));
 
 if (failed > 0) {
-  console.log("\n" + chalk.red("❌ Hugo build tests failed!"));
+  console.log("\n" + styleText("red", "❌ Hugo build tests failed!"));
   process.exit(1);
 } else {
-  console.log("\n" + chalk.green("✅ All Hugo build tests passed!"));
+  console.log("\n" + styleText("green", "✅ All Hugo build tests passed!"));
 }
