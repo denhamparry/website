@@ -2,9 +2,9 @@
 
 const { AxePuppeteer } = require("@axe-core/puppeteer");
 const puppeteer = require("puppeteer");
-const chalk = require("chalk");
+const { styleText } = require("node:util");
 
-console.log(chalk.blue("♿ Running Accessibility Tests...\n"));
+console.log(styleText("blue", "♿ Running Accessibility Tests...\n"));
 
 const pages = [
   { name: "Homepage", url: "http://localhost:1313" },
@@ -25,8 +25,8 @@ async function runAccessibilityTests() {
   let totalPasses = 0;
 
   for (const pageInfo of pages) {
-    console.log(chalk.bold(`\nTesting: ${pageInfo.name}`));
-    console.log(chalk.gray(`URL: ${pageInfo.url}`));
+    console.log(styleText("bold", `\nTesting: ${pageInfo.name}`));
+    console.log(styleText("gray", `URL: ${pageInfo.url}`));
 
     try {
       const page = await browser.newPage();
@@ -40,35 +40,45 @@ async function runAccessibilityTests() {
       // Report violations
       if (results.violations.length > 0) {
         console.log(
-          chalk.red(
+          styleText(
+            "red",
             `\n  ❌ Found ${results.violations.length} accessibility violations:`,
           ),
         );
 
         results.violations.forEach((violation, index) => {
-          console.log(chalk.red(`\n  ${index + 1}. ${violation.description}`));
-          console.log(chalk.yellow(`     Impact: ${violation.impact}`));
-          console.log(chalk.gray(`     Help: ${violation.help}`));
-          console.log(chalk.gray(`     More info: ${violation.helpUrl}`));
+          console.log(
+            styleText("red", `\n  ${index + 1}. ${violation.description}`),
+          );
+          console.log(styleText("yellow", `     Impact: ${violation.impact}`));
+          console.log(styleText("gray", `     Help: ${violation.help}`));
+          console.log(
+            styleText("gray", `     More info: ${violation.helpUrl}`),
+          );
 
           violation.nodes.forEach((node, nodeIndex) => {
-            console.log(chalk.gray(`\n     Element ${nodeIndex + 1}:`));
-            console.log(chalk.gray(`       ${node.html}`));
+            console.log(styleText("gray", `\n     Element ${nodeIndex + 1}:`));
+            console.log(styleText("gray", `       ${node.html}`));
             if (node.failureSummary) {
-              console.log(chalk.gray(`       Issue: ${node.failureSummary}`));
+              console.log(
+                styleText("gray", `       Issue: ${node.failureSummary}`),
+              );
             }
           });
         });
 
         totalViolations += results.violations.length;
       } else {
-        console.log(chalk.green("  ✅ No accessibility violations found!"));
+        console.log(
+          styleText("green", "  ✅ No accessibility violations found!"),
+        );
       }
 
       // Report passes
       if (results.passes.length > 0) {
         console.log(
-          chalk.green(
+          styleText(
+            "green",
             `  ✓ Passed ${results.passes.length} accessibility checks`,
           ),
         );
@@ -85,14 +95,16 @@ async function runAccessibilityTests() {
 
       if (criticalViolations.length > 0) {
         console.log(
-          chalk.red(
+          styleText(
+            "red",
             `\n  ⚠️  ${criticalViolations.length} CRITICAL violations found!`,
           ),
         );
       }
       if (seriousViolations.length > 0) {
         console.log(
-          chalk.yellow(
+          styleText(
+            "yellow",
             `  ⚠️  ${seriousViolations.length} SERIOUS violations found!`,
           ),
         );
@@ -101,7 +113,10 @@ async function runAccessibilityTests() {
       await page.close();
     } catch (error) {
       console.log(
-        chalk.red(`\n  Error testing ${pageInfo.name}: ${error.message}`),
+        styleText(
+          "red",
+          `\n  Error testing ${pageInfo.name}: ${error.message}`,
+        ),
       );
       totalViolations++;
     }
@@ -110,31 +125,38 @@ async function runAccessibilityTests() {
   await browser.close();
 
   // Summary
-  console.log(chalk.bold("\n\n📊 Accessibility Test Summary:"));
-  console.log(chalk.green(`  Total checks passed: ${totalPasses}`));
-  console.log(chalk.red(`  Total violations: ${totalViolations}`));
+  console.log(styleText("bold", "\n\n📊 Accessibility Test Summary:"));
+  console.log(styleText("green", `  Total checks passed: ${totalPasses}`));
+  console.log(styleText("red", `  Total violations: ${totalViolations}`));
 
   if (totalViolations === 0) {
     console.log(
-      chalk.green(
+      styleText(
+        "green",
         "\n✅ All accessibility tests passed! Your site is accessible.",
       ),
     );
     process.exit(0);
   } else {
     console.log(
-      chalk.red(
+      styleText(
+        "red",
         `\n❌ Found ${totalViolations} accessibility issues that need to be fixed.`,
       ),
     );
-    console.log(chalk.yellow("\n💡 Tips for fixing accessibility issues:"));
-    console.log(chalk.gray("  - Ensure all images have alt text"));
-    console.log(chalk.gray("  - Use semantic HTML elements"));
-    console.log(chalk.gray("  - Ensure sufficient colour contrast"));
     console.log(
-      chalk.gray("  - Make all interactive elements keyboard accessible"),
+      styleText("yellow", "\n💡 Tips for fixing accessibility issues:"),
     );
-    console.log(chalk.gray("  - Use ARIA labels where appropriate"));
+    console.log(styleText("gray", "  - Ensure all images have alt text"));
+    console.log(styleText("gray", "  - Use semantic HTML elements"));
+    console.log(styleText("gray", "  - Ensure sufficient colour contrast"));
+    console.log(
+      styleText(
+        "gray",
+        "  - Make all interactive elements keyboard accessible",
+      ),
+    );
+    console.log(styleText("gray", "  - Use ARIA labels where appropriate"));
     process.exit(1);
   }
 }
@@ -148,7 +170,9 @@ http
     }
   })
   .on("error", () => {
-    console.log(chalk.red("❌ Hugo server is not running!"));
-    console.log(chalk.yellow("Please start the Hugo server with: hugo server"));
+    console.log(styleText("red", "❌ Hugo server is not running!"));
+    console.log(
+      styleText("yellow", "Please start the Hugo server with: hugo server"),
+    );
     process.exit(1);
   });
