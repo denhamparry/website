@@ -1,5 +1,5 @@
 ---
-status: In Progress
+status: Complete
 issue: 359
 date: 2026-08-08
 ---
@@ -186,3 +186,28 @@ production-site file changes.
 - Non-blocking and pre-existing: investigate the Babel 8/Jest Babel 7 peer
   resolution warnings separately; this lockfile refresh neither introduced nor
   changed them.
+
+## Post-PR Verification
+
+Independent issue-to-PR verification reviewed implementation head
+`77fdde11e2a62cbad91d202004c958fe3262d0ec` from PR #361 and confirmed the local,
+remote, and GitHub head matched before review.
+
+| Criterion or issue item                                    | Independent evidence                                                                                                                                        | Result |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| All three vulnerable `brace-expansion` paths are refreshed | Re-read the complete PR diff and clean installed tree; the root, Linkinator, and `test-exclude` copies resolve to 2.1.4, 5.0.9, and 1.1.18                  | Pass   |
+| The vulnerable `js-yaml` path is refreshed                 | Re-read the complete PR diff and dependency tree; the sole installed copy resolves to 3.15.1 through `@istanbuljs/load-nyc-config`                          | Pass   |
+| Clean audit has no high-severity findings                  | Re-ran Node 22.23.1 `npm ci` and `npm audit --audit-level=high`; npm reported zero vulnerabilities at every severity                                        | Pass   |
+| Full test suite passes on Node 22.x                        | Independently reran the server-backed suite: nine Hugo checks, 20 functional tests, and 100 accessibility checks all passed                                 | Pass   |
+| Audit fix remains lockfile-only                            | Compared the complete branch against `origin/main`; `package.json`, `.npmrc`, parent ranges, scripts, source, workflows, and production paths are unchanged | Pass   |
+| Exact-version policy remains intact                        | Re-read `.npmrc`; `save-exact=true` remains present alongside the existing Node 22 engine enforcement                                                       | Pass   |
+| Lockfile scope is limited to affected packages             | Rechecked the 12-addition/12-deletion lockfile delta; only version, npm registry URL, and integrity triplets for the four affected nodes changed            | Pass   |
+| PR #358 and issue #353 context remains valid               | Re-fetched issue #359 and PR #361; the issue is open, the PR targets `main`, and the prior Node 22 enforcement is present on the base                       | Pass   |
+| Production site remains outside exposure                   | Revisited dependency placement and changed paths; all refreshed packages remain test-only dev dependencies with no Hugo production-source change            | Pass   |
+
+- Repeated the analogous-pattern sweep across every installed `brace-expansion`
+  and `js-yaml` occurrence; no missed in-scope copy was found.
+- Revalidated registry integrity through a fresh clean install and confirmed no
+  new dependency edge, package script, or forced major upgrade was introduced.
+- Outcome: no blocking or new non-blocking findings. The pre-existing Babel
+  peer-resolution warning remains the sole follow-up idea.
