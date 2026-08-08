@@ -2,6 +2,9 @@
   "name": "denhamparry-website-tests",
   "version": "1.0.0",
   "description": "Testing suite for denhamparry.co.uk Hugo website",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "test": "npm run test:hugo && npm run test:functional && npm run test:accessibility",
     "test:hugo": "node tests/hugo/test-hugo-build.js",
