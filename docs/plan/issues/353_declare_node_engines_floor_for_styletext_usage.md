@@ -1,5 +1,5 @@
 ---
-status: In Progress
+status: Complete
 issue: 353
 date: 2026-08-08
 ---
@@ -25,7 +25,7 @@ snapshot: `.nvmrc` already contains `22`, and `.npmrc` already contains
       matrix.
 - [x] `npm ci` on an older Node runtime reports the root package's version
       mismatch before a test script can fail at `styleText`.
-- [ ] The test suite remains green on Node 22.x.
+- [x] The test suite remains green on Node 22.x.
 
 ## Solution Design
 
@@ -157,6 +157,9 @@ package and its `>=22` requirement. The remaining commands must succeed.
 - `pre-commit run --all-files` - passed every hook, including JSON checks,
   gitleaks, cspell, ShellCheck, and Prettier.
 - `git diff --check` - passed.
+- PR #358 GitHub `test (22.x)` check on implementation head `32261c4f` - passed
+  in 1 minute 36 seconds. Conform, cspell, lint, PR-body validation, and the
+  Netlify preview checks also passed or were correctly skipped.
 
 ## Branch Review
 
@@ -185,4 +188,29 @@ package and its `>=22` requirement. The remaining commands must succeed.
 
 ## Post-PR Verification
 
-Pending.
+Independent issue-to-PR verification reviewed implementation head
+`32261c4f1896c0154fa97b131c62ff8804c6e00d` from PR #358 and confirmed it matched
+the local and remote branch before review.
+
+| Criterion or issue item              | Independent evidence                                                                                                                                                                | Result |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Root `engines.node` is `>=22`        | Re-read the complete PR diff and parsed both `package.json` and `package-lock.json`; both root values are exactly `>=22`                                                            | Pass   |
+| Older `npm ci` reports the mismatch  | Re-ran Node 20.20.2 `npm ci`; exit 1 named `denhamparry-website-tests@1.0.0`, required `>=22`, actual Node 20.20.2, and `EBADENGINE`                                                | Pass   |
+| Supported Node 22 path remains green | Re-ran Node 22.23.1 `npm ci` and the full suite: 9 Hugo checks, 20 functional tests, and 100 accessibility checks; GitHub `test (22.x)` also passed                                 | Pass   |
+| Matching local runtime selector      | Re-read `.nvmrc`; its existing value is `22`, so no change is required                                                                                                              | Pass   |
+| Optional strict enforcement          | Re-read `.npmrc` and queried npm under Node 22; `engine-strict` resolves to `true` while `save-exact=true` remains intact                                                           | Pass   |
+| Affected `styleText` consumers       | Revisited both CommonJS scripts; they remain unchanged and are protected by the root install gate                                                                                   | Pass   |
+| CI, Lighthouse, and Netlify scope    | Revisited all Node pins and confirmed the Node 22 test matrix installs the package; the unchanged Node 20 Lighthouse job and Node-free Netlify build do not run this npm test suite | Pass   |
+| PR #352 and issue #351 context       | Re-fetched GitHub state: PR #352 is merged and issue #351 is closed; the current default branch contains their `styleText` change                                                   | Pass   |
+
+- Repeated the analogous-pattern sweep across the sole package manifest, all
+  Node pins, all npm settings, and both `styleText` consumers. No missed
+  in-scope occurrence was found.
+- Rechecked the lockfile delta: only the root engine metadata changed; package
+  versions, resolved artifacts, integrity values, and dependency edges are
+  unchanged.
+- Rechecked unchanged adjacent paths for `.nvmrc`, workflows, test scripts,
+  Docker, and Netlify configuration.
+- Outcome: no blocking or new non-blocking findings. The previously recorded
+  Babel peer warnings and transitive audit findings remain the sole follow-up
+  idea.
