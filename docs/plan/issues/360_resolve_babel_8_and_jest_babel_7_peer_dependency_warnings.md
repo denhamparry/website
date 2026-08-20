@@ -1,5 +1,5 @@
 ---
-status: In Progress
+status: Complete
 issue: 360
 date: 2026-08-20
 ---
@@ -169,6 +169,11 @@ full test suite must pass on Node 22.x.
   this plan and cspell reject the package name `inflight`; the term was added to
   the file-local dictionary, the formatter output was inspected and restaged,
   and the complete hook suite then passed without further modification.
+- Hosted Conform initially rejected the evidence-only commit's `docs(plan)`
+  scope because this repository permits only `website`, `content`, `tests`,
+  `ci`, and `deps`. The implementation tree remained unchanged; the evidence
+  commit was amended to the allowed `docs(tests)` scope and pushed with a
+  branch-scoped force-with-lease.
 - `git diff --check` - passed.
 
 ## Branch Review
@@ -202,4 +207,28 @@ full test suite must pass on Node 22.x.
 
 ## Post-PR Verification
 
-TBD.
+Independent issue-to-PR verification reviewed implementation head
+`856a110afb88dad90fadf6b9955f46c5e628aa54` from PR #367 and confirmed the local,
+remote, and GitHub heads matched before review.
+
+| Criterion or issue item                                   | Independent evidence                                                                                                                                                                              | Result |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Clean `npm ci` has no `ERESOLVE` override warnings        | Re-ran Node 22 `npm ci` from the exact PR head; it installed 561 packages with only unrelated deprecation notices and zero `ERESOLVE` output                                                      | Pass   |
+| Full test suite passes on Node 22.x                       | Independently reran the server-backed suite: nine Hugo checks, 20 functional tests, and 100 accessibility checks passed                                                                           | Pass   |
+| Jest/Babel 8 support was investigated                     | Re-read the current registry peer metadata and live lockfile chain: current Jest accepts Babel 7, while the syntax plugins still require Babel 7 and no Babel 8 package node remains              | Pass   |
+| Babel dependencies are aligned to the declared peer chain | Parsed both npm manifests and reran the selected and complete `npm ls` trees; all transform consumers resolve valid `@babel/core@7.29.7` peers                                                    | Pass   |
+| Affected manifests are synchronized                       | Re-read the complete PR diff and parsed the root lock entry; both direct packages are exactly 7.29.7 in `package.json` and `package-lock.json`                                                    | Pass   |
+| Dependency graph is safe and scoped                       | Rechecked registry URLs, integrity fields, install-script packages, package inventory, stable lock regeneration, and `npm audit`; no unrelated script or registry change and zero vulnerabilities | Pass   |
+| PR #358 and issue #353 context is preserved               | Re-fetched live issue #360 and PR #367 and revisited the current Node 22 engine policy; this dependency-only change leaves the earlier runtime enforcement intact                                 | Pass   |
+| Future Babel/Jest upgrades remain out of scope            | Rechecked the issue and diff; no speculative override, Jest upgrade, runtime change, production Hugo change, or deploy work was added                                                             | Pass   |
+
+- Repeated the analogous-pattern sweep across the root manifest, full lockfile,
+  Babel configuration, Jest configuration, issue #286 provenance, and every
+  installed `@babel/core` occurrence. No missed in-scope or independently broken
+  occurrence was found.
+- Independently checked the important failure and success shapes: the original
+  head emitted repeated peer overrides, while the PR head installs cleanly and
+  exercises the Puppeteer ESM transform through all 20 passing functional tests.
+- Outcome: the blocking commit-policy finding was corrected without changing
+  implementation behavior and documented on the PR. No issue-to-implementation
+  finding or non-blocking follow-up remains.
