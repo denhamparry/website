@@ -1,12 +1,12 @@
 ---
-status: In Progress
+status: Complete
 issues:
   - 362
   - 363
 date: 2026-08-20
 ---
 
-<!-- cspell:words PaperMod worktree -->
+<!-- cspell:words numstat PaperMod worktree -->
 
 # GitHub Issues #362 and #363: Review talks and search pages
 
@@ -143,8 +143,31 @@ development environment.
 
 ## Post-PR Verification
 
-Pending PR creation.
+Independent verification reviewed PR #368 at implementation head
+`a447f0b13a796027dcad1466176ca9d60ee94a85`.
+
+| Criterion                                  | Independent evidence                                                                           | Result |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------- | ------ |
+| #362 talks review is current               | GitHub diff and local frontmatter show `reviewed: 2026-08-20`                                  | Passed |
+| No new talks or other talk edits           | GitHub reports one addition and one deletion; the complete hunk changes only the review marker | Passed |
+| #363 search review is current              | GitHub diff and local frontmatter show `reviewed: 2026-08-20`                                  | Passed |
+| Search metadata and behavior remain intact | Complete hunk preserves all other metadata; independently rerun 20 functional tests            | Passed |
+| One PR closes both issues                  | GitHub reports #362 and #363 in `closingIssuesReferences` for PR #368                          | Passed |
+| Remote review matches local evidence       | Local, remote branch, and GitHub PR head SHAs matched before the evidence update               | Passed |
+| PR body is stored correctly                | Exact body comparison passed with no literal escaped newlines                                  | Passed |
+
+- Both issues were re-fetched and remained open with unchanged review scope.
+- The initial independent `numstat` wrapper had nested-shell quoting errors;
+  corrected direct assertions confirmed each content file has exactly one
+  addition and one deletion.
+- The independent functional rerun passed 20 tests across two suites, including
+  navigation to Search and returning Talks as a result.
+- Related content, workflow behavior, and the complete GitHub-hosted diff were
+  revisited; no blocking or non-blocking findings were identified.
 
 ## Outcome
 
-Pending implementation and pull request creation.
+PR #368 updates both page review markers without adding talks or changing search
+metadata. The full validation and independent post-PR verification passed, both
+issues are linked for automatic closure, and the pull request remains open for
+user-managed review and merge.
