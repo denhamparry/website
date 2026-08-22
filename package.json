@@ -24,7 +24,7 @@
     "babel-jest": "30.4.1",
     "cspell": "10.0.1",
     "jest": "30.4.2",
-    "linkinator": "8.0.3",
+    "linkinator": "8.0.4",
     "puppeteer": "25.8.0"
   },
   "jest": {
