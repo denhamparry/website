@@ -1,5 +1,5 @@
 ---
-status: In Progress
+status: Complete
 issue: 374
 date: 2026-08-24
 ---
@@ -231,3 +231,32 @@ unchanged.
 - Non-blocking: evaluate native Jest ESM handling for Puppeteer in a separate
   change so the Babel transform and dependency subtree could potentially be
   removed. No follow-up issue is created in the workflow's default mode.
+
+## Post-PR Verification
+
+Independent issue-to-PR verification reviewed implementation head
+`be7367369d4f5ab24c1ca0f5a199f7f1574c1036` from PR #375 and confirmed the local,
+remote, and GitHub heads matched before review.
+
+| Criterion or issue item                                             | Independent evidence                                                                                                                                                                 | Result |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| Pin/ignore/remove decision exists                                   | Re-read the PR plan from the GitHub head; it explicitly retains exact Babel 7 pins, applies major-only ignores, and rejects an undeclared peer override                              | Pass   |
+| PR #372 is closed and references the decision                       | Re-fetched live PR state and comments; it is closed in favour of issue #374 with the peer-contract rationale                                                                         | Pass   |
+| PR #373 is closed and references the decision                       | Re-fetched live PR state and comments; it is closed in favour of issue #374 with the mirrored peer-contract rationale                                                                | Pass   |
+| Both Babel major updates are ignored narrowly                       | Re-parsed the PR configuration independently; the npm block has exactly two matching `dependency-name` entries and each has only `version-update:semver-major`                       | Pass   |
+| Minor, patch, and unrelated maintenance remain configured           | Compared parsed base and PR configurations; the pre-existing npm schedule, labels, commit prefix, and complete GitHub Actions ecosystem are identical                                | Pass   |
+| Upstream unblock condition remains accurate                         | Re-queried the registry: `babel-preset-current-node-syntax@1.2.0` is latest and all 15 current syntax-plugin dependencies still declare Babel 7-only core peers                      | Pass   |
+| Clean Node 22 install has no peer override                          | Independently reran `npm ci` on Node 22; 561 packages installed with zero vulnerabilities and no `ERESOLVE` text                                                                     | Pass   |
+| Babel/Jest peer trees are valid                                     | Independently reran both the selected Babel/Jest `npm ls` command and `npm ls --all`; both exited successfully with the complete chain on valid `@babel/core@7.29.7` peers           | Pass   |
+| Full Node 22 suite passes with Hugo running                         | Independently reran the server-backed suite; nine Hugo checks, 20 functional tests, and 100 accessibility checks passed with zero violations                                         | Pass   |
+| Affected package, lockfile, and Babel config paths remain unchanged | Re-read the complete GitHub diff and negative-scope assertions; only the Dependabot configuration and lifecycle plan change, and `babel.config.js` still has no `useBuiltIns` option | Pass   |
+| Future Babel 8 migration remains coordinated                        | Re-read the decision and traceability; both roots must move together only after the full peer chain changes, followed by the named install/tree/suite checks                         | Pass   |
+| Native Jest ESM alternative remains outside this fix                | Reconciled the issue's alternative with the plan and PR body; it is retained as one non-blocking follow-up idea without expanding this PR                                            | Pass   |
+
+- Repeated the analogous-pattern sweep across every direct Babel/Jest
+  dependency, Babel peer declaration, related configuration path, Dependabot
+  ecosystem, and prior plan; no missed in-scope occurrence was found.
+- Independently validated the complete changed Markdown shell fence, YAML, PR
+  path set, base/head diff, closing relationship, and negative/no-op scope.
+- Outcome: no blocking or new non-blocking findings. The previously identified
+  native Jest ESM alternative remains the sole follow-up idea.
