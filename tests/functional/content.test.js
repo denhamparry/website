@@ -1,4 +1,4 @@
-const puppeteer = require("puppeteer");
+let puppeteer;
 
 describe("Content Tests", () => {
   let browser;
@@ -6,6 +6,7 @@ describe("Content Tests", () => {
   const baseUrl = "http://localhost:1313";
 
   beforeAll(async () => {
+    puppeteer = await import("puppeteer");
     browser = await puppeteer.launch({
       headless: "new",
       args: [
@@ -18,7 +19,7 @@ describe("Content Tests", () => {
   });
 
   afterAll(async () => {
-    await browser.close();
+    await browser?.close();
   });
 
   test("Talks page contains expected content structure", async () => {

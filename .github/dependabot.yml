@@ -9,15 +9,6 @@ updates:
       - "javascript"
     commit-message:
       prefix: "fix(deps)"
-    # Babel 8 remains blocked by Jest's Babel 7-only syntax-plugin peer chain.
-    # See docs/plan/issues/374_pin_babel_7_and_ignore_blocked_babel_8_updates.md.
-    ignore:
-      - dependency-name: "@babel/core"
-        update-types:
-          - "version-update:semver-major"
-      - dependency-name: "@babel/preset-env"
-        update-types:
-          - "version-update:semver-major"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
