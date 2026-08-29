@@ -1,5 +1,5 @@
 ---
-status: In Progress
+status: Complete
 issue: 376
 date: 2026-08-29
 ---
@@ -244,4 +244,35 @@ plain-Node accessibility runner still loads Puppeteer without Jest or Babel.
 
 ## Post-PR Verification
 
-Pending PR creation.
+- PR: <https://github.com/denhamparry/website/pull/381>
+- Implementation head independently reviewed:
+  `0918190b1a4efdf8c3b35f37e7b8bfb301d89060`.
+- Local, remote branch, and GitHub PR head matched before verification. GitHub's
+  stored body contained real newlines, recognized `Closes #376`, and listed
+  exactly the seven planned paths.
+
+| Issue criterion or requirement                                      | Independent evidence                                                                                                                                                                                                          | Result |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Document whether the transform is still required                    | Re-fetched the live issue and reviewed the published decision, installed Puppeteer exports, and implementation: unchanged CommonJS Jest still fails, while native VM-module loading replaces Babel                            | Pass   |
+| Confirm current Jest/Puppeteer behavior rather than relying on #286 | Fresh transform-free and missing-VM runs reproduced the parser/loader failures on Jest 30.4.2 and Puppeteer 25.9.0; plain Node 22 import remains callable                                                                     | Pass   |
+| Evaluate native ESM and a CJS-compatible entry                      | Published diff uses the supported VM-module path; installed export metadata maps `import` and `require` to the same ESM file and exposes no separate CJS build                                                                | Pass   |
+| Remove direct `@babel/core`, `@babel/preset-env`, and `babel-jest`  | Re-read GitHub's manifest/lockfile diff and reran root assertions; all three are absent from root metadata and `@babel/preset-env` is absent from the complete graph                                                          | Pass   |
+| Delete `babel.config.js` and regenerate the lockfile                | GitHub reports the config deleted; independent lock comparison found 102 entries removed, zero added, and no retained-package change beyond the root record                                                                   | Pass   |
+| Remove the Babel semantic-major ignores only                        | Re-parsed the published Dependabot YAML; the npm block has no `ignore` key while both ecosystem schedules, labels, directories, and commit prefixes remain                                                                    | Pass   |
+| If Babel must stay, preserve the pin rationale                      | Not applicable because the independently verified native path passes and the root transform is removed                                                                                                                        | Pass   |
+| Clean Node 22 install without `ERESOLVE`                            | Fresh post-PR Node 22.23.2 `npm ci` installed 459 packages with no `ERESOLVE` output and zero vulnerabilities; `npm ls --all` remains valid                                                                                   | Pass   |
+| Full Node 22 suite with a running Hugo server                       | Fresh post-PR run passed nine Hugo checks, both functional suites and all 20 tests, and 100 accessibility checks with zero violations                                                                                         | Pass   |
+| Preserve the functional assertions                                  | GitHub diff changes only Puppeteer loading and teardown safety in the two suites; all existing assertions pass unchanged                                                                                                      | Pass   |
+| Reconcile #286, #360, #374, and PR #375                             | Re-read the live issue and historical plans: they remain immutable lifecycle evidence, while the current live transform and suppression are superseded                                                                        | Pass   |
+| Related and analogous paths                                         | Repeated repository-wide sweep across loaders, manifests, lockfile, workflows, Dependabot, accessibility, and lifecycle plans found no missed live root cause; plain-Node accessibility is intentionally different and passes | Pass   |
+| Out-of-scope deployment, merge, and manual issue closure            | No deploy, merge, manual closure, credential, secret, or unrelated repository operation occurred                                                                                                                              | Pass   |
+
+- Independent failure-shaped validation without the VM flag failed only with the
+  required dynamic-import callback error; guarded teardown introduced no
+  secondary error.
+- Independent corrected-behavior validation reran the complete suite rather than
+  relying on the PR body or earlier local evidence.
+- Outcome: all issue items pass with no blocking or new non-blocking finding.
+  This plan update is evidence-only; after it is pushed, the final PR head and
+  inspection of this evidence delta are recorded in the mutable PR body to avoid
+  a tracked-file/SHA loop.
