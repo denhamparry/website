@@ -1,6 +1,7 @@
-const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
+
+let puppeteer;
 
 describe("Website Navigation Tests", () => {
   let browser;
@@ -8,6 +9,7 @@ describe("Website Navigation Tests", () => {
   const baseUrl = "http://localhost:1313";
 
   beforeAll(async () => {
+    puppeteer = await import("puppeteer");
     browser = await puppeteer.launch({
       headless: "new",
       args: [
@@ -20,7 +22,7 @@ describe("Website Navigation Tests", () => {
   });
 
   afterAll(async () => {
-    await browser.close();
+    await browser?.close();
   });
 
   test("Homepage loads successfully", async () => {

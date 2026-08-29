@@ -8,7 +8,7 @@
   "scripts": {
     "test": "npm run test:hugo && npm run test:functional && npm run test:accessibility",
     "test:hugo": "node tests/hugo/test-hugo-build.js",
-    "test:functional": "jest tests/functional",
+    "test:functional": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js tests/functional",
     "test:accessibility": "node tests/accessibility/test-accessibility.js",
     "test:links": "linkinator public --recurse --skip 'livereload.js' --skip 'googletagmanager.com' --skip 'index.json'",
     "test:spell": "cspell '**/*.md' '**/*.txt' --no-progress",
@@ -18,10 +18,7 @@
   },
   "devDependencies": {
     "@axe-core/puppeteer": "4.13.0",
-    "@babel/core": "7.29.7",
-    "@babel/preset-env": "7.29.7",
     "axios": "1.19.0",
-    "babel-jest": "30.4.1",
     "cspell": "10.1.1",
     "jest": "30.4.2",
     "linkinator": "8.0.4",
@@ -31,9 +28,6 @@
     "testEnvironment": "node",
     "testMatch": [
       "**/tests/**/*.test.js"
-    ],
-    "transformIgnorePatterns": [
-      "/node_modules/(?!(puppeteer|puppeteer-core|@puppeteer)/)"
     ]
   }
 }
