@@ -83,6 +83,12 @@ jobs:
             const MODIFIED_DAYS = Number.parseInt(process.env.MODIFIED_DAYS, 10);
             const ASSIGNEES = JSON.parse(process.env.ASSIGNEES);
             const LABELS = JSON.parse(process.env.LABELS);
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
 
             for (const page of PAGES) {
               const TITLE = `Page requires review: ${page.path}`;
@@ -102,13 +108,9 @@ jobs:
               ].join('\n');
               console.log(TITLE, BODY, LABELS, ASSIGNEES);
 
-              const issues = await github.rest.issues.listForRepo({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                state: 'open',
-              });
-
-              const existingIssue = issues.data.find(issue => issue.title === TITLE);
+              const existingIssue = issues.find(
+                issue => !issue.pull_request && issue.title === TITLE
+              );
               if (existingIssue) {
                 if(DRY_RUN === 'true') {
                   console.log('Dry run! Issue already exists with number:', existingIssue.number);
