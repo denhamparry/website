@@ -504,9 +504,7 @@ flag event at SecurityCon tomorrow!
 
 - Type: Workshop
 - Date: 09th May 2022
-- Event:
-  [NDC London](https://ndclondon.com/agenda/an-introduction-to-kubernetes-part-i-02zg/0vh9oah807o),
-  Queen Elizabeth II Centre, London
+- Event: NDC London, Queen Elizabeth II Centre, London
 
 In this workshop, we're going to introduce you to the orchestrator formally
 known as Kubernetes. This isn't about why or if you should be using it, more of
