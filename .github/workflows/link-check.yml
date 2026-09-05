@@ -39,13 +39,16 @@ jobs:
             const TITLE = 'Broken links detected in talks.md';
 
             // Check if issue already exists
-            const issues = await github.rest.issues.listForRepo({
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',
+              per_page: 100,
             });
 
-            const existingIssue = issues.data.find(issue => issue.title === TITLE);
+            const existingIssue = issues.find(
+              issue => !issue.pull_request && issue.title === TITLE
+            );
             if (existingIssue) {
               console.log('Issue already exists with number:', existingIssue.number);
               // Add comment to existing issue
