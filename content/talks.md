@@ -1,7 +1,7 @@
 ---
 title: Talks
 date: 2022-04-22T21:00:00+00:00
-reviewed: 2026-08-20
+reviewed: 2026-09-05
 tags: ["talk"]
 author: Lewis Denham-Parry
 showToc: true
@@ -26,6 +26,33 @@ menu:
 ---
 
 ## 2026
+
+<!-- markdownlint-disable MD013 -->
+
+### KCD UK Edinburgh 2026 - GPUs have the Power! Lessons learned from DPS and MaxLPS
+
+<!-- markdownlint-enable MD013 -->
+
+- Type: Talk
+- Date: 19th October 2026
+- Event: [KCD UK Edinburgh 2026](https://ckranz.github.io/kcduk/)
+
+AI platforms promise elastic compute, but GPU clusters are increasingly
+constrained by power: what can run, when, and at what priority. This talk uses
+DPS/MaxLPS, NVIDIA's open source power-management project, as deployed within
+Nscale, as a practical case study in making Kubernetes aware of the physical
+limits behind AI workloads.
+
+We will unpack what DPS is, why MaxLPS matters, and how the pattern connects
+Kubernetes scheduling, telemetry, policy, and infrastructure control. The goal
+is not a product pitch; it is a Kubernetes operator's view of the hard
+questions: how do you model power as a shared resource, how do AI workloads
+express urgency, where should control loops live, and what safety gates are
+needed before software adjusts hardware behaviour?
+
+Attendees will leave with a mental model for power-aware cloud-native platforms,
+the risks of closed-loop automation, and lessons that apply even if they never
+run DPS themselves.
 
 <!-- markdownlint-disable MD013 -->
 
