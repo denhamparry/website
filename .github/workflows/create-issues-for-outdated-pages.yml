@@ -1,16 +1,23 @@
 name: Create issues for outdated pages
+# cspell:ignore argjson
 permissions:
   contents: read
   issues: write
 on:
   schedule:
     - cron: "30 5 * * *"
-  workflow_dispatch: # Allow manual trigger for testing
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Log proposed issues without creating them
+        required: false
+        default: true
+        type: boolean
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
   MODIFIED_DAYS: 14 # Set the number of days after which a page is considered outdated
   SEARCH_DIRECTORY: content # Path to the directory where the pages are located
-  DRY_RUN: false # Set to true to test the action without creating issues
+  DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
   LABELS: '["documentation", "help wanted"]' # Set the labels for the issue
   ASSIGNEES: '["denhamparry"]' # Set the assignee for the issue
 jobs:
@@ -25,31 +32,39 @@ jobs:
       - name: Find outdated pages
         id: find-outdated-pages
         run: |
-          export PAGES=""
-          find "$SEARCH_DIRECTORY" -type f -name "*.md" | while read -r page; do
-            LAST_COMMIT_DATE=$(git log -1 --format="%cd" --date=iso-strict "$page")
-            echo "Last commit date on $page: $LAST_COMMIT_DATE"
+          PAGES='[]'
+          CURRENT_DATE=$(date -u +"%Y-%m-%dT%H:%M:%S%z")
+          CURRENT_EPOCH=$(date -u -d "$CURRENT_DATE" +%s)
+
+          while IFS= read -r -d '' page; do
+            LAST_COMMIT_TIMESTAMP=$(git log -1 --format="%cd" --date=iso-strict -- "$page")
+            LAST_COMMIT_DATE=$(date -u -d "$LAST_COMMIT_TIMESTAMP" +"%Y-%m-%d")
+            LAST_COMMIT_EPOCH=$(date -u -d "$LAST_COMMIT_TIMESTAMP" +%s)
+            echo "Last commit date on $page: $LAST_COMMIT_TIMESTAMP"
 
             # Calculate the difference between the current date and the last commit date in days
-            CURRENT_DATE=$(date -u +"%Y-%m-%dT%H:%M:%S%z")
-            DATE_DIFF=$(($(date -u -d "$CURRENT_DATE" +%s) - $(date -u -d "$LAST_COMMIT_DATE" +%s)))
+            DATE_DIFF=$((CURRENT_EPOCH - LAST_COMMIT_EPOCH))
             DATE_DIFF_DAYS=$((DATE_DIFF / (60*60*24)))
 
             echo "Days since last commit: $DATE_DIFF_DAYS"
 
             # Check if the difference is more than MODIFIED_DAYS
-            if [ $DATE_DIFF_DAYS -gt "$MODIFIED_DAYS" ]; then
-              if [ -z "$PAGES" ]; then
-                export PAGES="$page"
-              else
-                export PAGES="$page,$PAGES"
-              fi
-              echo "PAGES=$PAGES" >> $GITHUB_OUTPUT
+            if [ "$DATE_DIFF_DAYS" -gt "$MODIFIED_DAYS" ]; then
+              PAGES=$(jq -c \
+                --arg path "$page" \
+                --arg last_commit_date "$LAST_COMMIT_DATE" \
+                --argjson days_since_commit "$DATE_DIFF_DAYS" \
+                '. + [{path: $path, lastCommitDate: $last_commit_date, daysSinceCommit: $days_since_commit}]' \
+                <<< "$PAGES")
               echo "Create issue for page: $page"
             else
               echo "Page $page is up to date, it was modified $DATE_DIFF_DAYS days ago"
             fi
-          done
+          done < <(find "$SEARCH_DIRECTORY" -type f -name "*.md" -print0 | sort -z)
+
+          if [ "$PAGES" != '[]' ]; then
+            echo "PAGES=$PAGES" >> "$GITHUB_OUTPUT"
+          fi
 
       - name:
           Check and create GitHub issue if an issue for a page does not exist
@@ -58,19 +73,33 @@ jobs:
         env:
           PAGES: "${{ steps.find-outdated-pages.outputs.PAGES }}"
           DRY_RUN: "${{ env.DRY_RUN }}"
+          MODIFIED_DAYS: "${{ env.MODIFIED_DAYS }}"
           ASSIGNEES: "${{ env.ASSIGNEES }}"
           LABELS: "${{ env.LABELS }}"
         with:
           script: |
-            const { PAGES } = process.env
+            const PAGES = JSON.parse(process.env.PAGES);
             const { DRY_RUN } = process.env;
+            const MODIFIED_DAYS = Number.parseInt(process.env.MODIFIED_DAYS, 10);
             const ASSIGNEES = JSON.parse(process.env.ASSIGNEES);
             const LABELS = JSON.parse(process.env.LABELS);
-            const PAGES_ARR =  PAGES.split(',');
 
-            for (let i = 0; i < PAGES_ARR.length; i++) {
-              var TITLE = `Page requires review: ${PAGES_ARR[i]}`
-              var BODY = 'This page requires review'
+            for (const page of PAGES) {
+              const TITLE = `Page requires review: ${page.path}`;
+              const markdownPath = page.path.replaceAll('`', '\\`');
+              const BODY = [
+                '## Page requires review',
+                '',
+                `- Page: \`${markdownPath}\``,
+                `- Last commit: ${page.lastCommitDate} (${page.daysSinceCommit} days ago; threshold ${MODIFIED_DAYS} days)`,
+                '',
+                '## Acceptance Criteria',
+                '',
+                '- [ ] Content is checked for accuracy and any stale entries or links are fixed',
+                '- [ ] The `reviewed` frontmatter marker is set to the review date',
+                '- [ ] The page still builds and renders (`npm run test:hugo`)',
+                '- [ ] The PR closes this issue',
+              ].join('\n');
               console.log(TITLE, BODY, LABELS, ASSIGNEES);
 
               const issues = await github.rest.issues.listForRepo({
