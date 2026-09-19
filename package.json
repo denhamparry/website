@@ -19,7 +19,7 @@
   "devDependencies": {
     "@axe-core/puppeteer": "4.13.0",
     "axios": "1.20.0",
-    "cspell": "10.3.0",
+    "cspell": "10.3.2",
     "jest": "30.5.1",
     "linkinator": "8.1.0",
     "puppeteer": "25.10.0"
