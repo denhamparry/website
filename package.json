@@ -22,7 +22,7 @@
     "cspell": "10.3.6",
     "jest": "30.5.2",
     "linkinator": "8.1.0",
-    "puppeteer": "25.11.0"
+    "puppeteer": "25.12.0"
   },
   "jest": {
     "testEnvironment": "node",
