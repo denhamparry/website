@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@axe-core/puppeteer": "4.14.0",
-    "axios": "1.21.0",
+    "axios": "1.21.1",
     "cspell": "10.4.1",
     "jest": "30.5.2",
     "linkinator": "8.1.0",
