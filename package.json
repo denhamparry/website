@@ -17,7 +17,7 @@
     "build:preview": "hugo --gc --minify --buildFuture"
   },
   "devDependencies": {
-    "@axe-core/puppeteer": "4.14.0",
+    "@axe-core/puppeteer": "4.14.1",
     "axios": "1.21.1",
     "cspell": "10.5.1",
     "jest": "30.5.2",
